@@ -20,11 +20,12 @@
     "jsonata": "^1.6.4",
     "markdown-it": "^8.4.2",
     "markdown-it-attrs": "^2.3.2",
+    "markdown-it-footnote": "^3.0.1",
     "markdown-it-named-headers": "0.0.4",
     "nuxt": "^2.5.1",
     "slug": "^1.0.0",
     "vue-scrollto": "^2.15.0",
-    "vuetify": "^1.5.7"
+    "vuetify": "^1.5.8"
   },
   "devDependencies": {
     "nodemon": "^1.11.0",

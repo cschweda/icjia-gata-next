@@ -9,6 +9,19 @@ const apiPath = './api/'
 
 const arr = []
 
+let md = require('markdown-it')({
+  html: true,
+  xhtmlOut: false,
+  breaks: false,
+  langPrefix: 'language-',
+  linkify: true,
+  typographer: false,
+  quotes: '“”‘’'
+})
+  .use(require('markdown-it-footnote'))
+  .use(require('markdown-it-named-headers'))
+  .use(require('markdown-it-attrs'))
+
 const readFiles = dirname => {
   const readDirPr = new Promise((resolve, reject) => {
     fs.readdir(
@@ -39,9 +52,12 @@ const readFiles = dirname => {
               obj[attr] = obj.attributes[attr]
             }
             /**
-             * ... then delete obj.attributes.
+             * ... delete obj.attributes ...
              */
             delete obj.attributes
+
+            obj.html = md.render(obj.body)
+            delete obj.body
             resolve(obj)
           })
         })

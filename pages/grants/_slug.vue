@@ -1,9 +1,12 @@
 <template>
-  <div>
-    <h1>{{ grant.title }}</h1>
-    <p>{{ grant.body }}</p>
- 
-  </div>
+  <v-layout>
+    <v-container>
+      <v-flex xs12>
+        <h1>{{ grant.title }}</h1>
+        <p v-html="grant.html"/>
+      </v-flex>
+    </v-container>
+  </v-layout>
 </template>
 
 <script>
@@ -16,11 +19,18 @@ export default {
   computed: {
     ...mapGetters(['grants'])
   },
-  asyncData({ store, params }) {
+  asyncData({ store, params, route, error }) {
     const slug = params.slug
     const query = jsonata(`$[slug="${slug}"]`)
     const result = query.evaluate(store.state.grants)
-    return { grant: result }
+    if (result != undefined) {
+      return { grant: result }
+    } else {
+      return error({
+        statusCode: 404,
+        message: ' Page not found '
+      })
+    }
   }
 }
 </script>
