@@ -10,7 +10,9 @@
       
       <v-flex 
        
-        xs4>
+        xs12
+        sm12
+        md4>
         
         <v-card-text class="px-3">
           <h2 class="mb-3">Current Grant Opportunities</h2>
@@ -33,7 +35,9 @@
       </v-flex>
       <v-flex 
        
-        xs4>
+        xs12
+        sm12
+        md4>
        
         <v-card-text class="px-3">
           <h2 class="mb-3">Pages</h2>
@@ -55,7 +59,9 @@
       </v-flex>
       <v-flex 
        
-        xs4>
+        xs12
+        sm12
+        md4>
        
         <v-card-text class="px-3">
           <h2 class="mb-3">News</h2>
