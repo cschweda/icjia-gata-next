@@ -4,8 +4,12 @@ const path = require('path')
 const slug = require('slug')
 
 const rootPath = './markdown/'
-const contentPaths = ['pages', 'grants']
+const contentPaths = ['pages', 'grants', 'news']
 const apiPath = './api/'
+
+const convertDatesToUTC = true
+const dateFields = ['posted', 'created', 'expires']
+const format = require('date-fns/format')
 
 const arr = []
 
@@ -50,14 +54,29 @@ const readFiles = dirname => {
              */
             for (let attr in obj.attributes) {
               obj[attr] = obj.attributes[attr]
+              /**
+               * ... convert YAML date string to ISU 8601 ...
+               */
+              dateFields.find(df => {
+                if (df === attr) {
+                  obj[attr] = format(obj[attr])
+                }
+              })
             }
             /**
              * ... delete obj.attributes ...
              */
             delete obj.attributes
-
+            /**
+             * ... render markdown to html ...
+             */
             obj.html = md.render(obj.body)
+            /**
+             * ... and delete markdown.
+             */
             delete obj.body
+
+            // console.log(obj.title, datefns.format(obj.posted))
             resolve(obj)
           })
         })

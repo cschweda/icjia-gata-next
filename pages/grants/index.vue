@@ -1,4 +1,6 @@
 <template>
+  
+  
   <v-container 
     grid-list-md 
   >
@@ -11,9 +13,11 @@
         xs12>
         
         <v-card-text class="px-3">
-          <h2 class="mb-3">All Grants</h2>
+          <v-switch 
+            v-model="showCurrent" 
+            :label="pageHeading"/>
           <div 
-            v-for="grant in grants" 
+            v-for="grant in grantsToDisplay" 
             :key="grant.slug">
             <v-card class="mb-4">
               <v-card-title>
@@ -21,12 +25,13 @@
               </v-card-title>
               <v-card-text>
                 {{ grant.description }}
-                
+                <h4 class="mt-2">Posted: {{ grant.posted }}</h4>
+                <h4>{{ isExpired(grant.expires) }}</h4>
               </v-card-text>
             </v-card>
           </div>
         </v-card-text>
-        
+       
       </v-flex>
       
       
@@ -35,18 +40,51 @@
 </template>
 
 <script>
+import format from 'date-fns/format'
 import { mapGetters } from 'vuex'
 export default {
   components: {},
+  data() {
+    return {
+      showCurrent: true,
+      now: format(new Date())
+    }
+  },
   computed: {
     // mix the getters into computed with object spread operator
     ...mapGetters([
-      'grants'
+      'grants',
+      'pages'
       // ...
-    ])
+    ]),
+    pageHeading() {
+      if (this.showCurrent) {
+        return 'Current'
+      } else {
+        return 'All'
+      }
+    },
+    grantsToDisplay() {
+      if (!this.showCurrent) {
+        return this.grants
+      } else {
+        let currentGrants = this.grants.filter(grant => {
+          if (grant.expires > this.now) {
+            return grant
+          }
+        })
+        return currentGrants
+      }
+    }
+  },
+  methods: {
+    isExpired(date) {
+      if (this.now > date) {
+        return 'Expired'
+      } else {
+        return `Deadlline: ${date}`
+      }
+    }
   }
 }
 </script>
-
-<style scoped>
-</style>
