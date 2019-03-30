@@ -8,7 +8,7 @@ const contentPaths = ['pages', 'grants', 'news']
 const apiPath = './api/'
 
 const convertDatesToUTC = true
-const dateFields = ['posted', 'created', 'expires']
+const dateFields = ['posted', 'created', 'expires', 'updated']
 const format = require('date-fns/format')
 
 const arr = []
@@ -59,7 +59,9 @@ const readFiles = dirname => {
                */
               dateFields.find(df => {
                 if (df === attr) {
-                  obj[attr] = format(obj[attr])
+                  if (obj[attr] != 'never') {
+                    obj[attr] = format(obj[attr])
+                  }
                 }
               })
             }

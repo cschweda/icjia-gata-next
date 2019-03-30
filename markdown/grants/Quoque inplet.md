@@ -2,7 +2,7 @@
 title: 'Quoque inplet'
 created: '2019-02-29'
 posted: '2019-02-29'
-expires: '2019-05-29'
+expires: 'never'
 description: 'Latia id saltibus Latona circumspicit nocenti! Vada plurimus tamen. Sit rota via
 ille ames aeternus iubet undas virtus! Animus canaeque monstri memento arbor.
 Aede remis ille, qui ponentem Demoleon et tosti requiemque vineta prior suumque.'
