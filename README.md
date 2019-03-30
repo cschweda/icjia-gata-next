@@ -1,10 +1,10 @@
 # icjia-gata-next
 
-> My wondrous Nuxt.js project
+> Convert markdown content to json -- and then require into statically generated app
 
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
 $ yarn install
 
