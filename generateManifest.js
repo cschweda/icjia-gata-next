@@ -3,31 +3,14 @@ const fm = require('front-matter')
 const path = require('path')
 const slug = require('slug')
 
-const rootPath = './markdown/'
-const contentPaths = ['pages', 'grants', 'news']
-const apiPath = './api/'
+const markdownSourcePath = './markdown/'
+const markdownContentFolders = ['pages', 'grants', 'news']
+const jsonDestinationPath = './api/'
 
-const convertDatesToUTC = true
 const dateFields = ['posted', 'created', 'expires', 'updated']
 const format = require('date-fns/format')
 
 const arr = []
-
-function linkify(html, prefix) {
-  const re = new RegExp('^(http|https|mailto)://', 'i')
-
-  const result = html.replace(/href="([^"]+)/g, function($1) {
-    const arr = $1.split('"')
-    //console.log(arr)
-    let match = re.test(arr[1])
-    // console.log(match)
-    if (!match) {
-      return `href="/static/${prefix}/${arr[1]}`
-    }
-    return $1
-  })
-  return result
-}
 
 let md = require('markdown-it')({
   html: true,
@@ -41,6 +24,20 @@ let md = require('markdown-it')({
   .use(require('markdown-it-footnote'))
   .use(require('markdown-it-named-headers'))
   .use(require('markdown-it-attrs'))
+
+function linkify(html, prefix) {
+  const re = new RegExp('^(http|https|mailto)://', 'i')
+
+  const result = html.replace(/href="([^"]+)/g, function($1) {
+    const arr = $1.split('"')
+    let match = re.test(arr[1])
+    if (!match) {
+      return `href="/static/${prefix}/${arr[1]}`
+    }
+    return $1
+  })
+  return result
+}
 
 const readFiles = dirname => {
   const readDirPr = new Promise((resolve, reject) => {
@@ -86,7 +83,7 @@ const readFiles = dirname => {
              */
             delete obj.attributes
             /**
-             * ... render markdown to html ...
+             * ... render markdown to html (and point non-http/s links to static folder) ...
              */
             obj.html = linkify(md.render(obj.body), obj.slug)
             /**
@@ -103,18 +100,18 @@ const readFiles = dirname => {
   )
 }
 
-if (!fs.existsSync(`${apiPath}`)) {
-  fs.mkdirSync(`${apiPath}`)
+if (!fs.existsSync(`${jsonDestinationPath}`)) {
+  fs.mkdirSync(`${jsonDestinationPath}`)
 }
 
 /**
  * Iterate through content folders ...
  */
-contentPaths.forEach(contentPath => {
+markdownContentFolders.forEach(contentPath => {
   /**
    * ... read each markdown file ...
    */
-  readFiles(`${rootPath}${contentPath}/`).then(
+  readFiles(`${markdownSourcePath}${contentPath}/`).then(
     allContents => {
       /**
        * ... sort descending on 'posted' ...
@@ -128,7 +125,7 @@ contentPaths.forEach(contentPath => {
        * ... then write a single json file to api directory for each content folder.
        */
       fs.writeFileSync(
-        `${apiPath}${contentPath}.json`,
+        `${jsonDestinationPath}${contentPath}.json`,
         JSON.stringify(allContents)
       )
     },
