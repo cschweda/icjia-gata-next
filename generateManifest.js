@@ -7,6 +7,8 @@ const markdownSourcePath = './markdown/'
 const markdownContentFolders = ['pages', 'grants', 'news']
 const jsonDestinationPath = './api/'
 
+const staticAssetPath = '/static/'
+
 const dateFields = ['posted', 'created', 'expires', 'updated']
 const format = require('date-fns/format')
 
@@ -25,14 +27,14 @@ let md = require('markdown-it')({
   .use(require('markdown-it-named-headers'))
   .use(require('markdown-it-attrs'))
 
-function linkify(html, prefix) {
+function linkify(html, staticAssetDirectory) {
   const re = new RegExp('^(http|https|mailto)://', 'i')
 
   const result = html.replace(/href="([^"]+)/g, function($1) {
     const arr = $1.split('"')
     let match = re.test(arr[1])
     if (!match) {
-      return `href="/static/${prefix}/${arr[1]}`
+      return `href="${staticAssetPath}${staticAssetDirectory}/${arr[1]}`
     }
     return $1
   })
@@ -61,7 +63,7 @@ const readFiles = dirname => {
              * ... slugify filename ...
              */
             const f = filename.split('.')
-            obj.slug = slug(f[0])
+            obj.slug = slug(f[0]).toLowerCase()
             /**
              * ... flatten obj by moving obj.attributes up one level ...
              */
@@ -83,9 +85,10 @@ const readFiles = dirname => {
              */
             delete obj.attributes
             /**
-             * ... render markdown to html (and point non-http/s links to static folder) ...
+             * ... render markdown to html ...
+             * ... and replace non-http/s links with static path and markdown filename ...
              */
-            obj.html = linkify(md.render(obj.body), obj.slug)
+            obj.html = linkify(md.render(obj.body), f[0])
             /**
              * ... and delete markdown.
              */
