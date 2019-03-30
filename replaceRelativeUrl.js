@@ -13,7 +13,6 @@ function linkify(html) {
     if (!match) {
       return 'href="/folder/test' + arr[1]
     }
-
     return $1
   })
   return result
