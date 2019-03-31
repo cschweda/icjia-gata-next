@@ -11,7 +11,7 @@
             class="px-3"
             @keyup="instantSearch"
           />
-          <div v-for="(result, index) in results" :key="index">
+          <div v-for="(result, index) in results" :key="index" class="px-3">
             <div>
               <nuxt-link :to="generatePath(result)">
                 <h2>{{result.title}}</h2>

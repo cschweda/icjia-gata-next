@@ -11,17 +11,18 @@
         <div class="sidebarItem">
           <nuxt-link to="/grants" class="sidebar-link">Grants</nuxt-link>
         </div>
-
+        <v-divider/>
         <div
           v-for="(page, index) in pages"
+          v-if="page.menuItem"
           :key="index"
           class="sidebarItem"
           style="margin-top: 0px;"
         >
           <nuxt-link :to="generateSlug(page.slug)" class="sidebar-link">{{page.title}}</nuxt-link>
         </div>
-
-        <div class="sidebarItem">
+        <v-divider/>
+        <div class="sidebarItem" style="padding-top: 10px;">
           <nuxt-link to="/search" class="sidebar-link">Search</nuxt-link>
         </div>
         <v-spacer/>
@@ -66,6 +67,7 @@ export default {
   font-weight: 700 !important;
   font-style: normal !important;
   font-size: 20px;
+  padding-bottom: 10px;
 }
 
 .sidebar-link {
@@ -77,6 +79,6 @@ export default {
 }
 
 .sidebar-height {
-  min-height: 92vh;
+  min-height: 91vh;
 }
 </style>
