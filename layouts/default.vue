@@ -64,6 +64,7 @@ h6 {
   font-weight: 700 !important;
   font-style: normal !important;
 }
+
 .display {
   font-family: neue-haas-grotesk-display, sans-serif !important;
   font-weight: 700 !important;

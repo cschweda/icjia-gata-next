@@ -28,6 +28,9 @@ in vastat carinae hanc?
 - Ipse classe arva quae incubat secernit Pisaeae
 - Inter est
 
+<div class="layout mt-4">
+<div class="flex xs6">
+
 ## Est ponto i oculosque tot Ascalaphus illuc
 
 Etiam curvamine moventem, figuras luce vinci; quae deusve species propiore
@@ -39,6 +42,10 @@ mihi sparsas.
 - Superis contraria amoris pulveris quae
 - Aetnam passura viridi cognita tamen
 - Est rerum caelumque inpiger
+
+  </div>
+
+  <div class="flex xs6">
 
 ## Alcmene nunc crudelis ille ante angit auro
 
@@ -55,3 +62,6 @@ ossibus. Suum tendere in ire aequore, annos. Et faciem autumnos, pavent cutem.
 Amuli suos, pro parte vipereas puerilibus ad tegebat pro sortis plena durescit.
 Artes genu uterum admonitu, bis rupisque ignes est facies imagine, est tenet
 solvi, est diversis.
+
+</div>
+</div>

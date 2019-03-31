@@ -1,5 +1,10 @@
 <template>
   <v-container grid-list-md>
+    <!-- <div class="flex-grid">
+      <div class="col">1</div>
+      <div class="col">2</div>
+      <div class="col">3</div>
+    </div>-->
     <v-layout row wrap>
       <v-flex xs12 sm12 md6>
         <v-card-text class="px-3">
