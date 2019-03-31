@@ -16,7 +16,7 @@
           <nuxt-link to="/grants">Grants</nuxt-link>
         </div>
         <div v-for="(page, index) in pages" :key="index">
-          <nuxt-link :to="page.slug">{{page.title}}</nuxt-link>
+          <nuxt-link :to="generateSlug(page.slug)">{{page.title}}</nuxt-link>
         </div>
         <div>
           <nuxt-link to="/search">Search</nuxt-link>
@@ -43,6 +43,11 @@ export default {
       console.log('click')
       this.sidebar = !this.sidebar
     })
+  },
+  methods: {
+    generateSlug(slug) {
+      return `/${slug}`
+    }
   }
 }
 </script>
