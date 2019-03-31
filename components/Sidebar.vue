@@ -1,12 +1,8 @@
 <template>
   <div>
     <v-navigation-drawer v-model="sidebar" absolute temporary>
-      <!-- <h2
-        class="text-xs-center"
-        style="font-size: 34px; margin-top: 20px;margin-bottom: 20px; border-bottom: 1px solid #ccc; padding-bottom: 10px;"
-      >TITLE HERE</h2>-->
-      <div class="mt-4 px-3">
-        <div class="sidebarItem">
+      <v-layout sidebar-height column ma-0 px-3>
+        <div class="sidebarItem mt-3">
           <nuxt-link to="/" class="sidebar-link">Home</nuxt-link>
         </div>
         <div class="sidebarItem">
@@ -15,18 +11,25 @@
         <div class="sidebarItem">
           <nuxt-link to="/grants" class="sidebar-link">Grants</nuxt-link>
         </div>
-        <div v-for="(page, index) in pages" :key="index" class="sidebarItem">
+
+        <div
+          v-for="(page, index) in pages"
+          :key="index"
+          class="sidebarItem"
+          style="margin-top: 0px;"
+        >
           <nuxt-link :to="generateSlug(page.slug)" class="sidebar-link">{{page.title}}</nuxt-link>
         </div>
+
         <div class="sidebarItem">
           <nuxt-link to="/search" class="sidebar-link">Search</nuxt-link>
         </div>
-      </div>
-      <!-- <v-spacer/>
-      <v-divider/>
-      <div class="text-xs-center mb-3 pt-3">
-        <h4 style="color: #333;">Additional Info Here</h4>
-      </div>-->
+        <v-spacer/>
+        <v-divider/>
+        <div class="text-xs-center mb-3 pt-3">
+          <h4 style="color: #333;">Additional Info Here</h4>
+        </div>
+      </v-layout>
     </v-navigation-drawer>
   </div>
 </template>
@@ -63,8 +66,6 @@ export default {
   font-weight: 700 !important;
   font-style: normal !important;
   font-size: 20px;
-  margin-top: 10px !important;
-  margin-bottom: 10px !important;
 }
 
 .sidebar-link {
@@ -73,5 +74,9 @@ export default {
 
 .sidebar-link:hover {
   color: #aaa;
+}
+
+.sidebar-height {
+  min-height: 92vh;
 }
 </style>
