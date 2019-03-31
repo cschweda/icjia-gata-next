@@ -84,4 +84,10 @@ h6 {
 .heavy {
   font-weight: 700;
 }
+
+.pageTitle {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 4px !important;
+  margin-bottom: 25px;
+}
 </style>

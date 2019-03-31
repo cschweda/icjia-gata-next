@@ -2,8 +2,8 @@
   <v-container grid-list-md>
     <v-layout row wrap>
       <v-flex xs12>
-        <h1 class="px-3">Grants</h1>
-        <v-card-text class="px-3">
+        <h1 class="pageTitle">Grant Opportunities</h1>
+        <v-card-text class>
           <v-switch v-model="showCurrent" :label="pageHeading"/>
           <div v-for="grant in grantsToDisplay" :key="grant.slug">
             <v-card class="mb-4">

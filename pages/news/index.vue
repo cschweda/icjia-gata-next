@@ -2,8 +2,8 @@
   <v-container grid-list-md>
     <v-layout row wrap>
       <v-flex xs12>
-        <h1 class="px-3">News</h1>
-        <v-card-text class="px-3">
+        <h1 class="pageTitle">News</h1>
+        <v-card-text class>
           <div v-for="post in news" :key="post.slug">
             <v-card class="mb-4">
               <v-card-title>
