@@ -4,6 +4,7 @@ posted: '2019-02-15'
 excerpt: 'ICJIA GATA Overview'
 menuItem: true
 position: 2
+section: 'pages'
 ---
 
 ## Vota omnis conatur adclivis moriemur nitidae Perseus

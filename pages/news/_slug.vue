@@ -2,8 +2,8 @@
   <v-layout>
     <v-container>
       <v-flex xs12>
-        <h1>{{ news.title }}</h1>
-        <p v-html="news.html"/>
+        <h1>{{ result.title }}</h1>
+        <p v-html="result.html"/>
       </v-flex>
     </v-container>
   </v-layout>
@@ -25,7 +25,7 @@ export default {
     const query = jsonata(`$[slug="${slug}"]`)
     const result = query.evaluate(store.state.news)
     if (result != undefined) {
-      return { news: result }
+      return { result }
     } else {
       return error({
         statusCode: 404,

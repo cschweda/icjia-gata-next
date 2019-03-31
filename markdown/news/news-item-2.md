@@ -7,6 +7,7 @@ Erinys mentis nectareis gaudia viventia, vidit herbas totidemque gravi, dea
 dispar que. Taurum quicumque metuendus Iolciacos stultae Pirithoi ad parat
 putetis: trahat venit quoque inplerant caducum, falce tanti praenuntia querenti.'
 status: 'live'
+section: 'news'
 ---
 
 ## Quam vestros ecce raptam

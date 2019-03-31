@@ -10,7 +10,7 @@
                 <nuxt-link :to="`/grants/${grant.slug}`">{{ grant.title }}</nuxt-link>
               </v-card-title>
               <v-card-text>
-                {{ grant.description }}
+                {{ grant.excerpt }}
                 <h4 class="mt-2">Posted: {{ grant.posted }}</h4>
                 <h4>Expires: {{ grant.expires }}</h4>
               </v-card-text>

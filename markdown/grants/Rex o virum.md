@@ -3,11 +3,12 @@ title: 'Rex o virum'
 created: '2019-02-29'
 posted: '2019-02-29'
 expires: '2019-03-15'
-description: 'Iactu e discederet, colorem festinant tibi meritorum semina vultus? Uti quibus
+excerpt: 'Iactu e discederet, colorem festinant tibi meritorum semina vultus? Uti quibus
 tempore partique confluat causa mutati magno hostem temploque se umeris! Inde
 molle mota, exiguus iacuit sui; mihi bina. Petitur sua simul est Actoriden!
 Parte digiti datum sumere ilia.'
 status: 'live'
+section: 'grants'
 ---
 
 ## Saepe ad guttura auras

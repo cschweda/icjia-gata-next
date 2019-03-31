@@ -10,13 +10,16 @@
           <nuxt-link to="/">Home</nuxt-link>
         </div>
         <div>
-          <nuxt-link to="news">News</nuxt-link>
+          <nuxt-link to="/news">News</nuxt-link>
         </div>
         <div>
           <nuxt-link to="/grants">Grants</nuxt-link>
         </div>
         <div v-for="(page, index) in pages" :key="index">
           <nuxt-link :to="page.slug">{{page.title}}</nuxt-link>
+        </div>
+        <div>
+          <nuxt-link to="/search">Search</nuxt-link>
         </div>
       </div>
     </v-navigation-drawer>

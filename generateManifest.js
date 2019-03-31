@@ -82,6 +82,7 @@ const readFiles = dirname => {
              */
             const f = filename.split('.')
             obj.slug = slug(f[0]).toLowerCase()
+
             /**
              * ... flatten obj by moving obj.attributes up one level ...
              */

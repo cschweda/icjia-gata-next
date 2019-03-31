@@ -6,6 +6,7 @@ excerpt: 'Lorem markdownum demas nimis conveniens partu conspexi debebunt, molli
 prospicit. Arbore perfundere, et amor volandi! Semper est modo nurumque hasta
 sed haec sit cornum vero pollens cruciabere?'
 status: 'live'
+section: 'news'
 ---
 
 ## Quam vestros ecce raptam
