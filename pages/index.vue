@@ -1,7 +1,7 @@
 <template>
   <v-container grid-list-md>
     <v-layout row wrap>
-      <v-flex xs12 sm12 md4>
+      <v-flex xs12 sm12 md6>
         <v-card-text class="px-3">
           <h2 class="mb-3">Current Grant Opportunities</h2>
           <div v-for="grant in grantsToDisplay" :key="grant.slug">
@@ -18,20 +18,8 @@
           </div>
         </v-card-text>
       </v-flex>
-      <v-flex xs12 sm12 md4>
-        <v-card-text class="px-3">
-          <h2 class="mb-3">Pages</h2>
-          <div v-for="page in pages" :key="page.slug">
-            <v-card class="mb-4">
-              <v-card-title>
-                <nuxt-link :to="`/${page.slug}`">{{ page.title }}</nuxt-link>
-              </v-card-title>
-              <v-card-text>{{ page.excerpt }}</v-card-text>
-            </v-card>
-          </div>
-        </v-card-text>
-      </v-flex>
-      <v-flex xs12 sm12 md4>
+
+      <v-flex xs12 sm12 md6>
         <v-card-text class="px-3">
           <h2 class="mb-3">News</h2>
           <div v-for="post in news" :key="post.slug">
@@ -52,6 +40,7 @@
 import format from 'date-fns/format'
 import { mapGetters } from 'vuex'
 export default {
+  transition: 'tweakOpacity',
   components: {},
   data() {
     return {

@@ -2,6 +2,7 @@
   <v-container grid-list-md>
     <v-layout row wrap>
       <v-flex xs12>
+        <h1 class="px-3">Grants</h1>
         <v-card-text class="px-3">
           <v-switch v-model="showCurrent" :label="pageHeading"/>
           <div v-for="grant in grantsToDisplay" :key="grant.slug">
@@ -26,6 +27,7 @@
 import format from 'date-fns/format'
 import { mapGetters } from 'vuex'
 export default {
+  transition: 'tweakOpacity',
   components: {},
   data() {
     return {

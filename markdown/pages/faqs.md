@@ -1,7 +1,9 @@
 ---
-title: 'ICJIA GATA Frequently Asked Questions'
+title: 'Frequently Asked Questions'
 posted: '2019-01-15'
 excerpt: 'ICJIA GATA Frequently Asked Questions'
+menuItem: true
+position: 4
 ---
 
 ## Viridique illum memor illa iamque seroque oculos

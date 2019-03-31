@@ -27,6 +27,24 @@ let md = require('markdown-it')({
   .use(require('markdown-it-named-headers'))
   .use(require('markdown-it-attrs'))
 
+/**
+ * Sort array of objects by property
+ *
+ * https://stackoverflow.com/questions/1129216/sort-array-of-objects-by-string-property-value
+ */
+function dynamicSort(property) {
+  var sortOrder = 1
+  if (property[0] === '-') {
+    sortOrder = -1
+    property = property.substr(1)
+  }
+  return function(a, b) {
+    var result =
+      a[property] < b[property] ? -1 : a[property] > b[property] ? 1 : 0
+    return result * sortOrder
+  }
+}
+
 function linkify(html, staticAssetDirectory) {
   const re = new RegExp('^(http|https|mailto)://', 'i')
 
@@ -116,14 +134,22 @@ markdownContentFolders.forEach(contentPath => {
    */
   readFiles(`${markdownSourcePath}${contentPath}/`).then(
     allContents => {
-      /**
-       * ... sort descending on 'posted' ...
-       */
-      allContents.sort(function compare(a, b) {
-        let dateA = new Date(a.posted)
-        let dateB = new Date(b.posted)
-        return dateB - dateA
-      })
+      if (contentPath === 'pages') {
+        /**
+         * ... sort on 'position' if item is a page ...
+         */
+        allContents.sort(dynamicSort('position'))
+      } else {
+        /**
+         * ... otherwise on 'posted' for everything else ...
+         */
+        allContents.sort(function compare(a, b) {
+          let dateA = new Date(a.posted)
+          let dateB = new Date(b.posted)
+          return dateB - dateA
+        })
+      }
+
       /**
        * ... then write a single json file to api directory for each content folder.
        */

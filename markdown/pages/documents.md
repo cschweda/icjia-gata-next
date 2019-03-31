@@ -1,7 +1,9 @@
 ---
-title: 'ICJIA GATA Documents'
+title: 'Documents'
 posted: '2019-01-15'
 excerpt: 'ICJIA GATA Documents'
+menuItem: true
+position: 5
 ---
 
 ## Thebas quae agitante ferens

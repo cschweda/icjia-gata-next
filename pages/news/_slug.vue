@@ -13,6 +13,7 @@
 import jsonata from 'jsonata'
 import { mapGetters } from 'vuex'
 export default {
+  transition: 'tweakOpacity',
   data() {
     return {}
   },
