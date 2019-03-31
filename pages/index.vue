@@ -8,14 +8,14 @@
         </v-flex>
       </v-layout>
     </v-container>
-    <div style="background: #aaa;">
+    <div style="background: #bbb;">
       <v-container grid-list-md>
         <v-layout row wrap>
           <v-flex xs12>
             <v-card-text class="px-3">
-              <h2 class="mb-3" style="color: #fff;">Current Grant Opportunities</h2>
+              <h2 class="mb-3" style="color: #333;">Current Grant Opportunities</h2>
               <div v-for="grant in grantsToDisplay" :key="grant.slug">
-                <v-card class="mb-4 elevation-0">
+                <v-card class="mb-4 elevation-2">
                   <v-card-title>
                     <nuxt-link :to="`/grants/${grant.slug}`">{{ grant.title }}</nuxt-link>
                   </v-card-title>
@@ -31,7 +31,7 @@
         </v-layout>
       </v-container>
     </div>
-    <v-container grid-list-md>
+    <!-- <v-container grid-list-md>
       <v-layout row wrap>
         <v-flex xs12>
           <v-card-text class="px-3">
@@ -47,7 +47,7 @@
           </v-card-text>
         </v-flex>
       </v-layout>
-    </v-container>
+    </v-container>-->
   </div>
 </template>
 

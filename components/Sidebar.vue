@@ -5,23 +5,28 @@
         class="text-xs-center"
         style="font-size: 34px; margin-top: 20px;margin-bottom: 20px; border-bottom: 1px solid #ccc; padding-bottom: 10px;"
       >TITLE HERE</h2>-->
-      <div class="mt-3">
-        <div>
-          <nuxt-link to="/">Home</nuxt-link>
+      <div class="mt-4 px-3">
+        <div class="sidebarItem">
+          <nuxt-link to="/" class="sidebar-link">Home</nuxt-link>
         </div>
-        <div>
-          <nuxt-link to="/news">News</nuxt-link>
+        <div class="sidebarItem">
+          <nuxt-link to="/news" class="sidebar-link">News</nuxt-link>
         </div>
-        <div>
-          <nuxt-link to="/grants">Grants</nuxt-link>
+        <div class="sidebarItem">
+          <nuxt-link to="/grants" class="sidebar-link">Grants</nuxt-link>
         </div>
-        <div v-for="(page, index) in pages" :key="index">
-          <nuxt-link :to="generateSlug(page.slug)">{{page.title}}</nuxt-link>
+        <div v-for="(page, index) in pages" :key="index" class="sidebarItem">
+          <nuxt-link :to="generateSlug(page.slug)" class="sidebar-link">{{page.title}}</nuxt-link>
         </div>
-        <div>
-          <nuxt-link to="/search">Search</nuxt-link>
+        <div class="sidebarItem">
+          <nuxt-link to="/search" class="sidebar-link">Search</nuxt-link>
         </div>
       </div>
+      <!-- <v-spacer/>
+      <v-divider/>
+      <div class="text-xs-center mb-3 pt-3">
+        <h4 style="color: #333;">Additional Info Here</h4>
+      </div>-->
     </v-navigation-drawer>
   </div>
 </template>
@@ -53,4 +58,20 @@ export default {
 </script>
 
 <style scoped>
+.sidebarItem {
+  font-family: neue-haas-grotesk-display, sans-serif !important;
+  font-weight: 700 !important;
+  font-style: normal !important;
+  font-size: 20px;
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+}
+
+.sidebar-link {
+  text-decoration: none !important;
+}
+
+.sidebar-link:hover {
+  color: #aaa;
+}
 </style>
