@@ -1,6 +1,11 @@
 <template>
   <div>
-    <v-navigation-drawer v-model="sidebar" absolute temporary>
+    <v-navigation-drawer
+      v-model="sidebar"
+      absolute
+      temporary
+      style="overflow-y: hidden !important;"
+    >
       <v-layout sidebar-height column ma-0 px-3>
         <div class="sidebarItem mt-3">
           <nuxt-link to="/" class="sidebar-link">Home</nuxt-link>
@@ -14,12 +19,15 @@
         <v-divider/>
         <div
           v-for="(page, index) in pages"
-          v-if="page.menuItem"
           :key="index"
           class="sidebarItem"
           style="margin-top: 0px;"
         >
-          <nuxt-link :to="generateSlug(page.slug)" class="sidebar-link">{{page.title}}</nuxt-link>
+          <nuxt-link
+            v-if="page.menuItem"
+            :to="generateSlug(page.slug)"
+            class="sidebar-link"
+          >{{page.title}}</nuxt-link>
         </div>
         <v-divider/>
         <div class="sidebarItem" style="padding-top: 10px;">

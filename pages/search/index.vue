@@ -2,7 +2,7 @@
   <div>
     <v-form class="pb-5 mt-2">
       <v-container>
-        <v-flex xs12>
+        <v-flex xs12 class="px-5">
           <h1 class="px-3">Search</h1>
           <v-text-field
             v-model="query"
@@ -11,7 +11,7 @@
             class="px-3"
             @keyup="instantSearch"
           />
-          <div v-for="(result, index) in results" :key="index" class="px-3">
+          <div v-for="(result, index) in results" :key="index" class="px-4">
             <div>
               <nuxt-link :to="generatePath(result)">
                 <h2>{{result.title}}</h2>

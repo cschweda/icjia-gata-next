@@ -1,23 +1,22 @@
 <template>
   <v-container grid-list-md>
     <v-layout row wrap>
-      <v-flex xs12>
+      <v-flex xs12 class="px-5">
         <h1 class="pageTitle">Grant Opportunities</h1>
-        <v-card-text class>
-          <v-switch v-model="showCurrent" :label="pageHeading"/>
-          <div v-for="grant in grantsToDisplay" :key="grant.slug">
-            <v-card class="mb-4">
-              <v-card-title>
-                <nuxt-link :to="`/grants/${grant.slug}`">{{ grant.title }}</nuxt-link>
-              </v-card-title>
-              <v-card-text>
-                {{ grant.excerpt }}
-                <h4 class="mt-2">Posted: {{ grant.posted }}</h4>
-                <h4>{{ isExpired(grant.expires) }}</h4>
-              </v-card-text>
-            </v-card>
-          </div>
-        </v-card-text>
+
+        <v-switch v-model="showCurrent" :label="pageHeading"/>
+        <div v-for="grant in grantsToDisplay" :key="grant.slug">
+          <v-card class="mb-4 px-3 py-3 elevation-1">
+            <h2>
+              <nuxt-link :to="`/grants/${grant.slug}`">{{ grant.title }}</nuxt-link>
+            </h2>
+            <v-card-text>
+              {{ grant.excerpt }}
+              <h4 class="mt-2">Posted: {{ grant.posted }}</h4>
+              <h4>{{ isExpired(grant.expires) }}</h4>
+            </v-card-text>
+          </v-card>
+        </div>
       </v-flex>
     </v-layout>
   </v-container>
@@ -44,9 +43,9 @@ export default {
     ]),
     pageHeading() {
       if (this.showCurrent) {
-        return 'Current'
+        return 'Current Opportunities'
       } else {
-        return 'All'
+        return 'All Opportunities'
       }
     },
     grantsToDisplay() {
@@ -73,3 +72,18 @@ export default {
   }
 }
 </script>
+
+<style>
+.v-input--selection-controls.v-input .v-label {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+h2 a {
+  text-decoration: none;
+}
+
+h2 a:hover {
+  color: #aaa;
+}
+</style>

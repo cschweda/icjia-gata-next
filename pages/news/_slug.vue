@@ -1,9 +1,9 @@
 <template>
   <v-layout>
     <v-container>
-      <v-flex xs12>
-        <h1>{{ result.title }}</h1>
-        <p v-html="result.html"/>
+      <v-flex xs12 class="px-5">
+        <h1 class="pageTitle">{{ result.title }}</h1>
+        <p class="px-3" v-html="result.html"/>
       </v-flex>
     </v-container>
   </v-layout>

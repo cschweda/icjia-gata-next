@@ -2,52 +2,33 @@
   <div>
     <v-container grid-list-md>
       <v-layout row wrap>
-        <v-flex xs12>
+        <v-flex xs12 px-5>
           <h1 class="pageTitle">GRANT ACCOUNTABILITY AND TRANSPARENCY AT ICJIA</h1>
           <div v-html="page.html"/>
         </v-flex>
       </v-layout>
     </v-container>
-    <div style="background: #bbb;">
+    <div style="background: #eee; border-top: 1px solid #ccc;">
       <v-container grid-list-md>
         <v-layout row wrap>
           <v-flex xs12>
-            <v-card-text class="px-3">
-              <h2 class="mb-3" style="color: #333;">Current Grant Opportunities</h2>
-              <div v-for="grant in grantsToDisplay" :key="grant.slug">
-                <v-card class="mb-4 elevation-2">
-                  <v-card-title>
-                    <nuxt-link :to="`/grants/${grant.slug}`">{{ grant.title }}</nuxt-link>
-                  </v-card-title>
-                  <v-card-text>
-                    {{ grant.excerpt }}
-                    <h4 class="mt-2">Posted: {{ grant.posted }}</h4>
-                    <h4>Expires: {{ grant.expires }}</h4>
-                  </v-card-text>
-                </v-card>
+            <h2 class="mb-3" style="color: #333;">Current Grant Opportunities</h2>
+            <div v-for="grant in grantsToDisplay" :key="grant.slug">
+              <div class="mb-4 px-5 py-4 elevation-1 grey lighten-4">
+                <h2>
+                  <nuxt-link :to="`/grants/${grant.slug}`">{{ grant.title }}</nuxt-link>
+                </h2>
+                <div>
+                  {{ grant.excerpt }}
+                  <h4 class="mt-2">Posted: {{ grant.posted }}</h4>
+                  <h4>Expires: {{ grant.expires }}</h4>
+                </div>
               </div>
-            </v-card-text>
+            </div>
           </v-flex>
         </v-layout>
       </v-container>
     </div>
-    <!-- <v-container grid-list-md>
-      <v-layout row wrap>
-        <v-flex xs12>
-          <v-card-text class="px-3">
-            <h2 class="mb-3">News</h2>
-            <div v-for="post in news" :key="post.slug">
-              <v-card class="mb-4 elevation-0">
-                <v-card-title>
-                  <nuxt-link :to="`/news/${post.slug}`">{{ post.title }}</nuxt-link>
-                </v-card-title>
-                <v-card-text>{{ post.excerpt }}</v-card-text>
-              </v-card>
-            </div>
-          </v-card-text>
-        </v-flex>
-      </v-layout>
-    </v-container>-->
   </div>
 </template>
 

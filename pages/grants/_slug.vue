@@ -1,9 +1,9 @@
 <template>
   <v-layout>
     <v-container>
-      <v-flex xs12>
-        <h1>{{ grant.title }}</h1>
-        <p v-html="grant.html"/>
+      <v-flex xs12 class="px-5">
+        <h1 class="pageTitle">{{ grant.title }}</h1>
+        <p class="px-3" v-html="grant.html"/>
       </v-flex>
     </v-container>
   </v-layout>

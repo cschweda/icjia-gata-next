@@ -1,10 +1,11 @@
 <template>
   <v-app>
-    <v-toolbar>
+    <v-toolbar color="blue darken-4" dark>
       <v-toolbar-side-icon @click="toggleSidebar"/>
       <v-toolbar-title class="display siteTitle">
         <nuxt-link to="/" class="noUnderline">
-          <span class="muted">ICJIA</span> | GATA Information
+          <span class="muted">ICJIA&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+          <span style="color: #fff !important">GATA Information</span>
         </nuxt-link>
       </v-toolbar-title>
       <v-spacer/>
@@ -65,6 +66,20 @@ h6 {
   font-style: normal !important;
 }
 
+h1 {
+  font-size: 2.3em;
+}
+
+h2 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+}
+
+h3 {
+  font-size: 1.3em;
+  margin-bottom: 15px;
+}
+
 .display {
   font-family: neue-haas-grotesk-display, sans-serif !important;
   font-weight: 700 !important;
@@ -78,7 +93,7 @@ h6 {
   text-decoration: none;
 }
 .muted {
-  color: #666 !important;
+  color: #ccc !important;
 }
 
 .heavy {
