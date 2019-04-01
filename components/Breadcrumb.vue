@@ -23,7 +23,7 @@ export default {
         if (i.length) {
           let obj = {}
           obj.text = i
-          console.log(index, crumbs.length)
+          //console.log(index, crumbs.length)
 
           if (index === 0) {
             obj.href = '/'
