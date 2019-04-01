@@ -23,11 +23,8 @@ export default {
         if (i.length) {
           let obj = {}
           obj.text = i
-          if (index === 2) {
-            obj.disabled = true
-          } else {
-            obj.disabled = false
-          }
+          console.log(index, crumbs.length)
+
           if (index === 0) {
             obj.href = '/'
           }
@@ -39,7 +36,7 @@ export default {
           crumbs.push(obj)
         }
       })
-      console.log(crumbs)
+      console.log((crumbs[crumbs.length - 1].disabled = true))
       return crumbs
     }
   }
