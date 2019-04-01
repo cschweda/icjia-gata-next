@@ -3,7 +3,7 @@
  */
 
 function linkify(html) {
-  const re = new RegExp('^(http|https|mailto)://', 'i')
+  const re = new RegExp('^(http|https|mailto):/?/?', 'i')
 
   const result = html.replace(/href="([^"]+)/g, function($1) {
     const arr = $1.split('"')

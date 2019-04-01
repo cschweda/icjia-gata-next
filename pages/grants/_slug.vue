@@ -3,7 +3,7 @@
     <v-container>
       <v-flex xs12 class="px-5">
         <h1 class="pageTitle">{{ grant.title }}</h1>
-        <p class="px-3" v-html="grant.html"/>
+        <p class="px-3 markdown-body" v-html="grant.html"/>
       </v-flex>
     </v-container>
   </v-layout>
