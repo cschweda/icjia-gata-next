@@ -1,4 +1,4 @@
-const config = {
+module.exports = {
   markdownItOptions: {
     html: true,
     xhtmlOut: false,
@@ -21,6 +21,23 @@ const config = {
     x: false,
     y: true
   },
+  siteConfig: {
+    pages: {
+      parentPath: '/',
+      type: 'page',
+      sortOn: 'position'
+    },
+    grants: {
+      parentPath: '/grants/',
+      type: 'grant',
+      sortOn: 'posted'
+    },
+    news: {
+      parentPath: '/news/',
+      type: 'news',
+      sortOn: 'posted'
+    }
+  },
   debug: false,
   theme: {
     dark: {
@@ -33,5 +50,3 @@ const config = {
     }
   }
 }
-
-export default config

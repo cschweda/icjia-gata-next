@@ -7,7 +7,7 @@
         <div v-for="post in news" :key="post.slug">
           <v-card class="mb-4 px-3 py-3 elevation-1">
             <h2>
-              <nuxt-link :to="`/news/${post.slug}`">{{ post.title }}</nuxt-link>
+              <nuxt-link :to="`${post.path}`">{{ post.title }}</nuxt-link>
             </h2>
             <v-card-text>
               {{ post.excerpt }}

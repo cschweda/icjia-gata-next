@@ -4,10 +4,27 @@ const path = require('path')
 const slug = require('slug')
 
 const markdownSourcePath = './markdown/'
-const markdownContentFolders = ['pages', 'grants', 'news']
+const staticAssetPath = './static/'
 const jsonDestinationPath = './api/'
-
-const staticAssetPath = '/static/'
+const config = require('./config')
+// console.log(config.siteConfig)
+// const siteConfig = {
+//   pages: {
+//     parentPath: '/',
+//     type: 'page',
+//     sortOn: 'position'
+//   },
+//   grants: {
+//     parentPath: '/grants/',
+//     type: 'grant',
+//     sortOn: 'posted'
+//   },
+//   news: {
+//     parentPath: '/news/',
+//     type: 'news',
+//     sortOn: 'posted'
+//   }
+// }
 
 const dateFields = ['posted', 'created', 'expires', 'updated']
 const format = require('date-fns/format')
@@ -103,6 +120,12 @@ const readFiles = dirname => {
              * ... delete obj.attributes ...
              */
             delete obj.attributes
+
+            /**
+             * ... generate url path ...
+             */
+
+            obj.path = `${config.siteConfig[obj.section].parentPath}${obj.slug}`
             /**
              * ... render markdown to html ...
              * ... and replace non-http/s links with static path and markdown filename ...
@@ -113,7 +136,6 @@ const readFiles = dirname => {
              */
             delete obj.body
 
-            // console.log(obj.title, datefns.format(obj.posted))
             resolve(obj)
           })
         })
@@ -126,27 +148,23 @@ if (!fs.existsSync(`${jsonDestinationPath}`)) {
   fs.mkdirSync(`${jsonDestinationPath}`)
 }
 
-/**
- * Iterate through content folders ...
- */
-markdownContentFolders.forEach(contentPath => {
-  /**
-   * ... read each markdown file ...
-   */
-  readFiles(`${markdownSourcePath}${contentPath}/`).then(
+const siteArray = Object.getOwnPropertyNames(config.siteConfig)
+siteArray.forEach(obj => {
+  readFiles(`${markdownSourcePath}${obj}/`).then(
     allContents => {
-      if (contentPath === 'pages') {
+      if (config.siteConfig[obj].type === 'page') {
         /**
          * ... sort on 'position' if item is a page ...
          */
         allContents.sort(dynamicSort('position'))
       } else {
         /**
-         * ... otherwise on 'posted' for everything else ...
+         * ... otherwise on specific date field for everything else ...
          */
+
         allContents.sort(function compare(a, b) {
-          let dateA = new Date(a.posted)
-          let dateB = new Date(b.posted)
+          let dateA = new Date(a[config.siteConfig[obj].sortOn])
+          let dateB = new Date(b[config.siteConfig[obj].sortOn])
           return dateB - dateA
         })
       }
@@ -155,9 +173,10 @@ markdownContentFolders.forEach(contentPath => {
        * ... then write a single json file to api directory for each content folder.
        */
       fs.writeFileSync(
-        `${jsonDestinationPath}${contentPath}.json`,
+        `${jsonDestinationPath}${obj}.json`,
         JSON.stringify(allContents)
       )
+      console.log(`${jsonDestinationPath}${obj}.json: successfully created`)
     },
     error => console.log(error)
   )

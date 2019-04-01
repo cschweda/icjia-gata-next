@@ -8,7 +8,7 @@
         <div v-for="grant in grantsToDisplay" :key="grant.slug">
           <v-card class="mb-4 px-3 py-3 elevation-1">
             <h2>
-              <nuxt-link :to="`/grants/${grant.slug}`">{{ grant.title }}</nuxt-link>
+              <nuxt-link :to="`${grant.path}`">{{ grant.title }}</nuxt-link>
             </h2>
             <v-card-text>
               {{ grant.excerpt }}

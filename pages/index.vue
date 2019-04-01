@@ -16,7 +16,7 @@
             <div v-for="grant in grantsToDisplay" :key="grant.slug">
               <div class="mb-4 px-5 py-4 elevation-1 grey lighten-4">
                 <h2>
-                  <nuxt-link :to="`/grants/${grant.slug}`">{{ grant.title }}</nuxt-link>
+                  <nuxt-link :to="`${grant.path}`">{{ grant.title }}</nuxt-link>
                 </h2>
                 <div>
                   {{ grant.excerpt }}
@@ -36,6 +36,7 @@
 import jsonata from 'jsonata'
 import format from 'date-fns/format'
 import { mapGetters } from 'vuex'
+
 export default {
   transition: 'tweakOpacity',
   components: {},

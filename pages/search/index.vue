@@ -13,7 +13,7 @@
           />
           <div v-for="(result, index) in results" :key="index" class="px-4">
             <div>
-              <nuxt-link :to="generatePath(result)">
+              <nuxt-link :to="result.path">
                 <h2>{{result.title}}</h2>
               </nuxt-link>
               <p>{{result.excerpt}}</p>
@@ -48,20 +48,13 @@ export default {
       distance: 100,
       maxPatternLength: 32,
       minMatchCharLength: 1,
-      keys: ['title', 'excerpt', 'html']
+      keys: ['title', 'excerpt', 'html', 'section', 'posted']
     })
   },
 
   methods: {
     instantSearch() {
       this.results = this.fuse.search(this.query)
-    },
-    generatePath(result) {
-      if (result.section != 'pages') {
-        return `/${result.section}/${result.slug}`
-      } else {
-        return `/${result.slug}`
-      }
     }
   }
 }
