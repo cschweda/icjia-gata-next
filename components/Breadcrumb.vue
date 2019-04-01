@@ -1,6 +1,6 @@
 <template>
   
-  <v-breadcrumbs :items="items" class="crumbs" divider=">"/>
+  <v-breadcrumbs :items="items" class="crumbs" divider="|"/>
   
  
  
@@ -23,7 +23,6 @@ export default {
         if (i.length) {
           let obj = {}
           obj.text = i
-          //console.log(index, crumbs.length)
 
           if (index === 0) {
             obj.href = '/'
@@ -36,7 +35,7 @@ export default {
           crumbs.push(obj)
         }
       })
-      console.log((crumbs[crumbs.length - 1].disabled = true))
+      crumbs[crumbs.length - 1].disabled = true
       return crumbs
     }
   }

@@ -24,7 +24,6 @@ function linkify(html, section, slug) {
     let match = re.test(arr[1])
     if (!match) {
       const href = `${section}/${slug}/${arr[1]}`
-
       return `href="/${href}`
     }
     return $1
