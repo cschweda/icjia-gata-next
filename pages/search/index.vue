@@ -2,13 +2,13 @@
   <div>
     <v-form class="pb-5 mt-2">
       <v-container>
-        <v-flex xs12 class="px-5">
-          <h1 class="px-3">Search</h1>
+        <v-flex xs12>
+          <h1>Search</h1>
           <v-text-field
             v-model="query"
             label="Search"
             placeholder="Enter search term"
-            class="px-3"
+           
             @keyup="instantSearch"
           />
           <div v-for="(result, index) in results" :key="index" class="px-4">

@@ -1,6 +1,7 @@
 <template>
   <div>
     <base-page :content="page"/>
+    
   </div>
 </template>
 
@@ -8,6 +9,7 @@
 import jsonata from 'jsonata'
 import { mapGetters } from 'vuex'
 import BasePage from '@/components/BasePage'
+
 export default {
   transition: 'tweakOpacity',
   components: {

@@ -1,7 +1,7 @@
 <template>
   <v-container grid-list-md>
     <v-layout row wrap>
-      <v-flex xs12 class="px-5">
+      <v-flex xs12>
         <h1 class="pageTitle rule">News</h1>
 
         <div v-for="post in news" :key="post.slug">

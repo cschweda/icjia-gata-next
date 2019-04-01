@@ -7,24 +7,6 @@ const markdownSourcePath = './markdown/'
 const staticAssetPath = '/'
 const jsonDestinationPath = './api/'
 const config = require('./config')
-// console.log(config.siteConfig)
-// const siteConfig = {
-//   pages: {
-//     parentPath: '/',
-//     type: 'page',
-//     sortOn: 'position'
-//   },
-//   grants: {
-//     parentPath: '/grants/',
-//     type: 'grant',
-//     sortOn: 'posted'
-//   },
-//   news: {
-//     parentPath: '/news/',
-//     type: 'news',
-//     sortOn: 'posted'
-//   }
-// }
 
 const dateFields = ['posted', 'created', 'expires', 'updated']
 const format = require('date-fns/format')
@@ -60,20 +42,6 @@ function dynamicSort(property) {
       a[property] < b[property] ? -1 : a[property] > b[property] ? 1 : 0
     return result * sortOrder
   }
-}
-
-function linkify(html, staticAssetDirectory) {
-  const re = new RegExp('^(http|https|mailto):/?/?', 'i')
-
-  const result = html.replace(/href="([^"]+)/g, function($1) {
-    const arr = $1.split('"')
-    let match = re.test(arr[1])
-    if (!match) {
-      return `href="${staticAssetPath}${staticAssetDirectory}/${arr[1]}`
-    }
-    return $1
-  })
-  return result
 }
 
 const readFiles = dirname => {
@@ -125,16 +93,13 @@ const readFiles = dirname => {
              * ... generate url path ...
              */
             //console.log(config.siteConfig[obj.section])
-            obj.path = `${config.siteConfig[obj.section].parentPath}${obj.slug}`
-            /**
-             * ... render markdown to html ...
-             * ... and replace non-http/s links with static path and markdown filename ...
-             */
-            obj.html = linkify(md.render(obj.body), f[0])
-            /**
-             * ... and delete markdown.
-             */
-            delete obj.body
+            if (obj.slug != 'home') {
+              obj.path = `${config.siteConfig[obj.section].parentPath}${
+                obj.slug
+              }`
+            } else {
+              obj.path = '/'
+            }
 
             resolve(obj)
           })

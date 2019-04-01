@@ -5,7 +5,7 @@
       <v-toolbar-title class="display siteTitle">
         <nuxt-link to="/" class="noUnderline">
           <span class="muted">ICJIA&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-          <span style="color: #fff !important">GATA Information</span>
+          <span style="color: #fff !important">GATA INFORMATION</span>
         </nuxt-link>
       </v-toolbar-title>
       <v-spacer/>
@@ -19,11 +19,11 @@
       </v-toolbar-items>
     </v-toolbar>
 
-    <v-content>
+    
      
-      <sidebar/>
-      <nuxt/>
-    </v-content>
+    <sidebar/>
+    <nuxt/>
+    <!-- </v-content> -->
   </v-app>
 </template>
 

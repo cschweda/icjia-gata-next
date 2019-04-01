@@ -1,20 +1,18 @@
 <template>
-  <v-layout>
-    <v-container>
-      <v-flex xs12 class="px-5">
-        <div class="nofo">Notice of Funding Opportunity</div>
-        <h1 class="pageTitle">{{ grant.title }}</h1>
-        <p class="px-3 markdown-body" v-html="grant.html"/>
-      </v-flex>
-    </v-container>
-  </v-layout>
+  <div>
+    <base-page :content="result"/>
+  </div>
 </template>
 
 <script>
 import jsonata from 'jsonata'
 import { mapGetters } from 'vuex'
+import BasePage from '@/components/BasePage'
 export default {
   transition: 'tweakOpacity',
+  components: {
+    BasePage
+  },
   data() {
     return {}
   },
@@ -26,7 +24,7 @@ export default {
     const query = jsonata(`$[slug="${slug}"]`)
     const result = query.evaluate(store.state.funding)
     if (result != undefined) {
-      return { grant: result }
+      return { result }
     } else {
       return error({
         statusCode: 404,

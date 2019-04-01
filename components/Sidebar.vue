@@ -14,7 +14,7 @@
           <nuxt-link to="/news" class="sidebar-link">News</nuxt-link>
         </div>
         <div class="sidebarItem">
-          <nuxt-link to="/funding" class="sidebar-link">Funding</nuxt-link>
+          <nuxt-link to="/funding" class="sidebar-link">Funding Opportunities</nuxt-link>
         </div>
         <v-divider/>
         <div

@@ -1,7 +1,7 @@
 <template>
   <v-container grid-list-md>
     <v-layout row wrap>
-      <v-flex xs12 class="px-5">
+      <v-flex xs12>
         <h1 class="pageTitle rule">Funding Opportunities</h1>
         
         <v-switch v-model="showCurrent" :label="pageHeading" :class="{isExpired: !showCurrent, isCurrent: showCurrent}" />

@@ -29,7 +29,7 @@ in vastat carinae hanc?
 - Inter est
 
 <div class="layout mt-4">
-<div class="flex xs6">
+<div class="flex xs12 sm12 md6">
 
 ## Est ponto i oculosque tot Ascalaphus illuc
 
@@ -45,7 +45,7 @@ mihi sparsas.
 
   </div>
 
-  <div class="flex xs6">
+  <div class="flex xs12 sm12 md6">
 
 ## Alcmene nunc crudelis ille ante angit auro
 

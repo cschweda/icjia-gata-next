@@ -1,19 +1,18 @@
 <template>
-  <v-layout>
-    <v-container>
-      <v-flex xs12 class="px-5">
-        <h1 class="pageTitle">{{ result.title }}</h1>
-        <p class="px-3" v-html="result.html"/>
-      </v-flex>
-    </v-container>
-  </v-layout>
+  <div>
+    <base-page :content="result"/>
+    
+  </div>
 </template>
 
 <script>
+import BasePage from '@/components/BasePage'
 import jsonata from 'jsonata'
 import { mapGetters } from 'vuex'
+
 export default {
   transition: 'tweakOpacity',
+  components: { BasePage },
   data() {
     return {}
   },
@@ -32,7 +31,8 @@ export default {
         message: ' Page not found '
       })
     }
-  }
+  },
+  computed: {}
 }
 </script>
 

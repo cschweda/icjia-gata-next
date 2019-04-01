@@ -4,7 +4,7 @@
       <v-layout row wrap>
         <v-flex xs12 px-5>
           <h1 class="pageTitle center">GRANT ACCOUNTABILITY AND TRANSPARENCY AT ICJIA</h1>
-          <div v-html="page.html"/>
+          <div v-html="markdown"/>
         </v-flex>
       </v-layout>
     </v-container>
@@ -36,6 +36,18 @@
 import jsonata from 'jsonata'
 import format from 'date-fns/format'
 import { mapGetters } from 'vuex'
+let md = require('markdown-it')({
+  html: true,
+  xhtmlOut: false,
+  breaks: false,
+  langPrefix: 'language-',
+  linkify: true,
+  typographer: false,
+  quotes: '“”‘’'
+})
+  .use(require('markdown-it-footnote'))
+  .use(require('markdown-it-named-headers'))
+  .use(require('markdown-it-attrs'))
 
 export default {
   transition: 'tweakOpacity',
@@ -66,6 +78,9 @@ export default {
       'news'
       // ...
     ]),
+    markdown() {
+      return md.render(this.page.body)
+    },
     grantsToDisplay() {
       let now = format(new Date())
       let currentGrants = this.funding.filter(grant => {
