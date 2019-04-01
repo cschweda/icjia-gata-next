@@ -34,6 +34,7 @@ export default {
       now: format(new Date())
     }
   },
+
   computed: {
     // mix the getters into computed with object spread operator
     ...mapGetters([
@@ -45,21 +46,32 @@ export default {
       if (this.showCurrent) {
         return 'Current Opportunities'
       } else {
-        return 'All Opportunities'
+        return 'Expired Opportunities'
       }
     },
     grantsToDisplay() {
       if (!this.showCurrent) {
-        return this.grants
+        return this.grants.filter(grant => {
+          if (grant.expires <= this.now) {
+            return grant
+          }
+        })
       } else {
-        let currentGrants = this.grants.filter(grant => {
+        return this.grants.filter(grant => {
           if (grant.expires > this.now) {
             return grant
           }
         })
-        return currentGrants
       }
     }
+  },
+  mounted() {
+    let expired = this.grants.filter(grant => {
+      if (grant.expires <= this.now) {
+        return grant
+      }
+    })
+    console.log(expired)
   },
   methods: {
     isExpired(date) {

@@ -38,15 +38,5 @@ module.exports = {
       sortOn: 'posted'
     }
   },
-  debug: false,
-  theme: {
-    dark: {
-      color: '#fff',
-      background: '#00695C'
-    },
-    light: {
-      color: '#333',
-      background: '#efefef'
-    }
-  }
+  debug: false
 }
