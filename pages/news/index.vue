@@ -2,7 +2,7 @@
   <v-container grid-list-md>
     <v-layout row wrap>
       <v-flex xs12 class="px-5">
-        <h1 class="pageTitle">News</h1>
+        <h1 class="pageTitle rule">News</h1>
 
         <div v-for="post in news" :key="post.slug">
           <v-card class="mb-4 px-3 py-3 elevation-1">

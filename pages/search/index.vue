@@ -37,10 +37,10 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(['pages', 'grants', 'news'])
+    ...mapGetters(['pages', 'funding', 'news'])
   },
   mounted() {
-    let allSiteContent = [...this.news, ...this.pages, ...this.grants]
+    let allSiteContent = [...this.news, ...this.pages, ...this.funding]
     this.fuse = new Fuse(allSiteContent, {
       shouldSort: true,
       threshold: 0.5,

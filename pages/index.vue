@@ -3,7 +3,7 @@
     <v-container grid-list-md>
       <v-layout row wrap>
         <v-flex xs12 px-5>
-          <h1 class="pageTitle">GRANT ACCOUNTABILITY AND TRANSPARENCY AT ICJIA</h1>
+          <h1 class="pageTitle center">GRANT ACCOUNTABILITY AND TRANSPARENCY AT ICJIA</h1>
           <div v-html="page.html"/>
         </v-flex>
       </v-layout>
@@ -12,7 +12,7 @@
       <v-container grid-list-md>
         <v-layout row wrap>
           <v-flex xs12>
-            <h2 class="mb-3" style="color: #333;">Current Grant Opportunities</h2>
+            <h2 class="mb-3" style="color: #333;">Current Funding Opportunities</h2>
             <div v-for="grant in grantsToDisplay" :key="grant.slug">
               <div class="mb-4 px-5 py-4 elevation-1 grey lighten-4">
                 <h2>
@@ -61,14 +61,14 @@ export default {
   computed: {
     // mix the getters into computed with object spread operator
     ...mapGetters([
-      'grants',
+      'funding',
       'pages',
       'news'
       // ...
     ]),
     grantsToDisplay() {
       let now = format(new Date())
-      let currentGrants = this.grants.filter(grant => {
+      let currentGrants = this.funding.filter(grant => {
         if (grant.expires > now) {
           return grant
         }

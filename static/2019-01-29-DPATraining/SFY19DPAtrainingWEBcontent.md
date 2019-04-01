@@ -1,13 +1,11 @@
----
-title: 'Death Penalty Abolition Fund: Law Enforcement Training'
-created: '2019-01-29'
-posted: '2019-01-29'
-expires: '2019-03-18'
-excerpt: 'The Illinois Criminal Justice Information Authority is requesting proposals for grants funding training of law enforcement personnel. Grants will be made with State Fiscal Year 2019 Death Penalty Abolition (DPA) funds. A total of $4.5 million in funding is available through this solicitation for use over a period of two months. Contingent on future appropriation and satisfactory performance, State Fiscal Year 2020 DPA funds also may be made available through this opportunity.'
-status: 'live'
-section: 'grants'
----
-[View the Notice of Funding Opportunity](DPAtrainingNOFO.pdf) {.text-xs-center}
+# DEATH PENALTY ABOLITION FUND 
+Notice of Funding Opportunity
+
+Law Enforcement Personnel Training
+
+
+
+## [View the Notice of Funding Opportunity](DPAtrainingNOFO.pdf)
 
 ## Introduction
 
@@ -84,15 +82,15 @@ Agencies interested in applying are asked to submit an online Notice of Intent b
 [Complete Notice of Intent](https://icjia.az1.qualtrics.com/jfe/form/SV_b2XTIkFxFR0807z)
 
 ## Timeline:
-|                             Task                             |              Date              |
-| :----------------------------------------------------------: | :----------------------------: |
-|                         NOFO Posted                          |      **January 30, 2019**      |
-|          Technical assistance recordings available           |        January 30, 2019        |
-|                    Notices of Intent due                     |        February 7, 2019        |
-|              NOFO question submission deadline               |         March 11, 2019         |
-|                     **Applications due**                     | **11:59 p.m., March 18, 2019** |
-| Budget Committee review/approval of recommended designations |         April 18, 2019         |
-|                 Projected program start date                 |          May 1, 2019           |
+Task | Date
+:----: | :---:
+NOFO Posted | **January 30, 2019**
+Technical assistance recordings available | January 30, 2019
+Notices of Intent due | February 7, 2019
+NOFO question submission deadline |  March 11, 2019
+**Applications due** |  **11:59 p.m., March 18, 2019**
+Budget Committee review/approval of recommended designations | April 18, 2019
+Projected program start date | May 1, 2019
 
 ## Reporting
 Recipients must submit quarterly financial reports, quarterly progress reports, final financial and progress reports, and, if applicable, an annual audit report in accordance with the CFR Part 200 Uniform Requirements. Future awards and fund drawdowns may be withheld if reports are delinquent.

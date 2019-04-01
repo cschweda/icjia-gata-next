@@ -1,20 +1,10 @@
----
-title: 'Violence Against Women Act (VAWA)  Notice of Funding Opportunity Services for Underserved Areas & Victim Groups'
-created: '2019-03-29'
-posted: '2019-03-29'
-expires: '2019-04-30'
-excerpt: 'The Illinois Criminal Justice Information Authority is requesting applications for grants for the Services for Underserved Areas and Victim Groups Program. Grants will be made with FFY18 Violence Against Women Act funds. A total of $1.4 million is available through this solicitation for use over a period of 12 months. '
-status: 'live'
-section: 'grants'
----
+# <p class="text-center"> Violence Against Women Act (VAWA)  Notice of Funding Opportunity Services for Underserved Areas & Victim Groups
 
-[Link to NOFO](VAWANOFO.pdf) {.text-xs-center}
+## <p class="text-center">[Link to NOFO](VAWANOFO.pdf)
 
 The Illinois Criminal Justice Information Authority is requesting applications for grants for the Services for Underserved Areas and Victim Groups Program. Grants will be made with FFY18 Violence Against Women Act funds. A total of $1.4 million is available through this solicitation for use over a period of 12 months. 
 
-## Application deadline
-
- Application materials must be received by **11:59 p.m. on Tuesday, April 30, 2019**. 
+**Application deadline:** Application materials must be received by **11:59 p.m. on Tuesday, April 30, 2019**. 
 
 ## Program Requirements
 
@@ -48,15 +38,15 @@ N/A
 	
 ## Timeline
 
-|                             Task                             |        Date        |
-| :----------------------------------------------------------: | :----------------: |
-|                         NOFO posted                          |   April 1, 2019    |
-|           Technical Assistance Recording available           |        N/A         |
-|                     Notice of Intent due                     |        N/A         |
-|              NOFO question submission deadline               |   April 15, 2019   |
-|                     **Applications due**                     | **April 30, 2019** |
-| Budget Committee review/approval of recommended designations |     June 2019      |
-|                      Program start date                      |    July 1, 2019    |
+Task | Date
+:----: | :----: |
+NOFO posted | April 1, 2019	
+Technical Assistance Recording available |  N/A
+Notice of Intent due  | N/A
+NOFO question submission deadline | April 15, 2019
+**Applications due** | **April 30, 2019**
+Budget Committee review/approval of recommended designations | June 2019
+Program start date | July 1, 2019
 	
 ## Reporting
 
@@ -68,10 +58,6 @@ In addition, funded programs will be required to report performance measures thr
 	
 The following documents must be emailed to 2019VAWANOFO@Illinois.gov by the **11:59 p.m., Tuesday, April 30, 2019,** deadline for application review. 
 	
-* [Completed and signed Uniform State Grant Application (Word)](VAWAApplication.pdf) 
-* [Completed Program Narrative (Word)](VAWAProgramNarrative.docx)
-* [Completed Budget/Budget Narrative (Excel)](VAWABudget.xls)
-
 ## Questions
 
 Questions regarding this NOFO may be submitted to 2019VAWANOFO@Illinois.gov until 11:59 p.m. on April 15, 2019.  Questions and responses will be posted at https://grants.icjia.cloud. 
@@ -83,3 +69,9 @@ Illinois Criminal Justice Information Authority
 300 West Adams, Suite 200
 Chicago, IL 60606
 2019VAWANOFO@Illinois.gov
+
+
+
+
+
+

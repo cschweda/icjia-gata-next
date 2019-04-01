@@ -12,7 +12,7 @@
       <v-toolbar-items class="hidden-sm-and-down display">
         <v-btn flat to="/news" class="heavy muted">News</v-btn>
 
-        <v-btn flat to="/grants" class="heavy muted">Grant Opportunities</v-btn>
+        <v-btn flat to="/funding" class="heavy muted">Funding Opportunities</v-btn>
         <v-btn icon to="/search">
           <v-icon>search</v-icon>
         </v-btn>
@@ -20,7 +20,7 @@
     </v-toolbar>
 
     <v-content>
-      <!-- <v-navigation-drawer v-model="drawer" absolute temporary>Test</v-navigation-drawer> -->
+     
       <sidebar/>
       <nuxt/>
     </v-content>
@@ -111,9 +111,25 @@ h3 {
   /* border-bottom: 1px solid #ccc; */
   padding-bottom: 4px !important;
   margin-bottom: 25px;
+  text-align: left;
+  color: #1a237e;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+
+.pageTitle.center {
+  /* border-bottom: 1px solid #ccc; */
+  padding-bottom: 4px !important;
+  margin-bottom: 25px;
   text-align: center;
   color: #1a237e;
   text-transform: uppercase;
+}
+
+.pageTitle.rule {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 8px;
+  margin-bottom: 25px;
 }
 
 /* Github CSS */

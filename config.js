@@ -27,9 +27,9 @@ module.exports = {
       type: 'page',
       sortOn: 'position'
     },
-    grants: {
-      parentPath: '/grants/',
-      type: 'grant',
+    funding: {
+      parentPath: '/funding/',
+      type: 'funding',
       sortOn: 'posted'
     },
     news: {

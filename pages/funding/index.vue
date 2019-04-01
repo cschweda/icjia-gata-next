@@ -2,18 +2,23 @@
   <v-container grid-list-md>
     <v-layout row wrap>
       <v-flex xs12 class="px-5">
-        <h1 class="pageTitle">Grant Opportunities</h1>
-
-        <v-switch v-model="showCurrent" :label="pageHeading"/>
+        <h1 class="pageTitle rule">Funding Opportunities</h1>
+        
+        <v-switch v-model="showCurrent" :label="pageHeading" :class="{isExpired: !showCurrent, isCurrent: showCurrent}" />
+       
         <div v-for="grant in grantsToDisplay" :key="grant.slug">
+         
           <v-card class="mb-4 px-3 py-3 elevation-1">
+            <div class="text-xs-right date" v-html="isExpired(grant.expires)"/>
             <h2>
               <nuxt-link :to="`${grant.path}`">{{ grant.title }}</nuxt-link>
             </h2>
+            <h4 class="mt-2" style="color: #666">Posted: {{ grant.posted }}</h4>
             <v-card-text>
+              
               {{ grant.excerpt }}
-              <h4 class="mt-2">Posted: {{ grant.posted }}</h4>
-              <h4>{{ isExpired(grant.expires) }}</h4>
+              
+              
             </v-card-text>
           </v-card>
         </div>
@@ -38,7 +43,7 @@ export default {
   computed: {
     // mix the getters into computed with object spread operator
     ...mapGetters([
-      'grants',
+      'funding',
       'pages'
       // ...
     ]),
@@ -46,18 +51,18 @@ export default {
       if (this.showCurrent) {
         return 'Current Opportunities'
       } else {
-        return 'Expired Opportunities'
+        return 'Expired'
       }
     },
     grantsToDisplay() {
       if (!this.showCurrent) {
-        return this.grants.filter(grant => {
+        return this.funding.filter(grant => {
           if (grant.expires <= this.now) {
             return grant
           }
         })
       } else {
-        return this.grants.filter(grant => {
+        return this.funding.filter(grant => {
           if (grant.expires > this.now) {
             return grant
           }
@@ -66,19 +71,22 @@ export default {
     }
   },
   mounted() {
-    let expired = this.grants.filter(grant => {
+    let expired = this.funding.filter(grant => {
       if (grant.expires <= this.now) {
         return grant
       }
     })
-    console.log(expired)
+    //console.log(expired)
   },
   methods: {
     isExpired(date) {
       if (this.now > date) {
-        return 'Expired'
+        return '<h4 style="color: #D84315;">Expired</h4>'
       } else {
-        return `Deadlline: ${date}`
+        return `<h4><span>Deadline:&nbsp;&nbsp;${format(
+          date,
+          'MMMM DD, YYYY'
+        )}</span></h4>`
       }
     }
   }
@@ -86,8 +94,15 @@ export default {
 </script>
 
 <style>
-.v-input--selection-controls.v-input .v-label {
-  font-weight: 700;
+.isCurrent.v-input--selection-controls.v-input .v-label {
+  /* color: #2e7d32; */
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.isExpired.v-input--selection-controls.v-input .v-label {
+  /* color: #d84315; */
+  font-weight: bold;
   font-size: 18px;
 }
 
@@ -97,5 +112,11 @@ h2 a {
 
 h2 a:hover {
   color: #aaa;
+}
+
+.date {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #666;
 }
 </style>

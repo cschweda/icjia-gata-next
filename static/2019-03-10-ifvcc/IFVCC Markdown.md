@@ -1,15 +1,6 @@
----
-title: 'Illinois Family Violence Coordinating Council  Notice of Funding Opportunity'
-created: '2019-03-13'
-posted: '2019-03-13'
-expires: '2019-04-05'
-excerpt: 'The Illinois Criminal Justice Information Authority is requesting proposals for grants funding local Illinois Family Violence Coordinating Council (IFVCC). Grants will be made with IFVCC state fiscal year 2020 funds. A total of $435,000 in funding is available through this solicitation for use over a period of 12 months. '
-status: 'live'
-section: 'grants'
----
+# <p class="text-center"> Illinois Family Violence Coordinating Council  Notice of Funding Opportunity
 
-
-[Link to NOFO](IFVCCNOFO.pdf) {.text-xs-center}
+## <p class="text-center">[Link to NOFO](IFVCCNOFO.pdf)
 
 The Illinois Criminal Justice Information Authority is requesting proposals for grants funding local Illinois Family Violence Coordinating Council (IFVCC). Grants will be made with IFVCC state fiscal year 2020 funds. A total of $435,000 in funding is available through this solicitation for use over a period of 12 months. 
 
@@ -85,15 +76,15 @@ Agencies interested in applying are asked to submit an online Notice of Intent b
 	
 ## Timeline
 
-|                             Task                             |             Date              |
-| :----------------------------------------------------------: | :---------------------------: |
-|                         NOFO posted                          |         March 6, 2019         |
-|           Technical Assistance Recording available           |        March 13, 2019         |
-|                     Notice of Intent due                     |        March 20, 2019         |
-|              NOFO question submission deadline               |        March 29, 2019         |
-|                     **Applications due**                     | **11:59 p.m., April 5, 2019** |
-| Budget Committee review/approval of recommended designations |         June 27, 2019         |
-|                      Program start date                      |         July 1, 2019          |
+Task | Date
+:----: | :----: |
+NOFO posted | March 6, 2019	
+Technical Assistance Recording available |  March 13, 2019
+Notice of Intent due  | March 20, 2019
+NOFO question submission deadline | March 29, 2019
+**Applications due** | **11:59 p.m., April 5, 2019**
+Budget Committee review/approval of recommended designations | June 27, 2019
+Program start date | July 1, 2019
 
 ## Reporting
 
@@ -118,3 +109,8 @@ Illinois Criminal Justice Information Authority
 607 East Adams, Suite 906
 Springfield, IL 62701
 CJA.IFVCC.NOFO@Illinois.gov 
+ 
+
+
+
+

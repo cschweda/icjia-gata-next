@@ -4,7 +4,7 @@ const path = require('path')
 const slug = require('slug')
 
 const markdownSourcePath = './markdown/'
-const staticAssetPath = './static/'
+const staticAssetPath = '/'
 const jsonDestinationPath = './api/'
 const config = require('./config')
 // console.log(config.siteConfig)
@@ -124,7 +124,7 @@ const readFiles = dirname => {
             /**
              * ... generate url path ...
              */
-
+            //console.log(config.siteConfig[obj.section])
             obj.path = `${config.siteConfig[obj.section].parentPath}${obj.slug}`
             /**
              * ... render markdown to html ...
@@ -180,4 +180,5 @@ siteArray.forEach(obj => {
     },
     error => console.log(error)
   )
+  console.log(obj)
 })
