@@ -2,7 +2,7 @@
   <div>
     <v-container grid-list-md>
       <v-layout row wrap>
-        <v-flex xs12 px-5>
+        <v-flex xs12>
           <h1 class="pageTitle center">GRANT ACCOUNTABILITY AND TRANSPARENCY AT ICJIA</h1>
           <div v-html="markdown"/>
         </v-flex>
