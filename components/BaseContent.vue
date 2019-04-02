@@ -4,7 +4,6 @@
     <slot :title="content.title" name="siteTitle"/>
     <slot :title="content.title" name="pageTitle"/>
     <slot :body="renderedContent" name="markdown"/>
-    <slot name="dynamicContent"/>
   </div>
 </template>
 

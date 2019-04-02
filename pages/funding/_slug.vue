@@ -13,7 +13,7 @@
       </v-layout>
     </template>
     <template slot="markdown" slot-scope="{body}">
-      <v-layout row >
+      <v-layout row>
         <v-container style="margin-top: -30px;">
           <v-flex xs12>
             <div v-html="body"/>
@@ -21,18 +21,17 @@
         </v-container>
       </v-layout>
     </template>
-      
   </base-content>
 </template>
 
 <script>
 import jsonata from 'jsonata'
 import { mapGetters } from 'vuex'
-import BasePage from '@/components/BasePage'
+import BaseContent from '@/components/BaseContent'
 export default {
   transition: 'tweakOpacity',
   components: {
-    BasePage
+    BaseContent
   },
   data() {
     return {}

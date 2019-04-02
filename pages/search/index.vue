@@ -13,19 +13,14 @@
           </v-container>
         </v-layout>
       </template>
-      <template slot="dynamicContent">
-        <v-layout row>
-          <v-container>
-            <v-flex xs12>
-              <search/>
-            </v-flex>
-          </v-container>
-        </v-layout>
-      </template>
     </base-content>
-    
-    
-    
+    <v-layout row>
+      <v-container>
+        <v-flex xs12>
+          <search/>
+        </v-flex>
+      </v-container>
+    </v-layout>
   </div>
 </template>
 
