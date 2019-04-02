@@ -1,0 +1,34 @@
+<template>
+  <div>
+    <v-switch v-model="showCurrent" :label="pageHeading" :class="{isExpired: !showCurrent, isCurrent: showCurrent}" />
+  </div>
+</template>
+
+<script>
+import { EventBus } from '@/event-bus'
+export default {
+  data() {
+    return {
+      showCurrent: true
+    }
+  },
+  computed: {
+    pageHeading() {
+      if (this.showCurrent) {
+        return 'Current Opportunities'
+      } else {
+        return 'Expired'
+      }
+    }
+  },
+  watch: {
+    showCurrent(newValue, oldValue) {
+      EventBus.$emit('toggleFundingDisplay', this.showCurrent)
+    }
+  },
+  methods: {}
+}
+</script>
+
+<style scoped>
+</style>

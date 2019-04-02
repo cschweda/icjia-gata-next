@@ -3,9 +3,9 @@
     <v-layout row wrap>
       <v-flex xs12>
         <h1 class="pageTitle rule">Funding Opportunities</h1>
-        
-        <v-switch v-model="showCurrent" :label="pageHeading" :class="{isExpired: !showCurrent, isCurrent: showCurrent}" />
-       
+        <grant-toggle/>
+        <!-- <v-switch v-model="showCurrent" :label="pageHeading" :class="{isExpired: !showCurrent, isCurrent: showCurrent}" />
+        -->
         <div v-for="grant in grantsToDisplay" :key="grant.slug">
          
           <v-card class="mb-4 px-3 py-3 elevation-1">
@@ -29,10 +29,12 @@
 
 <script>
 import format from 'date-fns/format'
+import GrantToggle from '@/components/GrantToggle'
 import { mapGetters } from 'vuex'
+import { EventBus } from '@/event-bus.js'
 export default {
   transition: 'tweakOpacity',
-  components: {},
+  components: { GrantToggle },
   data() {
     return {
       showCurrent: true,
@@ -76,7 +78,9 @@ export default {
         return grant
       }
     })
-    //console.log(expired)
+    EventBus.$on('toggleFundingDisplay', state => {
+      console.log(state)
+    })
   },
   methods: {
     isExpired(date) {

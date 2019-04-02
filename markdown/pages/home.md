@@ -5,6 +5,7 @@ excerpt: 'The Grant Accountability and Transparency Act (GATA) of 2014, 30 ILCS 
 menuItem: false
 position: 0
 section: 'pages'
+hideBreadcrumb: true
 ---
 
 The Grant Accountability and Transparency Act (GATA) of 2014, 30 ILCS 708/1 et seq., increased accountability and transparency in the use of grant funds and reduced the administrative burden on state agencies and grantees through adoption of federal grant guidelines and regulations.

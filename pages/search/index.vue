@@ -1,61 +1,68 @@
 <template>
   <div>
-    <v-form class="pb-5 mt-2">
-      <v-container>
-        <v-flex xs12>
-          <h1>Search</h1>
-          <v-text-field
-            v-model="query"
-            label="Search"
-            placeholder="Enter search term"
-           
-            @keyup="instantSearch"
-          />
-          <div v-for="(result, index) in results" :key="index" class="px-4">
-            <div>
-              <nuxt-link :to="result.path">
-                <h2>{{result.title}}</h2>
-              </nuxt-link>
-              <p>{{result.excerpt}}</p>
-            </div>
-          </div>
-        </v-flex>
-      </v-container>
-    </v-form>
+    <base-content :content="content">
+      <template slot="breadcrumb">
+        <breadcrumb :path="content.path" :hide="content.hideBreadcrumb"/>
+      </template>
+      <template slot="pageTitle" slot-scope="{title}">
+        <v-layout row>
+          <v-container>
+            <v-flex xs12>
+              <h1 class="pageTitle">{{title}}</h1>
+            </v-flex>
+          </v-container>
+        </v-layout>
+      </template>
+      <template slot="dynamicContent">
+        <v-layout row>
+          <v-container>
+            <v-flex xs12>
+              <search/>
+            </v-flex>
+          </v-container>
+        </v-layout>
+      </template>
+    </base-content>
+    
+    
+    
   </div>
 </template>
 
 <script>
+import jsonata from 'jsonata'
+import format from 'date-fns/format'
 import { mapGetters } from 'vuex'
+import BaseContent from '@/components/BaseContent'
+import Breadcrumb from '@/components/Breadcrumb'
+import Search from '@/components/Search'
 import Fuse from 'fuse.js'
 export default {
   transition: 'tweakOpacity',
+  components: { Breadcrumb, BaseContent, Search },
   data() {
     return {
-      query: '',
-      results: []
+      content: ''
     }
   },
   computed: {
     ...mapGetters(['pages', 'funding', 'news'])
   },
-  mounted() {
-    let allSiteContent = [...this.news, ...this.pages, ...this.funding]
-    this.fuse = new Fuse(allSiteContent, {
-      shouldSort: true,
-      threshold: 0.5,
-      location: 0,
-      distance: 100,
-      maxPatternLength: 32,
-      minMatchCharLength: 1,
-      keys: ['title', 'excerpt', 'html', 'section', 'posted']
-    })
-  },
-
-  methods: {
-    instantSearch() {
-      this.results = this.fuse.search(this.query)
+  asyncData({ store, params, route, error }) {
+    const slug = params.slug
+    const query = jsonata(`$[slug="search"]`)
+    const result = query.evaluate(store.state.pages)
+    if (result != undefined) {
+      return { content: result }
+    } else {
+      return error({
+        statusCode: 404,
+        message: ' Page not found '
+      })
     }
-  }
+  },
+  mounted() {},
+
+  methods: {}
 }
 </script>

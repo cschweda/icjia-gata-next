@@ -110,11 +110,10 @@ h3 {
 .pageTitle {
   /* border-bottom: 1px solid #ccc; */
   padding-bottom: 4px !important;
-  margin-bottom: 25px;
+  margin-top: 30px;
   text-align: left;
   color: #1a237e;
   text-transform: uppercase;
-  margin-top: 20px;
 }
 
 .pageTitle.center {

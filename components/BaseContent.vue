@@ -1,9 +1,10 @@
 <template>
   <div>
+    <slot name="breadcrumb"/>
     <slot :title="content.title" name="siteTitle"/>
     <slot :title="content.title" name="pageTitle"/>
     <slot :body="renderedContent" name="markdown"/>
-    <slot name="contentList"/>
+    <slot name="dynamicContent"/>
   </div>
 </template>
 
@@ -41,10 +42,6 @@ export default {
       default: null
     },
     title: {
-      type: String,
-      default: ''
-    },
-    markdown: {
       type: String,
       default: ''
     }

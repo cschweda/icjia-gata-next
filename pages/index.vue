@@ -1,34 +1,39 @@
 <template>
   <div>
-    <v-container grid-list-md>
-      <v-layout row wrap>
-        <v-flex xs12>
-          <h1 class="pageTitle center">GRANT ACCOUNTABILITY AND TRANSPARENCY AT ICJIA</h1>
-          <div v-html="markdown"/>
-        </v-flex>
-      </v-layout>
-    </v-container>
-    <div style="background: #eee; border-top: 1px solid #ccc;">
-      <v-container grid-list-md>
-        <v-layout row wrap>
-          <v-flex xs12>
-            <h2 class="mb-3" style="color: #333;">Current Funding Opportunities</h2>
-            <div v-for="grant in grantsToDisplay" :key="grant.slug">
-              <div class="mb-4 px-5 py-4 elevation-1 grey lighten-4">
-                <h2>
-                  <nuxt-link :to="`${grant.path}`">{{ grant.title }}</nuxt-link>
-                </h2>
-                <div>
-                  {{ grant.excerpt }}
-                  <h4 class="mt-2">Posted: {{ grant.posted }}</h4>
-                  <h4>Expires: {{ grant.expires }}</h4>
-                </div>
-              </div>
-            </div>
-          </v-flex>
+    <base-content :content="content">
+      <template slot="breadcrumb">
+        <breadcrumb :path="content.path" :hide="content.hideBreadcrumb"/>
+      </template>
+      <template slot="siteTitle" slot-scope="{title}">
+        <v-layout row>
+          <v-container>
+            <v-flex xs12>
+              <h1 class="pageTitle center">{{title}}</h1>
+            </v-flex>
+          </v-container>
         </v-layout>
-      </v-container>
-    </div>
+      </template>
+      <template slot="markdown" slot-scope="{body}">
+        <v-layout row>
+          <v-container>
+            <v-flex xs12>
+              <div v-html="body"/>
+            </v-flex>
+          </v-container>
+        </v-layout>
+      </template>
+      <template slot="dynamicContent">
+        <div style="background: #eee; border-top: 1px solid #ccc;">
+          <v-layout>
+            <v-container>
+              <v-flex xs12>
+                <content-list :items="grantsToDisplay" :show-current="showCurrent" title="Funding Opportunities" />
+              </v-flex>
+            </v-container>
+          </v-layout>
+        </div>
+      </template>
+    </base-content>
   </div>
 </template>
 
@@ -36,33 +41,27 @@
 import jsonata from 'jsonata'
 import format from 'date-fns/format'
 import { mapGetters } from 'vuex'
-let md = require('markdown-it')({
-  html: true,
-  xhtmlOut: false,
-  breaks: false,
-  langPrefix: 'language-',
-  linkify: true,
-  typographer: false,
-  quotes: '“”‘’'
-})
-  .use(require('markdown-it-footnote'))
-  .use(require('markdown-it-named-headers'))
-  .use(require('markdown-it-attrs'))
+import BaseContent from '@/components/BaseContent'
+import Breadcrumb from '@/components/Breadcrumb'
+import ContentList from '@/components/ContentList'
 
 export default {
   transition: 'tweakOpacity',
-  components: {},
+  components: { BaseContent, Breadcrumb, ContentList },
   data() {
     return {
-      showCurrent: true
+      showCurrent: true,
+      content: '',
+      test: { body: 'content here' }
     }
   },
+
   asyncData({ store, params, route, error }) {
     const slug = params.slug
     const query = jsonata(`$[slug="home"]`)
     const result = query.evaluate(store.state.pages)
     if (result != undefined) {
-      return { page: result }
+      return { content: result }
     } else {
       return error({
         statusCode: 404,
@@ -70,17 +69,10 @@ export default {
       })
     }
   },
+
   computed: {
-    // mix the getters into computed with object spread operator
-    ...mapGetters([
-      'funding',
-      'pages',
-      'news'
-      // ...
-    ]),
-    markdown() {
-      return md.render(this.page.body)
-    },
+    ...mapGetters(['funding', 'pages', 'news']),
+
     grantsToDisplay() {
       let now = format(new Date())
       let currentGrants = this.funding.filter(grant => {
@@ -90,6 +82,16 @@ export default {
       })
       return currentGrants
     }
+  },
+  mounted() {},
+  methods: {
+    renderedContent(content) {
+      return 'test' + content
+    }
   }
 }
 </script>
+
+
+<style lang="scss">
+</style>

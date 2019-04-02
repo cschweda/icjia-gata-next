@@ -1,9 +1,7 @@
 <template>
-  
-  <v-breadcrumbs :items="items" class="crumbs" divider="|"/>
-  
- 
- 
+  <div style="height: 20px;">
+    <v-breadcrumbs v-if="!hide" :items="items" class="crumbs" divider="|"/>
+  </div>
 </template>
 
 <script>
@@ -13,6 +11,10 @@ export default {
     path: {
       type: String,
       default: ''
+    },
+    hide: {
+      type: Boolean,
+      default: false
     }
   },
   computed: {
