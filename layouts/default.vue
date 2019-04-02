@@ -19,8 +19,6 @@
       </v-toolbar-items>
     </v-toolbar>
 
-    
-     
     <sidebar/>
     <nuxt/>
     <!-- </v-content> -->
@@ -129,6 +127,18 @@ h3 {
   border-bottom: 1px solid #ccc;
   padding-bottom: 8px;
   margin-bottom: 25px;
+}
+
+.pull-50 {
+  margin-top: -50px;
+}
+
+.pull-25 {
+  margin-top: -25px;
+}
+
+.border-top {
+  border-top: 1px solid #aaa !important;
 }
 
 /* Github CSS */

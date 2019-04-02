@@ -1,6 +1,10 @@
 <template>
   <div>
-    <v-switch v-model="showCurrent" :label="pageHeading" :class="{isExpired: !showCurrent, isCurrent: showCurrent}" />
+    <v-switch
+      v-model="showCurrent"
+      :label="pageHeading"
+      :class="{isExpired: !showCurrent, isCurrent: showCurrent}"
+    />
   </div>
 </template>
 
@@ -15,7 +19,7 @@ export default {
   computed: {
     pageHeading() {
       if (this.showCurrent) {
-        return 'Current Opportunities'
+        return 'Current'
       } else {
         return 'Expired'
       }

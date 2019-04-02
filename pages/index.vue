@@ -23,10 +23,11 @@
         </v-layout>
       </template>
     </base-content>
-    <div style="background: #eee; border-top: 1px solid #aaa;">
+    <div class="border-top" style="background: #F5F5F5">
       <v-layout>
         <v-container>
           <v-flex xs12>
+            <h2 class="pageTitle rule">Funding Opportunities</h2>
             <grant-toggle/>
           </v-flex>
         </v-container>
