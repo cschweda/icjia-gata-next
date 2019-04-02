@@ -138,7 +138,7 @@ h3 {
 }
 
 .border-top {
-  border-top: 1px solid #aaa !important;
+  border-top: 1px solid #bbb !important;
 }
 
 /* Github CSS */
