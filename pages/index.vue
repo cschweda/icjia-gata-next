@@ -22,18 +22,27 @@
           </v-container>
         </v-layout>
       </template>
-      <template slot="dynamicContent">
-        <div style="background: #eee; border-top: 1px solid #ccc;">
-          <v-layout>
+    </base-content>
+    <div style="background: #eee; border-top: 1px solid #aaa;">
+      <v-layout>
+        <v-container>
+          <v-flex xs12>
+            <grant-toggle/>
+          </v-flex>
+        </v-container>
+      </v-layout>
+      <base-list :items="grantsToDisplay" style="margin-top: -50px;">
+        <template slot-scope="item">
+          <v-layout row>
             <v-container>
               <v-flex xs12>
-                <content-list :items="grantsToDisplay" :show-current="showCurrent" title="Funding Opportunities" />
+                <base-card :item="item"/>
               </v-flex>
             </v-container>
           </v-layout>
-        </div>
-      </template>
-    </base-content>
+        </template>
+      </base-list>
+    </div>
   </div>
 </template>
 
@@ -41,18 +50,22 @@
 import jsonata from 'jsonata'
 import format from 'date-fns/format'
 import { mapGetters } from 'vuex'
+import { EventBus } from '@/event-bus'
 import BaseContent from '@/components/BaseContent'
 import Breadcrumb from '@/components/Breadcrumb'
-import ContentList from '@/components/ContentList'
+import BaseList from '@/components/BaseList'
+import BaseCard from '@/components/BaseCard'
+import GrantToggle from '@/components/GrantToggle'
 
 export default {
   transition: 'tweakOpacity',
-  components: { BaseContent, Breadcrumb, ContentList },
+  components: { BaseContent, Breadcrumb, BaseList, BaseCard, GrantToggle },
   data() {
     return {
       showCurrent: true,
       content: '',
-      test: { body: 'content here' }
+      now: format(new Date()),
+      hideExpired: true
     }
   },
 
@@ -74,21 +87,28 @@ export default {
     ...mapGetters(['funding', 'pages', 'news']),
 
     grantsToDisplay() {
-      let now = format(new Date())
-      let currentGrants = this.funding.filter(grant => {
-        if (grant.expires > now) {
-          return grant
-        }
-      })
-      return currentGrants
+      if (!this.hideExpired) {
+        return this.funding.filter(grant => {
+          if (grant.expires <= this.now) {
+            return grant
+          }
+        })
+      } else {
+        return this.funding.filter(grant => {
+          if (grant.expires > this.now) {
+            return grant
+          }
+        })
+      }
     }
   },
-  mounted() {},
-  methods: {
-    renderedContent(content) {
-      return 'test' + content
-    }
-  }
+  mounted() {
+    EventBus.$on('toggleFundingDisplay', state => {
+      this.hideExpired = state
+      console.log(state)
+    })
+  },
+  methods: {}
 }
 </script>
 
