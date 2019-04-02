@@ -26,6 +26,9 @@ export default {
       EventBus.$emit('toggleFundingDisplay', this.showCurrent)
     }
   },
+  mounted() {
+    EventBus.$emit('toggleFundingDisplay', this.showCurrent)
+  },
   methods: {}
 }
 </script>

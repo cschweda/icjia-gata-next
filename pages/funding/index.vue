@@ -37,27 +37,16 @@ export default {
   components: { GrantToggle },
   data() {
     return {
-      showCurrent: true,
-      now: format(new Date())
+      now: format(new Date()),
+      hideExpired: true
     }
   },
 
   computed: {
-    // mix the getters into computed with object spread operator
-    ...mapGetters([
-      'funding',
-      'pages'
-      // ...
-    ]),
-    pageHeading() {
-      if (this.showCurrent) {
-        return 'Current Opportunities'
-      } else {
-        return 'Expired'
-      }
-    },
+    ...mapGetters(['funding']),
+
     grantsToDisplay() {
-      if (!this.showCurrent) {
+      if (!this.hideExpired) {
         return this.funding.filter(grant => {
           if (grant.expires <= this.now) {
             return grant
@@ -79,7 +68,7 @@ export default {
       }
     })
     EventBus.$on('toggleFundingDisplay', state => {
-      console.log(state)
+      this.hideExpired = state
     })
   },
   methods: {
