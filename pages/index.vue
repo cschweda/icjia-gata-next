@@ -1,11 +1,11 @@
 <template>
   <div>
-    <base-content :content="content">
+    <base-content :content="content" style="margin-top: -25px;">
       <template slot="breadcrumb">
         <breadcrumb :path="content.path" :hide="content.hideBreadcrumb"/>
       </template>
       <template slot="siteTitle" slot-scope="{title}">
-        <v-layout row>
+        <v-layout row class="border-bottom" style="background: #f5f5f5;" >
           <v-container>
             <v-flex xs12>
               <h1 class="pageTitle center">{{title}}</h1>
@@ -14,8 +14,8 @@
         </v-layout>
       </template>
       <template slot="markdown" slot-scope="{body}">
-        <v-layout row>
-          <v-container>
+        <v-layout row >
+          <v-container class="mt-3">
             <v-flex xs12>
               <div v-html="body"/>
             </v-flex>
@@ -114,5 +114,5 @@ export default {
 </script>
 
 
-<style lang="scss">
+<style>
 </style>

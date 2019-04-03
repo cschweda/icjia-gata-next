@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app id="top">
     <v-toolbar color="blue darken-4" dark>
       <v-toolbar-side-icon @click="toggleSidebar"/>
       <v-toolbar-title class="display siteTitle">
@@ -21,7 +21,7 @@
 
     <sidebar/>
     <nuxt/>
-    <!-- </v-content> -->
+    
   </v-app>
 </template>
 
@@ -44,6 +44,9 @@ export default {
 </script>
 
 <style>
+html {
+  overflow-y: auto;
+}
 .tweakOpacity-enter-active,
 .tweakOpacity-leave-active {
   transition: opacity 0.2s ease-out;
@@ -138,7 +141,11 @@ h3 {
 }
 
 .border-top {
-  border-top: 1px solid #bbb !important;
+  border-top: 1px solid #ddd !important;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #ddd !important;
 }
 
 .link {

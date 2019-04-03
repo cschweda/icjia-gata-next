@@ -87,6 +87,6 @@ export default {
 }
 
 .sidebar-height {
-  min-height: 99vh;
+  min-height: 97vh;
 }
 </style>

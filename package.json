@@ -30,7 +30,8 @@
     "sass-loader": "^7.1.0",
     "slug": "^1.0.0",
     "vue-scrollto": "^2.15.0",
-    "vuetify": "^1.5.8"
+    "vue-sticky-directive": "0.0.8",
+    "vuetify": "^1.5.9"
   },
   "devDependencies": {
     "nodemon": "^1.11.0",

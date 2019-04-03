@@ -1,6 +1,6 @@
 <template>
   <div class="hidden-sm-and-down">
-    <h3 v-scroll-to="`#app`" class="toc-title">{{title}}</h3>
+    <h3 v-scroll-to="'#top'" class="toc-title">{{title}}</h3>
     <div class="wrapper">
       <div v-for="(item, index) in items" :key="index" class="toc">
         <div v-scroll-to="`#${item.id}`" class="toc-item">{{item.text}}</div>
@@ -36,10 +36,18 @@ export default {
 
 .toc-title {
   color: #303f9f;
-  cursor: pointer;
 }
 
 .toc-item {
   cursor: pointer;
+}
+
+.toc-item:hover {
+  color: #777;
+}
+
+.active {
+  color: #303f9f;
+  font-weight: 700;
 }
 </style>
