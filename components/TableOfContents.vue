@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="hidden-sm-and-down">
     <h3 v-scroll-to="`#app`" class="toc-title">{{title}}</h3>
     <div class="wrapper">
       <div v-for="(item, index) in items" :key="index" class="toc">
