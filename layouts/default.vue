@@ -149,6 +149,13 @@ h3 {
   color: #3949ab;
 }
 
+.nofo-link {
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 25px !important;
+}
+
 /* Github CSS */
 .markdown-body .octicon {
   display: inline-block;

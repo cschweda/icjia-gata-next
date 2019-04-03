@@ -9,7 +9,7 @@ section: 'pages'
 
 ## Thebas quae agitante ferens
 
-Lorem markdownum Saturnia cumque, sed dubitor mercurio currendo sinuavi amisit.
+Lorem markdownum [Saturnia cumque](test.pdf), sed dubitor mercurio currendo sinuavi amisit.
 Movetur domo lacus: enim nec tristibus pendebat instar discedere distat pondere.
 
 - Lacrimis ante et praecipitant sortes propensum inanis

@@ -1,27 +1,36 @@
 <template>
-  <base-content :content="content">
-    <template slot="breadcrumb">
-      <breadcrumb :path="content.path"/>
-    </template>
-    <template slot="pageTitle" slot-scope="{title}">
-      <v-layout row>
-        <v-container>
-          <v-flex xs12>
-            <h1 class="pageTitle rule">{{title}}</h1>
-          </v-flex>
-        </v-container>
-      </v-layout>
-    </template>
-    <template slot="markdown" slot-scope="{body}">
-      <v-layout row>
-        <v-container style="margin-top: -30px;">
-          <v-flex xs12>
-            <div v-html="body"/>
-          </v-flex>
-        </v-container>
-      </v-layout>
-    </template>
-  </base-content>
+  <div class="top">
+    
+    <base-content :content="content">
+      <template slot="breadcrumb">
+        <breadcrumb :path="content.path"/>
+      </template>
+      <template slot="table-of-contents">
+        <div class="table-of-contents">
+          <table-of-contents :items="tocItems"/>
+        </div>
+      </template>
+      <template slot="pageTitle" slot-scope="{title}">
+        <v-layout row>
+          <v-container>
+            <v-flex xs10>
+              <h1 class="pageTitle rule">{{title}}</h1>
+            </v-flex>
+          </v-container>
+        </v-layout>
+      </template>
+      <template slot="markdown" slot-scope="{body}">
+        <v-layout row>
+          <v-container style="margin-top: -30px;">
+         
+            <v-flex xs10>
+              <div v-html="body"/>
+            </v-flex>
+          </v-container>
+        </v-layout>
+      </template>
+    </base-content>
+  </div>
 </template>
 
 <script>
@@ -29,17 +38,32 @@ import jsonata from 'jsonata'
 import { mapGetters } from 'vuex'
 import BaseContent from '@/components/BaseContent'
 import Breadcrumb from '@/components/Breadcrumb'
+import TableOfContents from '@/components/TableOfContents'
 export default {
   transition: 'tweakOpacity',
   components: {
     BaseContent,
-    Breadcrumb
+    Breadcrumb,
+    TableOfContents
   },
   data() {
-    return {}
+    return {
+      tocItems: []
+    }
   },
   computed: {
     ...mapGetters(['funding'])
+  },
+  mounted() {
+    const toc = Array.prototype.slice.call(document.querySelectorAll('h2'))
+    const tocItems = toc.map(item => {
+      let obj = {}
+      obj.id = item.id
+      obj.text = item.innerHTML
+      return obj
+    })
+
+    this.tocItems = tocItems
   },
   asyncData({ store, params, route, error }) {
     const slug = params.slug
@@ -63,5 +87,11 @@ export default {
   border-bottom: 1px solid #ccc;
   margin-bottom: 20px;
   color: #555;
+}
+
+.table-of-contents {
+  position: fixed;
+  top: 150px;
+  right: 50px;
 }
 </style>

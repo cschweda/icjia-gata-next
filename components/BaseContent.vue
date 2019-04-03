@@ -1,6 +1,7 @@
 <template>
   <div>
     <slot name="breadcrumb"/>
+    <slot name="table-of-contents"/>
     <slot :title="content.title" name="siteTitle"/>
     <slot :title="content.title" name="pageTitle"/>
     <div class="markdown-body">
@@ -49,7 +50,11 @@ export default {
   },
   computed: {
     renderedContent() {
-      return md.render(this.content.body)
+      return linkify(
+        md.render(this.content.body),
+        this.content.section,
+        this.content.slug
+      )
     }
   },
   mounted() {},

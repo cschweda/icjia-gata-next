@@ -9,7 +9,7 @@ section: 'funding'
 ---
 
 
-[Link to NOFO](IFVCCNOFO.pdf) {.text-xs-center}
+[Link to NOFO](IFVCCNOFO.pdf) {.text-xs-center .nofo-link}
 
 The Illinois Criminal Justice Information Authority is requesting proposals for grants funding local Illinois Family Violence Coordinating Council (IFVCC). Grants will be made with IFVCC state fiscal year 2020 funds. A total of $435,000 in funding is available through this solicitation for use over a period of 12 months. 
 

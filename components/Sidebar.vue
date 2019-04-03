@@ -21,7 +21,7 @@
           v-for="(page, index) in pages"
           :key="index"
           class="sidebarItem"
-          style="margin-top: 0px;"
+          
         >
           <nuxt-link
             v-if="page.menuItem"
@@ -29,7 +29,7 @@
             class="sidebar-link"
           >{{page.title}}</nuxt-link>
         </div>
-        <v-divider/>
+        <v-divider style="margin-top: -25px"/>
         <div class="sidebarItem" style="padding-top: 10px;">
           <nuxt-link to="/search" class="sidebar-link">Search</nuxt-link>
         </div>

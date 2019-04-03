@@ -9,7 +9,7 @@ section: 'funding'
 ---
 
 
-[LINK TO NOFO](ICASANOFO) {.text-xs-center}
+[LINK TO NOFO](ICASANOFO) {.text-xs-center .nofo-link}
 
 The Illinois Criminal Justice Information Authority is requesting proposals for grants for the Services for Victims of Sexual Assault Program.  Grants will be made with Victims of Crime Act FFY17 funds. A total of $18,300,000 in funding is available through this solicitation for use over a period of 12 months. 
 
