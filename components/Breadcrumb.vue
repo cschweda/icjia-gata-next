@@ -1,6 +1,13 @@
 <template>
-  <div style="height: 20px;">
-    <v-breadcrumbs v-if="!hide" :items="items" class="crumbs" divider="|"/>
+  <div style="height: 30px;">
+    <!-- <v-breadcrumbs v-if="!hide" :items="items" class="crumbs" divider="|"/> -->
+    <v-breadcrumbs v-if="!hide" :items="items" class="crumbs" divider="|">
+      <template v-slot:item="props">
+        <nuxt-link :to="props.item.href" :class="[props.item.disabled && 'disabled']" class="link">{{ props.item.text.toUpperCase() }}</nuxt-link>
+      </template>
+    </v-breadcrumbs>
+   
+    
   </div>
 </template>
 
@@ -38,6 +45,7 @@ export default {
         }
       })
       crumbs[crumbs.length - 1].disabled = true
+      crumbs[crumbs.length - 1].href = items[items.length - 1]
       return crumbs
     }
   }
@@ -58,9 +66,6 @@ export default {
 div .v-breadcrumbs {
   padding: 6px 12px;
   justify-content: flex-end !important;
-}
-
-div .v-breadcrumbs__item {
-  font-size: 12px !important;
+  font-size: 12px;
 }
 </style>

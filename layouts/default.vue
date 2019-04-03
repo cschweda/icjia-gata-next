@@ -141,6 +141,14 @@ h3 {
   border-top: 1px solid #bbb !important;
 }
 
+.link {
+  text-decoration: none !important;
+}
+
+.link:hover {
+  color: #3949ab;
+}
+
 /* Github CSS */
 .markdown-body .octicon {
   display: inline-block;

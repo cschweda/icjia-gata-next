@@ -3,7 +3,9 @@
     <slot name="breadcrumb"/>
     <slot :title="content.title" name="siteTitle"/>
     <slot :title="content.title" name="pageTitle"/>
-    <slot :body="renderedContent" name="markdown"/>
+    <div class="markdown-body">
+      <slot :body="renderedContent" name="markdown"/>
+    </div>
   </div>
 </template>
 

@@ -37,7 +37,7 @@
           <v-layout row>
             <v-container>
               <v-flex xs12>
-                <base-card :item="item"/>
+                <base-card :item="item" :show-expired="true"/>
               </v-flex>
             </v-container>
           </v-layout>
