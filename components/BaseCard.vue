@@ -1,16 +1,20 @@
 <template>
   <div>
     <v-card class="mb-2 elevation-1">
-      <div class="text-xs-right date"/>
+     
     
       <div v-if="showExpired">
         <div v-if="!isExpired(item[expirationField])" style="background: red; color: #fff; font-weight: bold; font-size: 20px" class="px-2 py-2 text-xs-right">EXPIRED</div>
+      </div>
+
+      <div class="text-xs-right pt-2">
+        <h4 class="mt-2 px-3" style="font-size: 14px;"><span class="posted">Posted:</span>&nbsp;<span class="posted-date">{{ format(item.posted,'MMMM DD, YYYY') }}</span></h4>
       </div>
       
       <h2 class="px-3 pt-3">
         <nuxt-link :to="`${item.path}`" class="link">{{ item.title }}</nuxt-link>
       </h2>
-      <h4 class="mt-2 px-3" style="color: #666">Posted: {{ item.posted }}</h4>
+      
       <v-card-text class="px-3 py-3">{{ item.excerpt }}</v-card-text>
     </v-card>
     
@@ -36,7 +40,8 @@ export default {
   },
   data() {
     return {
-      now: format(new Date())
+      now: format(new Date()),
+      format: format
     }
   },
   methods: {
@@ -48,4 +53,11 @@ export default {
 </script>
 
 <style scoped>
+.posted {
+  color: #444 !important;
+}
+
+.posted-date {
+  color: #444 !important;
+}
 </style>
