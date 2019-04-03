@@ -91,7 +91,7 @@ export default {
 
 .table-of-contents {
   position: fixed;
-  top: 120px;
+  top: 160px;
   right: 10px;
 }
 </style>

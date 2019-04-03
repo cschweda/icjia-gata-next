@@ -1,15 +1,29 @@
 <template>
-  <v-menu offset-y>
+  <v-menu offset-y max-width="350" nudge-left="90">
     <template v-slot:activator="{ on }">
       <v-btn flat class="heavy muted" v-on="on">{{text}} <v-icon dark>arrow_drop_down</v-icon></v-btn>
     </template>
-    <v-list>
+    <v-list v-if="items.length === 0">
+      <div >
+        <div class="text-xs-center px-5 pb-2" style="font-weight: bold;">There are no current opportunities</div>
+        <v-divider/>
+        <div class="px-3 py-2 text-xs-center archive-link" @click="$router.push('/funding')">View the archive</div>
+      </div>
+      
+      
+    </v-list>
+   
+    <v-list v-else class="pt-4">
       <v-list-tile
-        v-for="item in items"
-        :key="item"
-        
+        v-for="(item, index) in items"
+        :key="index"
+        class="pb-3"
       >
-        <v-list-tile-title v-text="item"/>
+        <nuxt-link :to="item.path" class="menuItem">
+          <div >
+            {{item.title}}</div>
+        </nuxt-link>
+        
       </v-list-tile>
     </v-list>
   </v-menu>
@@ -17,20 +31,44 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+import { EventBus } from '@/event-bus.js'
 export default {
   props: {
     text: {
       type: String,
       default: 'Undefined'
+    },
+    items: {
+      type: Array,
+      default: () => []
     }
   },
   data() {
-    return {
-      items: ['List', 'Current', 'Funding', 'Opportunities', 'Here']
-    }
-  }
+    return {}
+  },
+  methods: {}
 }
 </script>
 
 <style scoped>
+.menuItem {
+  font-size: 12px;
+  font-weight: bold;
+  color: #444;
+  text-decoration: none;
+}
+
+.menuItem {
+  text-decoration: none;
+  color: #555;
+}
+
+.menuItem:hover {
+  color: #303f9f;
+}
+
+.archive-link {
+  cursor: pointer;
+}
 </style>

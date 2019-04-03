@@ -1,48 +1,25 @@
 <template>
   <v-app id="top">
-    <v-toolbar color="blue darken-4" dark>
-      <v-toolbar-side-icon @click="toggleSidebar"/>
-      <v-toolbar-title class="display siteTitle">
-        <nuxt-link to="/" class="noUnderline">
-          <span class="muted">ICJIA&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-          <span style="color: #fff !important">GATA INFORMATION</span>
-        </nuxt-link>
-      </v-toolbar-title>
-      <v-spacer/>
-      <v-toolbar-items class="hidden-sm-and-down display">
-        <v-btn flat to="/news" class="heavy muted">News</v-btn>
-
-        <!-- <v-btn flat to="/funding" class="heavy muted">Funding Opportunities</v-btn> -->
-        <menu-dropdown text="Funding Opportunities"/>
-        <v-btn icon to="/search">
-          <v-icon>search</v-icon>
-        </v-btn>
-      </v-toolbar-items>
-    </v-toolbar>
-
+    <app-nav/>
     <sidebar/>
     <nuxt/>
-    
   </v-app>
 </template>
 
 <script>
 import { EventBus } from '@/event-bus.js'
 import Sidebar from '@/components/Sidebar'
-import MenuDropdown from '@/components/MenuDropdown.vue'
+import AppNav from '@/components/AppNav.vue'
+
 export default {
   components: {
     Sidebar,
-    MenuDropdown
+    AppNav
   },
   data() {
     return {}
   },
-  methods: {
-    toggleSidebar() {
-      EventBus.$emit('toggleSidebar')
-    }
-  }
+  methods: {}
 }
 </script>
 

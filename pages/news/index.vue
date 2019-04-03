@@ -60,19 +60,6 @@ export default {
   computed: {
     ...mapGetters(['news', 'pages']),
     newsToDisplay() {
-      // if (!this.hideExpired) {
-      //   return this.news.filter(news => {
-      //     if (news.expires <= this.now) {
-      //       return news
-      //     }
-      //   })
-      // } else {
-      //   return this.news.filter(news => {
-      //     if (news.expires > this.now) {
-      //       return news
-      //     }
-      //   })
-      // }
       return this.news
     }
   },
@@ -89,24 +76,8 @@ export default {
       })
     }
   },
-  mounted() {
-    // EventBus.$on('toggleFundingDisplay', state => {
-    //   this.hideExpired = state
-    //   console.log(state)
-    // })
-  },
-  methods: {
-    // isExpired(date) {
-    //   if (this.now > date) {
-    //     return '<h4 style="color: #D84315;">Expired</h4>'
-    //   } else {
-    //     return `<h4><span>Deadline:&nbsp;&nbsp;${format(
-    //       date,
-    //       'MMMM DD, YYYY'
-    //     )}</span></h4>`
-    //   }
-    // }
-  }
+  mounted() {},
+  methods: {}
 }
 </script>
 

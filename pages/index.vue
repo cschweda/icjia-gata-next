@@ -1,11 +1,11 @@
 <template>
   <div>
-    <base-content :content="content" style="margin-top: -25px;">
-      <template slot="breadcrumb">
+    <base-content :content="content">
+      <!-- <template slot="breadcrumb">
         <breadcrumb :path="content.path" :hide="content.hideBreadcrumb"/>
-      </template>
+      </template> -->
       <template slot="siteTitle" slot-scope="{title}">
-        <v-layout row class="border-bottom" style="background: #f5f5f5;" >
+        <v-layout row class="border-bottom" style="background: #ffff;" >
           <v-container>
             <v-flex xs12>
               <h1 class="pageTitle center">{{title}}</h1>

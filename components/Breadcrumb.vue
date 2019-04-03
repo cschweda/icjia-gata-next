@@ -65,7 +65,7 @@ export default {
 
 div .v-breadcrumbs {
   padding: 6px 12px;
-  justify-content: flex-end !important;
+  /* justify-content: flex-end !important; */
   font-size: 12px;
 }
 </style>
