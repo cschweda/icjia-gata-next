@@ -12,7 +12,8 @@
       <v-toolbar-items class="hidden-sm-and-down display">
         <v-btn flat to="/news" class="heavy muted">News</v-btn>
 
-        <v-btn flat to="/funding" class="heavy muted">Funding Opportunities</v-btn>
+        <!-- <v-btn flat to="/funding" class="heavy muted">Funding Opportunities</v-btn> -->
+        <menu-dropdown text="Funding Opportunities"/>
         <v-btn icon to="/search">
           <v-icon>search</v-icon>
         </v-btn>
@@ -28,9 +29,11 @@
 <script>
 import { EventBus } from '@/event-bus.js'
 import Sidebar from '@/components/Sidebar'
+import MenuDropdown from '@/components/MenuDropdown.vue'
 export default {
   components: {
-    Sidebar
+    Sidebar,
+    MenuDropdown
   },
   data() {
     return {}
