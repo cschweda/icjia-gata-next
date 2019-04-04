@@ -5,19 +5,30 @@
       <template slot="breadcrumb">
         <breadcrumb :path="content.path"/>
       </template>
-      <template slot="table-of-contents">
+      <template v-if="!isExpired" slot="table-of-contents">
         <div class="table-of-contents">
           <table-of-contents :items="tocItems"/>
         </div>
       </template>
       <template slot="pageTitle" slot-scope="{title}">
+        
         <v-layout row>
           <v-container>
             <v-flex xs10>
-              <h1 class="pageTitle rule">{{title}}</h1>
+              <div style="color: #555; font-weight: 900; text-transform: uppercase;border-bottom: 1px solid #eee; padding-bottom: 5px; margin-bottom: 20px;">Notice of Funding Opportunity</div>
+              <h1 class="pageTitle" style="margin-top: 10px">{{title}}</h1>
             </v-flex>
           </v-container>
         </v-layout>
+      </template>
+      <template v-if="isExpired" slot="expired" >
+        
+          
+            
+        <div style="background: #EF5350; color: #fff; font-weight: bold; font-size: 20px" class="mt-0 px-2 py-5 text-xs-center">THIS FUNDING OPPORTUNITY HAS EXPIRED</div>
+           
+          
+       
       </template>
       <template slot="markdown" slot-scope="{body}">
         <v-layout row>
@@ -36,23 +47,21 @@
 <script>
 import jsonata from 'jsonata'
 import { mapGetters } from 'vuex'
-import BaseContent from '@/components/BaseContent'
-import Breadcrumb from '@/components/Breadcrumb'
-import TableOfContents from '@/components/TableOfContents'
+import format from 'date-fns/format'
 export default {
   transition: 'tweakOpacity',
-  components: {
-    BaseContent,
-    Breadcrumb,
-    TableOfContents
-  },
+  components: {},
   data() {
     return {
-      tocItems: []
+      tocItems: [],
+      now: format(new Date())
     }
   },
   computed: {
-    ...mapGetters(['funding'])
+    ...mapGetters(['funding']),
+    isExpired() {
+      return format(this.content.expires) < this.now
+    }
   },
   mounted() {
     const toc = Array.prototype.slice.call(document.querySelectorAll('h2'))
@@ -91,7 +100,7 @@ export default {
 
 .table-of-contents {
   position: fixed;
-  top: 160px;
+  top: 130px;
   right: 10px;
 }
 </style>

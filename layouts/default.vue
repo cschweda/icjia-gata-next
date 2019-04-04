@@ -1,7 +1,7 @@
 <template>
   <v-app id="top">
     <app-nav/>
-    <sidebar/>
+    
     <nuxt/>
   </v-app>
 </template>
@@ -141,6 +141,24 @@ h3 {
   text-transform: uppercase;
   font-weight: bold;
   margin-bottom: 25px !important;
+}
+
+summary {
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
+details {
+  font-weight: normal;
+  margin-bottom: 25px;
+}
+
+details p {
+  padding-left: 15px;
+}
+
+summary:focus {
+  outline: none;
 }
 
 /* Github CSS */

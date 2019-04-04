@@ -2,6 +2,7 @@
   <div>
     <v-navigation-drawer
       v-model="sidebar"
+      
       absolute
       temporary
       style="overflow-y: hidden !important;"
@@ -87,6 +88,6 @@ export default {
 }
 
 .sidebar-height {
-  min-height: 97vh;
+  min-height: 100vh;
 }
 </style>

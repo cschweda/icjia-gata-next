@@ -34,22 +34,12 @@
 import jsonata from 'jsonata'
 import format from 'date-fns/format'
 import { mapGetters } from 'vuex'
-import GrantToggle from '@/components/GrantToggle'
+
 import { EventBus } from '@/event-bus.js'
-import BaseContent from '@/components/BaseContent'
-import Breadcrumb from '@/components/Breadcrumb'
-import BaseList from '@/components/BaseList'
-import BaseCard from '@/components/BaseCard'
+
 export default {
   transition: 'tweakOpacity',
-  components: {
-    GrantToggle,
-    BaseContent,
-    Breadcrumb,
-    GrantToggle,
-    BaseList,
-    BaseCard
-  },
+  components: {},
   data() {
     return {
       now: format(new Date()),

@@ -1,25 +1,26 @@
 <template>
-  <v-toolbar color="blue darken-4" dark>
-    <v-toolbar-side-icon @click="toggleSidebar"/>
-    <v-toolbar-title class="display siteTitle">
-      <nuxt-link to="/" class="noUnderline">
-        <span class="muted">ICJIA&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-        <span style="color: #fff !important">GATA INFORMATION</span>
-      </nuxt-link>
-    </v-toolbar-title>
-    <v-spacer/>
-    <v-toolbar-items class="hidden-sm-and-down display">
-      <!-- <v-btn flat to="/news" class="heavy muted">News</v-btn> -->
-
+  <div>
+    <sidebar/>
+    <v-toolbar color="grey lighten-4" fixed>
+      <v-toolbar-side-icon @click="toggleSidebar"/>
+      <v-toolbar-title class="display siteTitle">
+        <nuxt-link to="/" class="noUnderline">
+          <span style="color: #aaa">ICJIA&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+          <span style="color: #333 !important">GATA INFORMATION</span>
+        </nuxt-link>
+      </v-toolbar-title>
+      <v-spacer/>
+      <v-toolbar-items class="hidden-sm-and-down display">
        
-      <menu-dropdown :items="currentFundingOpps" text="Funding Opportunities"/>
-      <v-btn icon to="/search">
-        <v-icon>search</v-icon>
-      </v-btn>
+        <menu-dropdown :items="currentFundingOpps" text="Funding Opportunities"/>
+        <v-btn icon to="/search" style="color: #555">
+          <v-icon>search</v-icon>
+        </v-btn>
       
 
-    </v-toolbar-items>
-  </v-toolbar>
+      </v-toolbar-items>
+    </v-toolbar>
+  </div>
 </template>
 
 <script>

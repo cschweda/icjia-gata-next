@@ -1,7 +1,7 @@
 <template>
   <v-menu offset-y max-width="350" nudge-left="90">
     <template v-slot:activator="{ on }">
-      <v-btn flat class="heavy muted" v-on="on">{{text}} <v-icon dark>arrow_drop_down</v-icon></v-btn>
+      <v-btn flat class="heavy" style="color: #666" v-on="on">{{text}} <v-icon dark>arrow_drop_down</v-icon></v-btn>
     </template>
     <v-list v-if="items.length === 0">
       <div >

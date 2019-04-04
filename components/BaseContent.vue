@@ -1,5 +1,6 @@
 <template>
-  <div>
+  <div style="margin-top: 65px">
+    <slot name="expired"/>
     <slot name="breadcrumb"/>
     <slot name="table-of-contents"/>
     <slot :title="content.title" name="siteTitle"/>

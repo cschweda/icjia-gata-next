@@ -25,14 +25,12 @@
   </base-content>
 </template>
 <script>
-import Breadcrumb from '@/components/Breadcrumb'
-import BaseContent from '@/components/BaseContent'
 import jsonata from 'jsonata'
 import { mapGetters } from 'vuex'
 
 export default {
   transition: 'tweakOpacity',
-  components: { BaseContent, Breadcrumb },
+  components: {},
   data() {
     return {}
   },

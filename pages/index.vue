@@ -1,14 +1,11 @@
 <template>
-  <div>
+  <div style="margin-top: -5px">
     <base-content :content="content">
-      <template slot="breadcrumb">
-        <breadcrumb :path="content.path" :hide="content.hideBreadcrumb"/>
-      </template>
       <template slot="siteTitle" slot-scope="{title}">
-        <v-layout row class="border-bottom" style="background: #ffff;" >
-          <v-container>
+        <v-layout row style="background: #1A237E;" >
+          <v-container class="py-4">
             <v-flex xs12>
-              <h1 class="pageTitle center">{{title}}</h1>
+              <h1 class="text-xs-center" style="color: #fff">{{title}}</h1>
             </v-flex>
           </v-container>
         </v-layout>
@@ -32,7 +29,7 @@
           </v-flex>
         </v-container>
       </v-layout>
-      <base-list :items="grantsToDisplay" style="margin-top: -50px;">
+      <base-list :items="grantsToDisplay" style="margin-top: -30px;">
         <template slot-scope="item">
           <v-layout row>
             <v-container>
@@ -52,15 +49,10 @@ import jsonata from 'jsonata'
 import format from 'date-fns/format'
 import { mapGetters } from 'vuex'
 import { EventBus } from '@/event-bus'
-import BaseContent from '@/components/BaseContent'
-import Breadcrumb from '@/components/Breadcrumb'
-import BaseList from '@/components/BaseList'
-import BaseCard from '@/components/BaseCard'
-import GrantToggle from '@/components/GrantToggle'
 
 export default {
   transition: 'tweakOpacity',
-  components: { BaseContent, Breadcrumb, BaseList, BaseCard, GrantToggle },
+
   data() {
     return {
       showCurrent: true,

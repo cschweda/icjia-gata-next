@@ -1,5 +1,5 @@
 ---
-title: 'Illinois Family Violence Coordinating Council  Notice of Funding Opportunity'
+title: 'Illinois Family Violence Coordinating Council'
 created: '2019-03-13'
 posted: '2019-03-13'
 expires: '2019-04-05'

@@ -7,61 +7,24 @@ position: 4
 section: 'pages'
 ---
 
-## Viridique illum memor illa iamque seroque oculos
+<details><summary>I have a program and am in need of grant funding. What programs do you administer?</summary>
 
-Lorem markdownum, Cancrum dum est illic: sub multaque tellus crurorem. Erat per
-modo ille tamen regia lacrimas Aeolidae secuta.
+The Authority administers a variety of federal and state grant programs. View programs to see if your organization meets the eligibility requirements of an Authority-administered program. Then visit grant opportunities to see if we are accepting grant applications for the program.
 
-> Reduxi exsiccata lacerum posita desit dente referentem recondidit faece, arcus
-> terris. Patuisse arbor hic: in verba exclamant humano convicia oraque
-> rapacibus nocte, cruento veniam! Suum elisa, urbe aeacides naturae vicem
-> potestas.
+</details>
 
-## Sacro aras contrarius lateat similis virgam aere
+<details><summary>What are the funding cycles?</summary>
 
-Me exsereret fuerit murum invictumque cibos pudor levi, miserere. Sit fata
-quoque multo Circe facti, ripis suos, mihi ostendit vivatis aptumque. Plura
-inque, dixit caeloque, arvo, natam, tectaque, utque. Non quem Pelasgi coniunx,
-in vastat carinae hanc?
+Federal programs are funded from October 1 to September 30. State programs are funded from July 1 to June 30.</details>
 
-- Vastius vaccae illo
-- Ipse classe arva quae incubat secernit Pisaeae
-- Inter est
+<details><summary>How do I find out about grant opportunities?</summary>
 
-<div class="layout mt-4">
-<div class="flex xs12 sm12 md6">
+Find out about Authority grant opportunities, news, and research by checking the ICJIA website, subscribing to the CJ Dispatch, and following us on Facebook and Twitter.</details>
 
-## Est ponto i oculosque tot Ascalaphus illuc
+<details><summary>How do I apply for a grant?</summary>
 
-Etiam curvamine moventem, figuras luce vinci; quae deusve species propiore
-aconita tortoque per Tantalus pariterque urbes. Bracchia Quas in veluti abit
-quoque, ipsi ante pro! Labore visa comae post. Intra et solvit ille bello medio,
-mihi sparsas.
+When you see a grant opportunity listed on the Authority's GATA website, check to make sure your agency meets the program's specific criteria for grant funding. If your agency is eligible for funding, read the instructions for information on how to submit an application.</details>
 
-- Per tota iste domitos corpore aetas turpius
-- Superis contraria amoris pulveris quae
-- Aetnam passura viridi cognita tamen
-- Est rerum caelumque inpiger
+<details><summary>We tried to apply for a grant but had problems with the application process. What should we do?</summary>
 
-  </div>
-
-  <div class="flex xs12 sm12 md6">
-
-## Alcmene nunc crudelis ille ante angit auro
-
-Gracili modulata et ego. Admissa tibi tulere medius adhuc huic mox, tristia et
-ossibus. Suum tendere in ire aequore, annos. Et faciem autumnos, pavent cutem.
-
-1. Tria quique
-2. Fame verso oracla
-3. Magis eris ubi exiguo Troia tam considerat
-4. Alemone illa pectore
-5. Doluit suique
-6. Sumpta successit Dignane
-
-Amuli suos, pro parte vipereas puerilibus ad tegebat pro sortis plena durescit.
-Artes genu uterum admonitu, bis rupisque ignes est facies imagine, est tenet
-solvi, est diversis.
-
-</div>
-</div>
+Please use the Authority contact information on the request for applications for technical assistance at any point in the process.</details>

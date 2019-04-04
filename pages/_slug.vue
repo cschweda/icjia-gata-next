@@ -28,15 +28,10 @@
 <script>
 import jsonata from 'jsonata'
 import { mapGetters } from 'vuex'
-import BaseContent from '@/components/BaseContent'
-import Breadcrumb from '@/components/Breadcrumb'
 
 export default {
   transition: 'tweakOpacity',
-  components: {
-    BaseContent,
-    Breadcrumb
-  },
+  components: {},
   data() {
     return {}
   },

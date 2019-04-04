@@ -28,13 +28,11 @@
 import jsonata from 'jsonata'
 import format from 'date-fns/format'
 import { mapGetters } from 'vuex'
-import BaseContent from '@/components/BaseContent'
-import Breadcrumb from '@/components/Breadcrumb'
-import Search from '@/components/Search'
+
 import Fuse from 'fuse.js'
 export default {
   transition: 'tweakOpacity',
-  components: { Breadcrumb, BaseContent, Search },
+  components: {},
   data() {
     return {
       content: ''
