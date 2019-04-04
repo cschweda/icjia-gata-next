@@ -13,14 +13,15 @@
       
     </v-list>
    
-    <v-list v-else class="pt-4">
+    <v-list v-else class="pt-4" >
       <v-list-tile
         v-for="(item, index) in items"
         :key="index"
-        class="pb-3"
+        class="pb-3 menuDropdown"
+        
       >
         <nuxt-link :to="item.path" class="menuItem">
-          <div >
+          <div class="px-2 py-2">
             {{item.title}}</div>
         </nuxt-link>
         
@@ -51,7 +52,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .menuItem {
   font-size: 12px;
   font-weight: bold;
@@ -65,10 +66,15 @@ export default {
 }
 
 .menuItem:hover {
-  color: #303f9f;
+  background: #303f9f;
+  color: #fff;
 }
 
 .archive-link {
   cursor: pointer;
+}
+
+.menuDropdown .v-list__tile {
+  padding: 0 0px !important;
 }
 </style>

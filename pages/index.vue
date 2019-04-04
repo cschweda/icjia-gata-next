@@ -1,9 +1,9 @@
 <template>
   <div>
     <base-content :content="content">
-      <!-- <template slot="breadcrumb">
+      <template slot="breadcrumb">
         <breadcrumb :path="content.path" :hide="content.hideBreadcrumb"/>
-      </template> -->
+      </template>
       <template slot="siteTitle" slot-scope="{title}">
         <v-layout row class="border-bottom" style="background: #ffff;" >
           <v-container>

@@ -1,6 +1,6 @@
 <template>
   <div style="height: 30px;">
-    <!-- <v-breadcrumbs v-if="!hide" :items="items" class="crumbs" divider="|"/> -->
+   
     <v-breadcrumbs v-if="!hide" :items="items" class="crumbs" divider="|">
       <template v-slot:item="props">
         <nuxt-link :to="props.item.href" :class="[props.item.disabled && 'disabled']" class="link">{{ props.item.text.toUpperCase() }}</nuxt-link>
@@ -65,7 +65,7 @@ export default {
 
 div .v-breadcrumbs {
   padding: 6px 12px;
-  /* justify-content: flex-end !important; */
+  justify-content: flex-end !important;
   font-size: 12px;
 }
 </style>

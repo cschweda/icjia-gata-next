@@ -1,6 +1,6 @@
 <template>
   <div>
-    <!-- <slot name="breadcrumb"/> -->
+    <slot name="breadcrumb"/>
     <slot name="table-of-contents"/>
     <slot :title="content.title" name="siteTitle"/>
     <slot :title="content.title" name="pageTitle"/>

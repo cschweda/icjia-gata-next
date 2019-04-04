@@ -9,7 +9,7 @@
     </v-toolbar-title>
     <v-spacer/>
     <v-toolbar-items class="hidden-sm-and-down display">
-      <v-btn flat to="/news" class="heavy muted">News</v-btn>
+      <!-- <v-btn flat to="/news" class="heavy muted">News</v-btn> -->
 
        
       <menu-dropdown :items="currentFundingOpps" text="Funding Opportunities"/>
@@ -17,6 +17,7 @@
         <v-icon>search</v-icon>
       </v-btn>
       
+
     </v-toolbar-items>
   </v-toolbar>
 </template>

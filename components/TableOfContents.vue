@@ -3,7 +3,7 @@
     <h3 v-scroll-to="'#top'" class="toc-title">{{title}}</h3>
     <div class="wrapper">
       <div v-for="(item, index) in items" :key="index" class="toc">
-        <div v-scroll-to="`#${item.id}`" class="toc-item">{{item.text}}</div>
+        <div v-scroll-to="`#${item.id}`" class="toc-item px-1">{{item.text}}</div>
       </div>
     </div>
   </div>
@@ -28,6 +28,7 @@ export default {
 .wrapper {
   border-left: 2px solid #ccc;
   padding-left: 20px;
+  padding-right: 10px;
 }
 .toc {
   font-size: 13px;
@@ -43,7 +44,8 @@ export default {
 }
 
 .toc-item:hover {
-  color: #777;
+  color: #fff;
+  background: #303f9f;
 }
 
 .active {
