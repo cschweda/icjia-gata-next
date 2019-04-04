@@ -1,12 +1,11 @@
 <template>
-  <div style="margin-top: 65px">
-    
+  <div>
     <base-content :content="content">
-      <template slot="nav">
+      <!-- <template slot="nav">
         <app-nav/>
-      </template>
+      </template>-->
       <template slot="siteTitle" slot-scope="{title}">
-        <v-layout row style="background: #1A237E;" >
+        <v-layout row style="background: #1A237E;">
           <v-container class="py-4">
             <v-flex xs12>
               <h1 class="text-xs-center" style="color: #fff">{{title}}</h1>
@@ -15,7 +14,7 @@
         </v-layout>
       </template>
       <template slot="markdown" slot-scope="{body}">
-        <v-layout row >
+        <v-layout row>
           <v-container class="mt-3">
             <v-flex xs12>
               <div v-html="body"/>

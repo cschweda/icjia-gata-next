@@ -1,7 +1,6 @@
 <template>
   <div>
-   
-    <v-toolbar color="grey lighten-4" fixed>
+    <v-toolbar :clipped-left="clipped" color="grey lighten-4" app fixed>
       <v-toolbar-side-icon @click="toggleSidebar"/>
       <v-toolbar-title class="display siteTitle">
         <nuxt-link to="/" class="noUnderline">
@@ -11,13 +10,10 @@
       </v-toolbar-title>
       <v-spacer/>
       <v-toolbar-items class="hidden-sm-and-down display">
-       
         <menu-dropdown :items="currentFundingOpps" text="Funding Opportunities"/>
         <v-btn icon to="/search" style="color: #555">
           <v-icon>search</v-icon>
         </v-btn>
-      
-
       </v-toolbar-items>
     </v-toolbar>
   </div>

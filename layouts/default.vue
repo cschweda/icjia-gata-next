@@ -1,7 +1,7 @@
 <template>
   <v-app id="top">
     <sidebar/>
-   
+    <app-nav/>
     <v-content>
       <nuxt/>
     </v-content>

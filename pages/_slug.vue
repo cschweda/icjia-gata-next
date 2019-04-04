@@ -1,8 +1,5 @@
 <template>
   <base-content :content="content">
-    <template slot="nav">
-      <app-nav/>
-    </template>
     <template slot="breadcrumb">
       <breadcrumb :path="content.path"/>
     </template>
@@ -16,7 +13,7 @@
       </v-layout>
     </template>
     <template slot="markdown" slot-scope="{body}">
-      <v-layout row >
+      <v-layout row>
         <v-container style="margin-top: -30px;">
           <v-flex xs12>
             <div v-html="body"/>
@@ -24,7 +21,6 @@
         </v-container>
       </v-layout>
     </template>
-      
   </base-content>
 </template>
 

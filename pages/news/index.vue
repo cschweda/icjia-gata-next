@@ -1,9 +1,6 @@
 <template>
   <div>
     <base-content :content="content">
-      <template slot="nav">
-        <app-nav/>
-      </template>
       <template slot="breadcrumb">
         <breadcrumb :path="content.path" :hide="content.hideBreadcrumb"/>
       </template>
@@ -18,7 +15,6 @@
       </template>
     </base-content>
 
-  
     <base-list :items="newsToDisplay" class="pull-25">
       <template slot-scope="item">
         <v-layout row>

@@ -1,8 +1,5 @@
 <template>
   <base-content :content="content">
-    <template slot="nav">
-      <app-nav/>
-    </template>
     <template slot="breadcrumb">
       <breadcrumb :path="content.path" :hide="false"/>
     </template>
@@ -10,14 +7,16 @@
       <v-layout row>
         <v-container>
           <v-flex xs12>
-            <div style="color: #555; font-weight: 900; text-transform: uppercase;border-bottom: 1px solid #eee; padding-bottom: 5px; margin-bottom: 20px;">News & Announcements</div>
+            <div
+              style="color: #555; font-weight: 900; text-transform: uppercase;border-bottom: 1px solid #eee; padding-bottom: 5px; margin-bottom: 20px;"
+            >News & Announcements</div>
             <h1 class="pageTitle rule">{{title}}</h1>
           </v-flex>
         </v-container>
       </v-layout>
     </template>
     <template slot="markdown" slot-scope="{body}">
-      <v-layout row >
+      <v-layout row>
         <v-container style="margin-top: -30px;">
           <v-flex xs12>
             <div v-html="body"/>
@@ -25,7 +24,6 @@
         </v-container>
       </v-layout>
     </template>
-      
   </base-content>
 </template>
 <script>

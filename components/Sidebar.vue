@@ -1,13 +1,6 @@
 <template>
-  
-  <v-navigation-drawer
-    v-model="sidebar"
-    
-    absolute
-    temporary
-    style="overflow-y: hidden !important;"
-  >
-    <v-layout column ma-0 px-3>
+  <v-navigation-drawer v-model="sidebar" :clipped="clipped" enable-resize-watcher temporary app>
+    <v-layout sidebar-height column ma-0 px-3>
       <div class="sidebarItem mt-3">
         <nuxt-link to="/" class="sidebar-link">Home</nuxt-link>
       </div>
@@ -18,12 +11,7 @@
         <nuxt-link to="/funding" class="sidebar-link">Funding Opportunities</nuxt-link>
       </div>
       <v-divider/>
-      <div
-        v-for="(page, index) in pages"
-        :key="index"
-        class="sidebarItem"
-          
-      >
+      <div v-for="(page, index) in pages" :key="index" class="sidebarItem">
         <nuxt-link
           v-if="page.menuItem"
           :to="generateSlug(page.slug)"
@@ -37,18 +25,25 @@
       <v-spacer/>
       <v-divider/>
       <div class="text-xs-center mb-3 pt-3 py-3">
-          
-          
-         
-        <img src="@/assets/img/logo-small.png" class="logo" height="40" @click="goto('http://www.icjia.state.il.us')">
-        <h6><a href="https://github.com/ICJIA/icjia-gata-next">View on Github</a></h6>
-        <h6 style="color: #666" class="mt-2" >&copy;&nbsp;2019 <a class="copyright" href="http://www.icjia.state.il.us">Illinois Criminal Justice Information Authority</a></h6>
-          
-         
+        <img
+          src="@/assets/img/logo-small.png"
+          class="logo"
+          height="40"
+          @click="goto('http://www.icjia.state.il.us')"
+        >
+        <h6>
+          <a href="https://github.com/ICJIA/icjia-gata-next">View on Github</a>
+        </h6>
+        <h6 style="color: #666" class="mt-2">
+          &copy;&nbsp;2019
+          <a
+            class="copyright"
+            href="http://www.icjia.state.il.us"
+          >Illinois Criminal Justice Information Authority</a>
+        </h6>
       </div>
     </v-layout>
   </v-navigation-drawer>
-  
 </template>
 
 <script>
@@ -81,6 +76,9 @@ export default {
 </script>
 
 <style scoped>
+.sidebar {
+  min-height: 100vh;
+}
 .sidebarItem {
   font-family: neue-haas-grotesk-display, sans-serif !important;
   font-weight: 700 !important;

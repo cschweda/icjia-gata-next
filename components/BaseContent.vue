@@ -1,10 +1,10 @@
 <template>
-  <div style="margin-top: 35px">
+  <div>
     <slot name="nav"/>
     <slot name="expired"/>
     <slot name="breadcrumb"/>
     <slot name="table-of-contents"/>
-    <slot :title="content.title" name="siteTitle" />
+    <slot :title="content.title" name="siteTitle"/>
     <div style="margin-top: -20px">
       <slot :title="content.title" name="pageTitle"/>
     </div>
