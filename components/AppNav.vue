@@ -1,6 +1,6 @@
 <template>
   <div>
-    <sidebar/>
+   
     <v-toolbar color="grey lighten-4" fixed>
       <v-toolbar-side-icon @click="toggleSidebar"/>
       <v-toolbar-title class="display siteTitle">

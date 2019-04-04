@@ -1,5 +1,6 @@
 <template>
   <v-app id="top">
+    <sidebar/>
     <app-nav/>
     
     <nuxt/>
@@ -8,14 +9,9 @@
 
 <script>
 import { EventBus } from '@/event-bus.js'
-import Sidebar from '@/components/Sidebar'
-import AppNav from '@/components/AppNav.vue'
 
 export default {
-  components: {
-    Sidebar,
-    AppNav
-  },
+  components: {},
   data() {
     return {}
   },
