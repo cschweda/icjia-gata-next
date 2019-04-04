@@ -2,12 +2,12 @@
   
   <v-navigation-drawer
     v-model="sidebar"
-    :clipped="true"
+    
     absolute
     temporary
     style="overflow-y: hidden !important;"
   >
-    <v-layout sidebar-height column ma-0 px-3>
+    <v-layout column ma-0 px-3>
       <div class="sidebarItem mt-3">
         <nuxt-link to="/" class="sidebar-link">Home</nuxt-link>
       </div>
