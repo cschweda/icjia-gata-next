@@ -1,5 +1,5 @@
 ---
-title: 'Overview'
+title: 'General Overview'
 posted: '2019-02-15'
 excerpt: 'ICJIA GATA Overview'
 menuItem: true
@@ -7,51 +7,52 @@ position: 2
 section: 'pages'
 ---
 
-## Vota omnis conatur adclivis moriemur nitidae Perseus
+The Grant Accountability and Transparency Act (GATA) of 2014, 30 ILCS 708/1 et seq., increased accountability and transparency in the use of grant funds and reduced the administrative burden on state agencies and grantees through adoption of federal grant guidelines and regulations.
 
-Lorem markdownum etiam qualesque palato tremuloque forma tenebris, e dumque
-orant, mittit lingua pelle, domum plena lugebisque! Verti non maxima vulnus et
-foro! Vehit peioris ab frustra, orbum dedit Hecate memorique iubas exspectatus
-lapsu metas cursus modo semicremoque solis. Incommendataque Cupido amplectitur
-quid ignem emicat belloque ut tamen donare ait vitisque utque: querno
-fumantiaque laquei pariter.
+Pursuant to the Act, the Grant Accountability and Transparency Unit (GATU) was established within the Governor's Office of Management and Budget; GATU is charged with implementation of the Act in coordination with state grant-making agencies and nonprofit organizations in Illinois. GATA requires grants administered by state agencies to be awarded in a competitive bidding process. In addition, all applicants must undergo a registration and pre-award screening process. This competitive grant award process is initiated with a Notice of Funding Opportunity (NOFO).
 
-- Sorores nymphae quae secundo meorum corpore ut
-- Vacuus domos adspicit cuncta
-- Tulit dividuae
-- Est est manu
-- Tumidus Lotis nunc in messis
-- Proles recolligat stabit prosternit mons quicumque dextra
+<div class="layout row wrap mt-5">
+<div class="flex xs12 sm12 md6">
 
-Tutum discretus Salmacis timeam oscula. Contigit Iuno fulmine. Habitavit isto,
-nec Ortygiam fervet modo mons caespite media trux taedia et quam his et. Excidit
-dextra inmergere Procne seque, agit repulsa; utque obumbrat fetus! Tibi ubi
-tenuisset ingens pendebat flexumque stamina nymphae Aphareia protinus; et orant,
-oro.
+## ICJIA Grant Award Process
 
-## Non subito cum et saepe
+A Notice of Funding Opportunity (NOFO) requires applicants to concisely address a specified scope of work, provide a program budget detailing personnel and equipment needs, and qualify their experience to implement the program's scope of services. Applications are competitively reviewed and scored.
 
-Non pisa caeli, iniuria, umor qui ab constabat cogit, et? Nec ante vocat atra,
-nec et tremit, non res, Oliaros cortice, roganti. Quidem et iussit animal, umor
-dea amictu geminum ullos! Populoque atlas non tamen, Peucetiosque vidit et
-sustinet postquam iamdudum.
+All applicants must:
 
-- Procul in facies veluti
-- Coeamus invadunt in lingua crimen se vocabula
-- Si tulit
+- Register on the State of Illinois Grant Accountability and Transparency Act (GATA) web portal.
+- Pass the pre-qualification verification of the following:
+  - valid DUNS number, current SAM.gov account;
+  - not be on the Federal Excluded Parties List;
+  - be in Good Standing with the Illinois Secretary of State, as applicable;
+  - not be on the Illinois Stop Payment list and not on the Dept. of Healthcare and Family Services Provider Sanctions list.
+- Complete the Internal Control Questionnaire (ICQ).
+- Once a grant award is given to an applicant they must submit to ICJIA a grant packet that includes an ICJIA approved:
 
-## Procrin timui parvam gravidamve docuique
+- Fully executed agreement
+- Program narrative
+- Program budget
+- Sets of certification documents
+- Programmatic Risk Assessment (PRA)
 
-Mente et me saepe torosa communemque terga habitus materno auras avis anguem et
-radice placidis, alasque. Dis pariterque, deae alas; curvat saepe tellure
-mergor.
+</div>
 
-> Nam patet nant quod leviter omnem egreditur Alpheos ara anima haec nautae
-> vidit, ora. Agmine sine profugam huic petens subiti aut os rugosis annos
-> silentia tamen meritis pudor serpentis!
+<div class="flex xs12 sm12 md6">
 
-In partu moribundo maiorque quam, sed punica inveni illa nuper. Pharsalia illo.
-Sic longius missus nantemque laeva Avernas agitavit genusque moenia, ad a
-nostra. Dat alis sacra haustis nato pontus dicere velantque Sabinae insidere!
-Bracchia quia illa Aetnaea comitemque Phyllei arsit et mersa consiliis arduus
-sperat, tollens saetis?
+## Helpful Hints
+
+A well-developed grant application includes:
+
+- Data and evidence that support the program scope and suggested outputs.
+- Program scope that is aligned with national, regional or local initiatives.
+- Strong and established partnerships with community groups, other not-for-profits, and local governments, detailed in the program scope and in letters of support.
+- Complete and concise responses in every section of the application.
+
+Also consider:
+
+- Complete the ICQ section of the GATA pre-registration within 3 weeks prior to the submittal of your NOFO application.
+- Submit your Letter of Intent and any questions to the agency that generated the NOFO as soon as possible.
+- Attending the NOFO conference call and review all posted webinars.
+
+</div>
+</div>

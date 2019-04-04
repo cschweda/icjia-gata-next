@@ -7,52 +7,53 @@ position: 5
 section: 'pages'
 ---
 
-## Thebas quae agitante ferens
+<div style="background: #3949AB">
 
-Lorem markdownum [Saturnia cumque](test.pdf), sed dubitor mercurio currendo sinuavi amisit.
-Movetur domo lacus: enim nec tristibus pendebat instar discedere distat pondere.
+<div style="font-size: 28px; font-weight: bold; color: #fff" class="text-xs-center py-5">The following forms are samples and not for use.</div>
 
-- Lacrimis ante et praecipitant sortes propensum inanis
-- Capillos lucemque palluit poenae comes retinere
-- Manet viri cecidit
-- Currus inter bovis
-- Signant Non est doceri habet fatum copia
+</div>
 
-## Illi et audiat
+## GATA Uniform Grant Agreement Template {.mt-5}
 
-Peremi ministeriis cruor; quod fessam a matrem Venerem manus hiatu sanguine at
-nec est. Bromiumque poenas dracones pauca Ityn ante; quisquis longa esto pars
-Miletum Iuppiter vetito ut per quoque, ut.
+View an example of a basic ICJIA grant agreement. An actual grant agreement also will have program- and grantee-specific information.
 
-> Ore non dei! Quod mater plebe attonitus videri inpietate radiis duobus
-> ferentes, iunctissima. Mihi est non retinentia laure videt manat cum corniger
-> facias. Da modo. Pleni novus media triones!
+- [GATA Uniform Grant Agreement »](/static/documents/Agreement_Template/GATA_UNIFORM_GRANT_AGREEMENT_040517.pdf)
 
-## Statione cum videt passurae undas
+## ICJIA Uniform Budget Template
 
-Moverat plenaque Achille innectite caecos Latona tibi caelo ponitque sanguine
-nulla, penetralia deme Daedalion est tales geminae humumque. Negate tremula, in
-habet: non deam unum copia iussit umore relicta aurea tanta; annum. Aedes quam
-uti corpore arvis, pone sparsi una in pietas tenuisse versata, spectantur
-precari, dum.
+View examples of the ICJIA Uniform Budget Template documents.
 
-> Ibi te superis caelo hordea cervix Priamidenque illum et vatis Penthea
-> institerat fassusque contraxit ipsas. Hospitis tenuit convicia dumque
-> secretasque retemptat primum numeros placeat et sensit domum pro venit moraque
-> si vero. Aequor liquerunt quotiens virgineos iugeribus auras Lycaoniae imagine
-> rursusque mox, et. Foramina ut nudaque operum lacrimae; tibi cum; vos
-> Melanchaetes movit fuerunt. Caelo et candida bis canis dedisti adunco nisi se
-> sanguineam vias successu rotarum parvis exclamatque quae, per.
+- [Budget Instructions (General).pdf »](</static/documents/Budget_Template/ICJIA_Uniform_Budget_Template_032817_Sample_Budget_Instructions_(General).pdf>)
+- [Budget Instructions (ICJIA).pdf»](</static/documents/Budget_Template/ICJIA_Uniform_Budget_Template_032817_Sample_Budget_Instructions_(ICJIA).pdf>)
+- [Section A ICJIA Funds »](/static/documents/Budget_Template/ICJIA_Uniform_Budget_Template_032817_Sample_Section_A_ICJIA_Funds.pdf)
+- [Section A Indirect Cost Info](/static/documents/Budget_Template/ICJIA_Uniform_Budget_Template_032817_Sample_Section_A_Indirect_Cost_Info.pdf)
+- [Section B Match Funds »](/static/documents/Budget_Template/ICJIA_Uniform_Budget_Template_032817_Sample_Section_B_Match_Funds.pdf)
+- [Applicant Certification »](/static/documents/Budget_Template/ICJIA_Uniform_Budget_Template_032817_Sample_Applicant_Certification.pdf)
+- [FFATA Form »](/static/documents/Budget_Template/ICJIA_Uniform_Budget_Template_032817_Sample_FFATA_Form.pdf)
+- [Section C1 Personnel »](/static/documents/Budget_Template/ICJIA_Uniform_Budget_Template_032817_Sample_Section_C1_Personnel.pdf)
+- [Section C2 Fringe Benefits »](/static/documents/Budget_Template/ICJIA_Uniform_Budget_Template_032817_Sample_Section_C2_Fringe_Benefits.pdf)
+- [Section C3 Travel »](/static/documents/Budget_Template/ICJIA_Uniform_Budget_Template_032817_Sample_Section_C3_Travel.pdf)
+- [Section C4 Equipment.pdf »](/static/documents/Budget_Template/ICJIA_Uniform_Budget_Template_032817_Sample_Section_C4_Equipment.pdf)
+- [Section C5 Supplies.pdf »](/static/documents/Budget_Template/ICJIA_Uniform_Budget_Template_032817_Sample_Section_C5_Supplies.pdf)
+- [Section C6 Contractual.pdf »](/static/documents/Budget_Template/ICJIA_Uniform_Budget_Template_032817_Sample_Section_C6_Contractual.pdf)
+- [Section C7 Indirect Costs.pdf »](/static/documents/Budget_Template/ICJIA_Uniform_Budget_Template_032817_Sample_Section_C7_Indirect_Costs.pdf)
+- [Section C Budget Summary.pdf »](/static/documents/Budget_Template/ICJIA_Uniform_Budget_Template_032817_Sample_Section_C_Budget_Summary.pdf)
+- [Agency Approval.pdf »](/static/documents/Budget_Template/ICJIA_Uniform_Budget_Template_032817_Sample_Agency_Approval.pdf)
 
-## Ceyca maius ulnis pudet generum
+## ICJIA Fiscal Reports
 
-Imas tibi vertice. Et caelum, aquas equis sonuit et tabuit stamina siquidem
-iugulatus auster partim siste et Achaia. Se vidisti cum stivave spes, duce pars
-messis dixit pollice caedis artus templi sedibus intellege. Adhuc ille ciconia:
-inanes peragat fieri, est lacrimans! Et venti transfert deforme coniunctis,
-sociorum.
+View a Monthly or a Quarterly Fiscal Report in the required reporting format. Reporting deadlines vary by grant.
 
-Gaudia visaque coniugis frigore: quicquam recusat exspectatus inter intrat
-sanctae data quod ora! Iunctam pondere accipe una pars quinquennia amando. Nec
-fraudate quem calenti, pariterque raucum, da haerent in Desine metuens vocant.
-Cui illa tertius, recondidit petit parentis petit cladis sic.
+- [Grantee Fiscal Report 1-4 Quarter with Close Out with Cent 04-2017 »](/static/documents/Fiscal_Reporting/Grantee_Fiscal_Report_1-4_Quarter_with_Close_Out_with_Cents_4_2017_SAMPLE.pdf)
+
+## Risk Assessment Form
+
+View an example of a programmatic Risk Assessment. The Risk Assessment Form may include additional questions specific to a grant program.
+
+- [Programmatic Risk Assessment Questionnaire 03-08-2017.pdf »](/static/documents/Risk_Assessment_Form/Programmatic_Risk_Assessment_Questionnaire_030817.pdf)
+
+## Uniform Application
+
+View the ICJIA Uniform Application for Grant Assistance.
+
+- [Uniform Application for Grant Assistance 11-02-2016 »](/static/documents/Uniform_Application/ICJIA_Uniform_Application_for_Grant_Assistance_110216.pdf)

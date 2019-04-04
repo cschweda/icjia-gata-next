@@ -26,26 +26,25 @@ export default {
   },
   computed: {
     items() {
-      const items = this.path.split('/')
+      // const items = this.path.split('/')
+      // const crumbs = [{ text: 'home', disabled: false, href: '/' }]
+      // items.forEach((i, index) => {
+      //   if (i.length) {
+      //     let obj = {}
+      //     obj.text = i
+      //     if (index === 0) {
+      //       obj.href = '/'
+      //     }
+      //     if (index === 1) {
+      //       obj.href = '/' + items[1]
+      //     }
+      //     crumbs.push(obj)
+      //   }
+      // })
+      // crumbs[crumbs.length - 1].disabled = true
+      // crumbs[crumbs.length - 1].href = items[items.length - 1]
+      // return crumbs
       const crumbs = [{ text: 'home', disabled: false, href: '/' }]
-      items.forEach((i, index) => {
-        if (i.length) {
-          let obj = {}
-          obj.text = i
-
-          if (index === 0) {
-            obj.href = '/'
-          }
-
-          if (index === 1) {
-            obj.href = '/' + items[1]
-          }
-
-          crumbs.push(obj)
-        }
-      })
-      crumbs[crumbs.length - 1].disabled = true
-      crumbs[crumbs.length - 1].href = items[items.length - 1]
       return crumbs
     }
   }

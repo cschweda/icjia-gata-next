@@ -27,4 +27,16 @@ When you see a grant opportunity listed on the Authority's GATA website, check t
 
 <details><summary>We tried to apply for a grant but had problems with the application process. What should we do?</summary>
 
-Please use the Authority contact information on the request for applications for technical assistance at any point in the process.</details>
+Please [contact the Authority via email](mailto:cja.irc@illinois.gov) or call (312) 793-8550 for applications for technical assistance at any point in the process.</details>
+
+## GATA General Procedural Common FAQs webinar
+
+This webinar answers frequently asked questions about the grant review process. Topics include rules and regulations, common errors on applications, certifications, and budgetary issues.
+
+<div class="text-xs-center mt-5">
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/g18hgiS3RYI/0.jpg)](https://www.youtube.com/watch?v=g18hgiS3RYI)
+
+### Click to play video on YouTube
+
+</div>
