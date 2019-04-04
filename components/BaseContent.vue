@@ -1,5 +1,6 @@
 <template>
-  <div style="margin-top: 65px">
+  <div style="margin-top: 35px">
+    <slot name="nav"/>
     <slot name="expired"/>
     <slot name="breadcrumb"/>
     <slot name="table-of-contents"/>

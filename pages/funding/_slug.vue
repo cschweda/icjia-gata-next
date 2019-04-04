@@ -2,6 +2,9 @@
   <div class="top">
     
     <base-content :content="content">
+      <template slot="nav">
+        <app-nav/>
+      </template>
       <template slot="breadcrumb">
         <breadcrumb :path="content.path"/>
       </template>

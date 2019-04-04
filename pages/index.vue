@@ -1,6 +1,10 @@
 <template>
   <div style="margin-top: -5px">
+    
     <base-content :content="content">
+      <template slot="nav">
+        <app-nav/>
+      </template>
       <template slot="siteTitle" slot-scope="{title}">
         <v-layout row style="background: #1A237E;" >
           <v-container class="py-4">
