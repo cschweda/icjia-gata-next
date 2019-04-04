@@ -1,17 +1,15 @@
-const sitePages = require('./api/pages.json')
-const siteNews = require('./api/news.json')
-const siteFunding = require('./api/funding.json')
-
-const pages = sitePages.map(item => {
-  return item.path
+const config = require('./config')
+const routes = []
+const siteArray = Object.getOwnPropertyNames(config.siteConfig)
+siteArray.forEach(section => {
+  try {
+    let json = require(`./api/${section}.json`)
+    let sectionPaths = json.map(section => {
+      return section.path
+    })
+    routes.push(...sectionPaths)
+  } catch (e) {
+    console.log(`ERROR: ${e}`)
+  }
 })
-
-const news = siteNews.map(item => {
-  return item.path
-})
-
-const funding = siteFunding.map(item => {
-  return item.path
-})
-
-module.exports = [...pages, ...news, ...funding]
+module.exports = routes

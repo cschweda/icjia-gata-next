@@ -65,13 +65,15 @@ export default {
   },
   mounted() {
     const toc = Array.prototype.slice.call(document.querySelectorAll('h2'))
+
     const tocItems = toc.map(item => {
       let obj = {}
       obj.id = item.id
       obj.text = item.innerHTML
       return obj
     })
-
+    const intro = { id: 'top', text: 'Introduction' }
+    tocItems.unshift(intro)
     this.tocItems = tocItems
   },
   asyncData({ store, params, route, error }) {

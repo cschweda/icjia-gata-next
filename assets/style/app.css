@@ -1,6 +1,6 @@
-html {
+/* html {
   overflow-y: auto;
-}
+} */
 .tweakOpacity-enter-active,
 .tweakOpacity-leave-active {
   transition: opacity 0.2s ease-out;
