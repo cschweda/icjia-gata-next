@@ -55,7 +55,7 @@ h3 {
   text-decoration: none;
 }
 .muted {
-  color: #ccc !important;
+  color: #777 !important;
 }
 
 .heavy {
@@ -92,6 +92,10 @@ h3 {
 
 .pull-25 {
   margin-top: -25px;
+}
+
+.pull-10 {
+  margin-top: -10px !important;
 }
 
 .border-top {

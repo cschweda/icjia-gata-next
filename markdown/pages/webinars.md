@@ -7,41 +7,112 @@ position: 3
 section: 'pages'
 ---
 
-## Est Tmolo ego corniger flesse arsit
+## Program Goals, Objectives and Performance Indicators
 
-Lorem markdownum, toris aut purpureas poteram est etiam domos potest, et dedit
-madefactaque fores, quae qui. His oenea lacertis. Inde fidemque illas bacchantum
-et, Veneris cadensve fugis et Imbreus imoque. Submisit Quirini unica nos.
+View a webinar describing Goals, Objectives, and Performance Indicators to assist in the process of grant and program development.
 
-Tauri sacra pudore sororia exsistunt procubuit passi inpresso quicquid adest
-mollibus; Baccho iuncturas, perdiderint vires nos saepe. Nido matre pedes
-corpore vertice florentemque Thisbe praecordia, sarisa finemque quoque dedit.
-Alta sola vetus erit ante Delphos ubi collo metalla quaerunt scire amplectitur!
-Precor solito tecta et spemque ignota Haemoniosque illud, de sub, et, ipso
-fulmina!
+<div class="text-xs-center mt-5">
 
-> Totis usque servanda ab teque vagitque, sed celer minanti! Tamen formidabile
-> nescio: formae iuventae, habuit, verbis. Dies Picus die, cum est Bacchus.
-> Genuit inferiora meminit, solent est venit solet, et haec nymphas cum prodes
-> deorum, contemptaque vires et nocti.
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/C6-qCnIsNjs/0.jpg)](https://www.youtube.com/watch?v=C6-qCnIsNjs)
 
-## In lumen mens canna
+##### Click to play on YouTube{.muted .pull-10}
 
-Armandique didicit. Colunt viri vastior honoris patientem quid manu opemque
-ille, urbis enim est sic fratribus, nec. Hoste silentia recepi in nullis vapor
-mutet. Regna inde et vestro nacta colla ducere, parva. Saepe est, secus erit
-colla!
+</div>
 
-- Furit ope umenti procubuit habent vultus somnia
-- Dicuntur concursum qui ibis istis dedissent cinerem
-- Vincere qui caput
+## Logic Models
 
-Domo tela at nare tuam his adspicit umbra quin de ilia. Media unum generumque
-talia; sub remis coeunt purpurea moverat: iam diversa in facta lacrimae,
-electra! Sola Marmaridae fauces. Ast gaudens hausit; sortes donec valentius
-pendere umida sulco.
+View this Logic Model webinar series to assist in the process of program planning and development.
 
-De ecce de trahitur terrent serpens comitante horrida futura molle in ante est
-Cynthia totumque, ille. Aeacon sum sacraque tenebas Sidonius. Potest in quod
-exercita Aeneaeque nostris carebis. Cerno seque dare procul soporem. Tmolo ubi
-haereat silentia, in tuumque dixere plurimus apta oraque silvis.
+<div class="text-xs-center mt-5">
+
+### The Value of Logic Models (Part 1){.mt-5}
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/rop6xoEA_NQ/0.jpg)](https://www.youtube.com/watch?v=rop6xoEA_NQ)
+
+##### Click to play on YouTube{.muted .pull-10}
+
+### The Value of Logic Models (Part 2){.mt-5}
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/1bGkwPgwmcw/0.jpg)](https://www.youtube.com/watch?v=1bGkwPgwmcw)
+
+##### Click to play on YouTube{.muted .pull-10}
+
+### The Value of Logic Models (Part 3){.mt-5}
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/6O5YP5d2iTs/0.jpg)](https://www.youtube.com/watch?v=6O5YP5d2iTs)
+
+##### Click to play on YouTube{.muted .pull-10}
+
+</div>
+
+## Amendments to Grant Agreements
+
+View a webinar on the process of amending an existing Authority grant agreement.
+
+<div class="text-xs-center mt-5">
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/iHsWphZtbzU/0.jpg)](https://www.youtube.com/watch?v=iHsWphZtbzU)
+
+##### Click to play on YouTube{.muted .pull-10}
+
+</div>
+
+## Budget Categories Needing Prior Approval
+
+View a webinar describing items that require Prior Approvals and/or Additional Justifications (even if they are detailed in the agreement narrative and budget).
+
+<div class="text-xs-center mt-5">
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/YjkFmPid5DI/0.jpg)](https://www.youtube.com/watch?v=YjkFmPid5DI)
+
+##### Click to play on YouTube{.muted .pull-10}
+
+</div>
+
+## Budget Category: Travel Costs
+
+View a webinar describing Travel Costs and State Travel Guidelines.
+
+<div class="text-xs-center mt-5">
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/nQb8pK5e3Mo/0.jpg)](https://www.youtube.com/watch?v=nQb8pK5e3Mo)
+
+##### Click to play on YouTube{.muted .pull-10}
+
+</div>
+
+## Budget Category: Subcontractors
+
+This webinar describes the Subcontract Approval process and required Consultant/Contractor/Vendor documentation.
+
+<div class="text-xs-center mt-5">
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/zXIopZ4KeEI/0.jpg)](https://www.youtube.com/watch?v=zXIopZ4KeEI)
+
+##### Click to play on YouTube{.muted .pull-10}
+
+</div>
+
+## Budget Category: Indirect Costs
+
+View a webinar on Indirect Costs.
+
+<div class="text-xs-center mt-5">
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/4stkASoNY5w/0.jpg)](https://www.youtube.com/watch?v=4stkASoNY5w)
+
+##### Click to play on YouTube{.muted .pull-10}
+
+</div>
+
+## Faith-Based Program Self Reporting Form
+
+View a webinar on how to complete the Authority's Faith-Based Program Self Reporting Form.
+
+<div class="text-xs-center mt-5">
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/x6cqf0075Fg/0.jpg)](https://www.youtube.com/watch?v=x6cqf0075Fg)
+
+##### Click to play on YouTube{.muted .pull-10}
+
+</div>
