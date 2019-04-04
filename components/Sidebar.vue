@@ -12,7 +12,7 @@
           <nuxt-link to="/" class="sidebar-link">Home</nuxt-link>
         </div>
         <div class="sidebarItem">
-          <nuxt-link to="/news" class="sidebar-link">News</nuxt-link>
+          <nuxt-link to="/news" class="sidebar-link">News & Announcements</nuxt-link>
         </div>
         <div class="sidebarItem">
           <nuxt-link to="/funding" class="sidebar-link">Funding Opportunities</nuxt-link>
