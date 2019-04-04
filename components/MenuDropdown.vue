@@ -1,31 +1,89 @@
 <template>
-  <v-menu offset-y max-width="350" nudge-left="90">
+  <v-menu offset-y max-width="350" nudge-left="120">
     <template v-slot:activator="{ on }">
       <v-btn flat class="heavy" style="color: #666" v-on="on">{{text}} <v-icon dark>arrow_drop_down</v-icon></v-btn>
     </template>
-    <v-list v-if="items.length === 0">
-      <div >
-        <div class="text-xs-center px-5 pb-2" style="font-weight: bold;">There are no current opportunities</div>
-        <v-divider/>
-        <div class="px-3 py-2 text-xs-center archive-link" @click="$router.push('/funding')">View the archive</div>
-      </div>
+    <v-list v-if="items.length === 0" two-line subheader>
+      <v-list-tile
+       
+        avatar
+       
+      >
+        <v-list-tile-avatar>
+          <v-icon color="indigo lighten-1">info</v-icon>
+        </v-list-tile-avatar>
+
+        <v-list-tile-content>
+          <v-list-tile-title>There are no current opportunities</v-list-tile-title>
+         
+        </v-list-tile-content>
+
+        
+      </v-list-tile>
+      
+      <v-divider inset/>
+      <v-list-tile
+       
+        avatar
+        @click="push('/funding')"
+      >
+        <v-list-tile-avatar>
+          <v-icon color="grey darken-2">folder</v-icon>
+        </v-list-tile-avatar>
+
+        <v-list-tile-content>
+          <v-list-tile-title>View the Archive</v-list-tile-title>
+         
+        </v-list-tile-content>
+
+        
+      </v-list-tile>
       
       
     </v-list>
    
-    <v-list v-else class="pt-4" >
+   
+    <v-list v-else two-line subheader>
+      <v-subheader inset style="font-weight: bold; color: #555">Current Opportunities</v-subheader>
+
       <v-list-tile
-        v-for="(item, index) in items"
-        :key="index"
-        class="pb-3 menuDropdown"
-        
+        v-for="item in items"
+        :key="item.title"
+        avatar
+        @click="push(item.path)"
       >
-        <nuxt-link :to="item.path" class="menuItem">
-          <div class="px-2 py-2">
-            {{item.title}}</div>
-        </nuxt-link>
+        <v-list-tile-avatar>
+          <v-icon color="indigo lighten-1">info</v-icon>
+        </v-list-tile-avatar>
+
+        <v-list-tile-content>
+          <v-list-tile-title>{{ item.title }}</v-list-tile-title>
+          <v-list-tile-sub-title>Expires: {{ format(item.expires, 'MMMM DD, YYYY') }}</v-list-tile-sub-title>
+        </v-list-tile-content>
+
         
       </v-list-tile>
+
+      <v-divider inset/>
+
+      <v-list-tile
+       
+        avatar
+        @click="push('/funding')"
+      >
+        <v-list-tile-avatar>
+          <v-icon color="grey darken-2">folder</v-icon>
+        </v-list-tile-avatar>
+
+        <v-list-tile-content>
+          <v-list-tile-title>View the Archive</v-list-tile-title>
+         
+        </v-list-tile-content>
+
+        
+      </v-list-tile>
+      
+     
     </v-list>
   </v-menu>
   
@@ -34,6 +92,7 @@
 <script>
 import { mapGetters } from 'vuex'
 import { EventBus } from '@/event-bus.js'
+import format from 'date-fns/format'
 export default {
   props: {
     text: {
@@ -46,9 +105,15 @@ export default {
     }
   },
   data() {
-    return {}
+    return {
+      format
+    }
   },
-  methods: {}
+  methods: {
+    push(path) {
+      this.$router.push(path)
+    }
+  }
 }
 </script>
 
