@@ -37,7 +37,10 @@
         <v-spacer/>
         <v-divider/>
         <div class="text-xs-center mb-3 pt-3">
-          <h4 style="color: #333;">Additional Info Here</h4>
+         
+          <img src="@/assets/img/logo-small.png" class="logo" height="40" @click="goto('http://www.icjia.state.il.us')">
+          <h6 style="color: #666" >&copy;&nbsp;2019 <a class="copyright" href="http://www.icjia.state.il.us">Illinois Criminal Justice Information Authority</a></h6>
+          
         </div>
       </v-layout>
     </v-navigation-drawer>
@@ -65,6 +68,9 @@ export default {
   methods: {
     generateSlug(slug) {
       return `/${slug}`
+    },
+    goto(url) {
+      location.href = url
     }
   }
 }
@@ -89,5 +95,17 @@ export default {
 
 .sidebar-height {
   min-height: 100vh;
+}
+
+.logo:hover {
+  cursor: pointer;
+}
+
+.copyright {
+  text-decoration: none;
+}
+
+.copyright:hover {
+  color: #aaa;
 }
 </style>

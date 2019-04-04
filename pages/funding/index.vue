@@ -107,14 +107,14 @@ export default {
 <style>
 .isCurrent.v-input--selection-controls.v-input .v-label {
   /* color: #2e7d32; */
-  font-weight: bold;
-  font-size: 18px;
+  font-weight: bold !important;
+  font-size: 18px !important;
 }
 
 .isExpired.v-input--selection-controls.v-input .v-label {
   /* color: #d84315; */
-  font-weight: bold;
-  font-size: 18px;
+  font-weight: bold !important;
+  font-size: 18px !important;
 }
 
 h2 a {
