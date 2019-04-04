@@ -2,7 +2,7 @@
   
   <v-navigation-drawer
     v-model="sidebar"
-      
+    :clipped="true"
     absolute
     temporary
     style="overflow-y: hidden !important;"

@@ -1,5 +1,5 @@
 <template>
-  <div style="margin-top: -5px">
+  <div style="margin-top: 65px">
     
     <base-content :content="content">
       <template slot="nav">
