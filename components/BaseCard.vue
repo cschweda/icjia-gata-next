@@ -18,6 +18,7 @@
 </template>
 
 <script>
+const moment = require('moment')
 export default {
   props: {
     item: {
@@ -39,7 +40,17 @@ export default {
   mounted() {},
   methods: {
     isExpired(date) {
-      return true
+      let now = moment().endOf('day')
+
+      let expiration = moment(this.item.expires)
+        .add(1, 'day')
+        .endOf('day')
+
+      if (now.isAfter(expiration)) {
+        return true
+      } else {
+        return false
+      }
     }
   }
 }

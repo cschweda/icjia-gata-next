@@ -58,7 +58,7 @@
 
         <v-list-tile-content>
           <v-list-tile-title style="font-weight: 700;">{{ item.title }}</v-list-tile-title>
-          <v-list-tile-sub-title>Expires: {{ item.expires, 'MMMM DD, YYYY' }}</v-list-tile-sub-title>
+          <v-list-tile-sub-title>Expires: {{ formatDate(item.expires)}}</v-list-tile-sub-title>
         </v-list-tile-content>
 
         
@@ -92,6 +92,8 @@
 <script>
 import { mapGetters } from 'vuex'
 import { EventBus } from '@/event-bus.js'
+import config from '@/config'
+const moment = require('moment')
 
 export default {
   props: {
@@ -110,6 +112,11 @@ export default {
   methods: {
     push(path) {
       this.$router.push(path)
+    },
+    formatDate(date) {
+      return moment(date)
+        .add(1, 'day')
+        .format(config.dateFormat)
     }
   }
 }

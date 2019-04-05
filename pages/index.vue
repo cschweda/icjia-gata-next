@@ -43,12 +43,12 @@
                 <base-card :item="item" :show-expired="true">
                   <template slot="posted">
                     <div class="text-xs-right pr-3 pt-3 pb-2">
-                      <h4 class="pr-3 pb-4" style="font-size: 14px;"><span class="posted">Posted:&nbsp;{{ item.posted }}</span></h4>
+                      <h4 class="pr-3 pb-4" style="font-size: 14px;"><span class="posted">Posted:&nbsp;{{ formatDate(item.posted) }}</span></h4>
                     </div>
                   </template>
                   <template slot="expires">
                     <div class="text-xs-left pb-2">
-                      <h4 class="pl-3 pt-4" style="font-size: 14px;"><span class="expires">{{expiredText}}:&nbsp;{{item.expires}}</span></h4>
+                      <h4 class="pl-3 pt-4" style="font-size: 14px;"><span class="expires">{{expiredText}}:&nbsp;{{formatDate(item.expires)}}</span></h4>
                     </div>
                   </template>
               </base-card></v-flex>
@@ -64,9 +64,11 @@
 
 <script>
 import jsonata from 'jsonata'
-const moment = require('moment')
 import { mapGetters } from 'vuex'
 import { EventBus } from '@/event-bus'
+const moment = require('moment')
+
+import config from '@/config'
 
 export default {
   transition: 'tweakOpacity',
@@ -75,7 +77,7 @@ export default {
     return {
       showCurrent: true,
       content: '',
-
+      config,
       hideExpired: true
     }
   },
@@ -102,13 +104,12 @@ export default {
     fundsToDisplay() {
       if (this.hideExpired) {
         let funding = this.funding.filter(f => {
-          let now = moment().endOf('day')
-          console.log(now)
+          let now = moment().startOf('day')
+
           let expiration = moment(f.expires)
             .add(1, 'day')
             .endOf('day')
-          console.log(now.isSameOrBefore(expiration))
-          //console.log(now <= expiration)
+
           if (now.isSameOrBefore(expiration)) {
             return f
           }
@@ -116,32 +117,32 @@ export default {
         return funding
       } else {
         let funding = this.funding.filter(f => {
-          let now = moment().endOf('day')
-          console.log(now)
+          let now = moment().startOf('day')
+
           let expiration = moment(f.expires)
             .add(1, 'day')
             .endOf('day')
-          console.log(now.isSameOrBefore(expiration))
-          //console.log(now <= expiration)
+
           if (now.isAfter(expiration)) {
             return f
           }
         })
         return funding
       }
-
-      return null
     }
   },
   mounted() {
     EventBus.$on('toggleFundingDisplay', state => {
       this.hideExpired = state
     })
-    //console.log(this.funding[0].expires)
-    //console.log(new Date())
-    // console.log(moment().format())
   },
-  methods: {}
+  methods: {
+    formatDate(date) {
+      return moment(date)
+        .add(1, 'day')
+        .format(config.dateFormat)
+    }
+  }
 }
 </script>
 

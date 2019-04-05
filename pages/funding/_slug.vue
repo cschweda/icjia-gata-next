@@ -48,6 +48,7 @@
 <script>
 import jsonata from 'jsonata'
 import { mapGetters } from 'vuex'
+const moment = require('moment')
 
 export default {
   transition: 'tweakOpacity',
@@ -60,7 +61,12 @@ export default {
   computed: {
     ...mapGetters(['funding']),
     isExpired() {
-      return true
+      let now = moment().startOf('day')
+
+      let expiration = moment(this.content.expires)
+        .add(1, 'day')
+        .endOf('day')
+      return now.isSameOrAfter(expiration)
     }
   },
   mounted() {

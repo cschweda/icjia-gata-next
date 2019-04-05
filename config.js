@@ -21,6 +21,7 @@ module.exports = {
     x: false,
     y: true
   },
+  dateFormat: 'MMMM DD, YYYY',
   siteConfig: {
     pages: {
       parentPath: '/',

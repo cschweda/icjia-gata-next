@@ -25,6 +25,7 @@ import jsonata from 'jsonata'
 import { mapGetters } from 'vuex'
 import { EventBus } from '@/event-bus.js'
 import MenuDropdown from '@/components/MenuDropdown.vue'
+const moment = require('moment')
 export default {
   components: {
     MenuDropdown
@@ -38,12 +39,18 @@ export default {
   computed: {
     ...mapGetters(['funding']),
     currentFundingOpps() {
-      // let funding = this.funding.filter(f => {
-      //   if (!isAfter(new Date(), new Date(endOfDay(f.expires)))) {
-      //     return f
-      //   }
-      // })
-      let funding = []
+      let funding = this.funding.filter(f => {
+        let now = moment().startOf('day')
+
+        let expiration = moment(f.expires)
+          .add(1, 'day')
+          .endOf('day')
+
+        if (now.isSameOrBefore(expiration)) {
+          return f
+        }
+      })
+      return funding
       return funding
     }
   },
