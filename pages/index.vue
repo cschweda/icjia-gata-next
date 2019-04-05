@@ -43,12 +43,12 @@
                 <base-card :item="item" :show-expired="true">
                   <template slot="posted">
                     <div class="text-xs-right pr-3 pt-3 pb-2">
-                      <h4 class="pr-3 pb-4" style="font-size: 14px;"><span class="posted">Posted:&nbsp;{{ format(item.posted,'MMMM DD, YYYY') }}</span></h4>
+                      <h4 class="pr-3 pb-4" style="font-size: 14px;"><span class="posted">Posted:&nbsp;{{ item.posted,'MMMM DD, YYYY' }}</span></h4>
                     </div>
                   </template>
                   <template slot="expires">
                     <div class="text-xs-left pb-2">
-                      <h4 class="pl-3 pt-4" style="font-size: 14px;"><span class="expires">{{expiredText}}:&nbsp;{{format(item.expires, "MMMM DD, YYYY")}}</span></h4>
+                      <h4 class="pl-3 pt-4" style="font-size: 14px;"><span class="expires">{{expiredText}}:&nbsp;{{item.expires, "MMMM DD, YYYY"}}</span></h4>
                     </div>
                   </template>
               </base-card></v-flex>
@@ -64,7 +64,7 @@
 
 <script>
 import jsonata from 'jsonata'
-import { format, differenceInCalendarDays } from 'date-fns'
+// import { format } from 'date-fns'
 // import isAfter from 'date-fns/is_after'
 // import endOfDay from 'date-fns/end_of_day'
 
@@ -106,7 +106,7 @@ export default {
     fundsToDisplay() {
       if (this.hideExpired) {
         let funding = this.funding.filter(f => {
-          if (differenceInCalendarDays(new Date(), new Date(f.expires)) <= 1) {
+          if (new Date() > new Date(f.expires)) {
             return f
           }
         })
@@ -135,7 +135,7 @@ export default {
       this.hideExpired = state
     })
     //console.log(this.funding[0].expires)
-    console.log(new Date())
+    //console.log(new Date())
   },
   methods: {}
 }
