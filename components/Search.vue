@@ -19,7 +19,6 @@
 </template>
 
 <script>
-import format from 'date-fns/format'
 import Fuse from 'fuse.js'
 import { mapGetters } from 'vuex'
 export default {

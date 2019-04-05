@@ -18,9 +18,6 @@
 </template>
 
 <script>
-import format from 'date-fns/format'
-import isAfter from 'date-fns/is_after'
-import endOfDay from 'date-fns/end_of_day'
 export default {
   props: {
     item: {
@@ -37,20 +34,12 @@ export default {
     }
   },
   data() {
-    return {
-      format: format
-    }
+    return {}
   },
-  mounted() {
-    // console.log(
-    //   'Date: ',
-    //   isAfter(endOfDay(new Date(this.item.expires)), new Date())
-    // )
-    // console.log('Expires: ', endOfDay(new Date(this.item.expires)))
-  },
+  mounted() {},
   methods: {
     isExpired(date) {
-      return isAfter(new Date(), new Date(endOfDay(this.item.expires)))
+      return true
     }
   }
 }

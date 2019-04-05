@@ -31,7 +31,7 @@
 
 <script>
 import jsonata from 'jsonata'
-import format from 'date-fns/format'
+
 import { mapGetters } from 'vuex'
 
 import Fuse from 'fuse.js'

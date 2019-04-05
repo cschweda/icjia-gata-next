@@ -21,9 +21,7 @@
 
 <script>
 import jsonata from 'jsonata'
-import format from 'date-fns/format'
-// import isAfter from 'date-fns/is_after'
-// import endOfDay from 'date-fns/end_of_day'
+
 import { mapGetters } from 'vuex'
 import { EventBus } from '@/event-bus.js'
 import MenuDropdown from '@/components/MenuDropdown.vue'

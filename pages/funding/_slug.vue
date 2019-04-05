@@ -48,16 +48,13 @@
 <script>
 import jsonata from 'jsonata'
 import { mapGetters } from 'vuex'
-import format from 'date-fns/format'
-// import isAfter from 'date-fns/is_after'
-// import endOfDay from 'date-fns/end_of_day'
+
 export default {
   transition: 'tweakOpacity',
   components: {},
   data() {
     return {
-      tocItems: [],
-      now: format(new Date())
+      tocItems: []
     }
   },
   computed: {

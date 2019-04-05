@@ -34,12 +34,12 @@
               <base-card :item="item" :show-expired="true">
                 <template slot="posted">
                   <div class="text-xs-right pr-3 pt-3 pb-2">
-                    <h4 class="pr-3 pb-4" style="font-size: 14px;"><span class="posted">Posted:&nbsp;{{ format(item.posted,'MMMM DD, YYYY') }}</span></h4>
+                    <h4 class="pr-3 pb-4" style="font-size: 14px;"><span class="posted">Posted:&nbsp;{{ item.posted,'MMMM DD, YYYY' }}</span></h4>
                   </div>
                 </template>
                 <template slot="expires">
                   <div class="text-xs-left pb-2">
-                    <h4 class="pl-3 pt-4" style="font-size: 14px;"><span class="expires">{{expiredText}}:&nbsp;{{format(item.expires, "MMMM DD, YYYY")}}</span></h4>
+                    <h4 class="pl-3 pt-4" style="font-size: 14px;"><span class="expires">{{expiredText}}:&nbsp;{{item.expires, "MMMM DD, YYYY"}}</span></h4>
                   </div>
                 </template>
             </base-card></v-flex>
@@ -53,9 +53,7 @@
 
 <script>
 import jsonata from 'jsonata'
-import format from 'date-fns/format'
-import isAfter from 'date-fns/is_after'
-import endOfDay from 'date-fns/end_of_day'
+
 import { mapGetters } from 'vuex'
 
 import { EventBus } from '@/event-bus.js'
@@ -65,9 +63,7 @@ export default {
   components: {},
   data() {
     return {
-      now: format(new Date()),
-      hideExpired: true,
-      format
+      hideExpired: true
     }
   },
 
@@ -116,18 +112,7 @@ export default {
       console.log(state)
     })
   },
-  methods: {
-    // isExpired(date) {
-    //   if (this.now > date) {
-    //     return '<h4 style="color: #D84315;">Expired</h4>'
-    //   } else {
-    //     return `<h4><span>Deadline:&nbsp;&nbsp;${format(
-    //       date,
-    //       'MMMM DD, YYYY'
-    //     )}</span></h4>`
-    //   }
-    // }
-  }
+  methods: {}
 }
 </script>
 

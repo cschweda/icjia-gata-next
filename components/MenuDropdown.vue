@@ -58,7 +58,7 @@
 
         <v-list-tile-content>
           <v-list-tile-title style="font-weight: 700;">{{ item.title }}</v-list-tile-title>
-          <v-list-tile-sub-title>Expires: {{ format(item.expires, 'MMMM DD, YYYY') }}</v-list-tile-sub-title>
+          <v-list-tile-sub-title>Expires: {{ item.expires, 'MMMM DD, YYYY' }}</v-list-tile-sub-title>
         </v-list-tile-content>
 
         
@@ -92,7 +92,7 @@
 <script>
 import { mapGetters } from 'vuex'
 import { EventBus } from '@/event-bus.js'
-import format from 'date-fns/format'
+
 export default {
   props: {
     text: {
@@ -105,9 +105,7 @@ export default {
     }
   },
   data() {
-    return {
-      format
-    }
+    return {}
   },
   methods: {
     push(path) {

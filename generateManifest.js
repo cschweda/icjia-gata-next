@@ -9,7 +9,7 @@ const jsonDestinationPath = './api/'
 const config = require('./config')
 
 const dateFields = ['posted', 'created', 'expires', 'updated']
-const format = require('date-fns/format')
+// const format = require('date-fns/format')
 
 const arr = []
 
@@ -79,7 +79,7 @@ const readFiles = dirname => {
               dateFields.find(df => {
                 if (df === attr) {
                   if (obj[attr] != 'never') {
-                    obj[attr] = format(obj[attr])
+                    obj[attr] = new Date(obj[attr])
                   }
                 }
               })
