@@ -1,6 +1,11 @@
 <template>
   <div>
     <base-content :content="content">
+      <template slot="browserCheck">
+        <no-ssr>
+          <browser-detect/>
+        </no-ssr>
+      </template>
       <template slot="breadcrumb">
         <breadcrumb :path="content.path" :hide="content.hideBreadcrumb"/>
       </template>
@@ -20,7 +25,13 @@
         <v-layout row>
           <v-container>
             <v-flex xs12>
-              <base-card :item="item"/>
+              <base-card :item="item">
+                <template slot="posted">
+                  <div class="text-xs-right pr-3 pt-3 pb-2">
+                    <h4 class="pr-3 pb-4" style="font-size: 14px;"><span class="posted">Posted:&nbsp;{{ format(item.posted,'MMMM DD, YYYY') }}</span></h4>
+                  </div>
+                </template>
+              </base-card>
             </v-flex>
           </v-container>
         </v-layout>
@@ -41,7 +52,7 @@ export default {
   components: {},
   data() {
     return {
-      now: format(new Date()),
+      format,
       hideExpired: true
     }
   },

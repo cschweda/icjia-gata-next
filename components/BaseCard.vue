@@ -6,7 +6,7 @@
       </div>
       <slot name="expires"/>
      
-      <h2 class="px-3 pt-0">
+      <h2 class="px-3 pt-3">
         <nuxt-link :to="`${item.path}`" class="link">{{ item.title }}</nuxt-link>
       </h2>
       <v-card-text class="px-3">{{ item.excerpt }}</v-card-text>

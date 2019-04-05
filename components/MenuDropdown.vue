@@ -57,7 +57,7 @@
         </v-list-tile-avatar> -->
 
         <v-list-tile-content>
-          <v-list-tile-title>{{ item.title }}</v-list-tile-title>
+          <v-list-tile-title style="font-weight: 700;">{{ item.title }}</v-list-tile-title>
           <v-list-tile-sub-title>Expires: {{ format(item.expires, 'MMMM DD, YYYY') }}</v-list-tile-sub-title>
         </v-list-tile-content>
 

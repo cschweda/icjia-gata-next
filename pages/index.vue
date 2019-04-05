@@ -1,9 +1,12 @@
 <template>
   <div>
+    
     <base-content :content="content">
-      <!-- <template slot="nav">
-        <app-nav/>
-      </template>-->
+      <template slot="browserCheck">
+        <no-ssr>
+          <browser-detect/>
+        </no-ssr>
+      </template>
       <template slot="siteTitle" slot-scope="{title}">
         <v-layout row style="background: #1A237E;">
           <v-container class="py-4">

@@ -69,6 +69,7 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    transpile: [/node_modules[/\\]vuetify[/\\]/],
     /*
     ** You can extend webpack config here
     */

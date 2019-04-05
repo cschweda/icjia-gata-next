@@ -19,6 +19,14 @@ export default {
       type: String,
       default: ''
     },
+    section: {
+      type: String,
+      default: ''
+    },
+    title: {
+      type: String,
+      default: 'undefined'
+    },
     hide: {
       type: Boolean,
       default: false
@@ -45,6 +53,17 @@ export default {
       // crumbs[crumbs.length - 1].href = items[items.length - 1]
       // return crumbs
       const crumbs = [{ text: 'home', disabled: false, href: '/' }]
+      let obj = {}
+      obj.text = this.section
+      obj.disabled = true
+      obj.href = `${this.section}`
+      crumbs.push(obj)
+      // let obj={}
+      // obj.text=this.title
+      // obj.disabled = true
+      // obj.href=`${this.section}/${this.title}`
+      // crumbs.push{obj}
+
       return crumbs
     }
   }
@@ -53,8 +72,9 @@ export default {
 
 <style>
 .crumbs {
-  /* background: #efefef; */
   text-transform: uppercase;
+  /* background: #f5f5f5;
+  border-bottom: 1px solid #e5e5e5; */
 }
 
 .disabled {
