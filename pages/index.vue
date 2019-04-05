@@ -43,7 +43,7 @@
                 <base-card :item="item" :show-expired="true">
                   <template slot="posted">
                     <div class="text-xs-right pr-3 pt-3 pb-2">
-                      <h4 class="pr-3 pb-4" style="font-size: 14px;"><span class="posted">Posted:&nbsp;{{ item.posted}}</span></h4>
+                      <h4 class="pr-3 pb-4" style="font-size: 14px;"><span class="posted">Posted:&nbsp;{{ item.posted }}</span></h4>
                     </div>
                   </template>
                   <template slot="expires">
@@ -64,7 +64,7 @@
 
 <script>
 import jsonata from 'jsonata'
-
+const moment = require('moment')
 import { mapGetters } from 'vuex'
 import { EventBus } from '@/event-bus'
 
@@ -102,27 +102,34 @@ export default {
     fundsToDisplay() {
       if (this.hideExpired) {
         let funding = this.funding.filter(f => {
-          if (new Date() > new Date(f.expires)) {
+          let now = moment().endOf('day')
+          console.log(now)
+          let expiration = moment(f.expires)
+            .add(1, 'day')
+            .endOf('day')
+          console.log(now.isSameOrBefore(expiration))
+          //console.log(now <= expiration)
+          if (now.isSameOrBefore(expiration)) {
+            return f
+          }
+        })
+        return funding
+      } else {
+        let funding = this.funding.filter(f => {
+          let now = moment().endOf('day')
+          console.log(now)
+          let expiration = moment(f.expires)
+            .add(1, 'day')
+            .endOf('day')
+          console.log(now.isSameOrBefore(expiration))
+          //console.log(now <= expiration)
+          if (now.isAfter(expiration)) {
             return f
           }
         })
         return funding
       }
-      // if (this.hideExpired) {
-      //   let funding = this.funding.filter(f => {
-      //     if (differenceInCalendarDays(new Date(), endOfDay(f.expires)) <= 1) {
-      //       return f
-      //     }
-      //   })
-      //   return funding
-      // } else {
-      //   let funding = this.funding.filter(f => {
-      //     if (differenceInCalendarDays(new Date(), endOfDay(f.expires)) > 1) {
-      //       return f
-      //     }
-      //   })
-      //   return funding
-      // }
+
       return null
     }
   },
@@ -132,6 +139,7 @@ export default {
     })
     //console.log(this.funding[0].expires)
     //console.log(new Date())
+    // console.log(moment().format())
   },
   methods: {}
 }
