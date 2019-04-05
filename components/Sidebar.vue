@@ -31,16 +31,16 @@
           height="40"
           @click="goto('http://www.icjia.state.il.us')"
         >
-        <h6>
-          <a href="https://github.com/ICJIA/icjia-gata-next">View on Github</a>
-        </h6>
-        <h6 style="color: #666" class="mt-2">
+        <h5>
+          <a href="https://github.com/ICJIA/icjia-gata-next" class="sidebar-footer-link">View on Github</a>
+        </h5>
+        <h5 style="color: #666; font-weight: 400 !important;" class="mt-2">
           &copy;&nbsp;2019
           <a
-            class="copyright"
+            class="sidebar-footer-link"
             href="http://www.icjia.state.il.us"
           >Illinois Criminal Justice Information Authority</a>
-        </h6>
+        </h5>
       </div>
     </v-layout>
   </v-navigation-drawer>
@@ -52,7 +52,8 @@ import { EventBus } from '@/event-bus.js'
 export default {
   data() {
     return {
-      sidebar: false
+      sidebar: false,
+      clipped: false
     }
   },
   computed: {
@@ -60,7 +61,7 @@ export default {
   },
   mounted() {
     EventBus.$on('toggleSidebar', () => {
-      console.log('click')
+      //console.log('click')
       this.sidebar = !this.sidebar
     })
   },
@@ -103,11 +104,12 @@ export default {
   cursor: pointer;
 }
 
-.copyright {
+.sidebar-footer-link {
   text-decoration: none;
+  font-weight: 400;
 }
 
-.copyright:hover {
+.sidebar-footer-link:hover {
   color: #aaa;
 }
 </style>

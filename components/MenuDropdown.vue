@@ -52,9 +52,9 @@
         avatar
         @click="push(item.path)"
       >
-        <v-list-tile-avatar>
+        <!-- <v-list-tile-avatar>
           <v-icon color="indigo lighten-1">info</v-icon>
-        </v-list-tile-avatar>
+        </v-list-tile-avatar> -->
 
         <v-list-tile-content>
           <v-list-tile-title>{{ item.title }}</v-list-tile-title>

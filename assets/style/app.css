@@ -138,3 +138,12 @@ details p {
 summary:focus {
   outline: none;
 }
+
+.expires {
+  color: #666;
+  font-size: 18px;
+}
+
+.posted {
+  color: #999;
+}

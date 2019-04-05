@@ -22,6 +22,8 @@
 <script>
 import jsonata from 'jsonata'
 import format from 'date-fns/format'
+import isAfter from 'date-fns/is_after'
+import endOfDay from 'date-fns/end_of_day'
 import { mapGetters } from 'vuex'
 import { EventBus } from '@/event-bus.js'
 import MenuDropdown from '@/components/MenuDropdown.vue'
@@ -32,18 +34,19 @@ export default {
   data() {
     return {
       now: format(new Date()),
-      empty: []
+      empty: [],
+      clipped: true
     }
   },
   computed: {
     ...mapGetters(['funding']),
     currentFundingOpps() {
-      const currentFundingOpps = this.funding.filter(item => {
-        if (format(item.expires) > this.now) {
-          return item
+      let funding = this.funding.filter(f => {
+        if (!isAfter(new Date(), new Date(endOfDay(f.expires)))) {
+          return f
         }
       })
-      return currentFundingOpps
+      return funding
     }
   },
   methods: {
