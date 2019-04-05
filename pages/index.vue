@@ -104,22 +104,22 @@ export default {
       return this.hideExpired ? 'Expires' : 'Expired'
     },
     fundsToDisplay() {
-      if (this.hideExpired) {
-        let funding = this.funding.filter(f => {
-          if (differenceInCalendarDays(new Date(), endOfDay(f.expires)) <= 1) {
-            return f
-          }
-        })
-
-        return funding
-      } else {
-        let funding = this.funding.filter(f => {
-          if (differenceInCalendarDays(new Date(), endOfDay(f.expires)) > 1) {
-            return f
-          }
-        })
-        return funding
-      }
+      // if (this.hideExpired) {
+      //   let funding = this.funding.filter(f => {
+      //     if (differenceInCalendarDays(new Date(), endOfDay(f.expires)) <= 1) {
+      //       return f
+      //     }
+      //   })
+      //   return funding
+      // } else {
+      //   let funding = this.funding.filter(f => {
+      //     if (differenceInCalendarDays(new Date(), endOfDay(f.expires)) > 1) {
+      //       return f
+      //     }
+      //   })
+      //   return funding
+      // }
+      return null
     }
   },
   mounted() {
@@ -127,6 +127,7 @@ export default {
       this.hideExpired = state
     })
     //console.log(this.funding[0].expires)
+    console.log(new Date())
   },
   methods: {}
 }
