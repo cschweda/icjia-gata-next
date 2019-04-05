@@ -1,6 +1,8 @@
 <template>
   <v-app id="top">
-   
+    <no-ssr>
+      <browser-detect/>
+    </no-ssr>
     <sidebar/>
     <app-nav/>
     <v-content>

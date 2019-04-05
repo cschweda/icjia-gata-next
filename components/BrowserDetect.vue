@@ -1,8 +1,8 @@
 <template>
   <div
-    v-if="browserObj.isIE"
+    v-if="!browserObj.isIE"
     class="text-xs-center pt-5 pb-5"
-    style="background-color: red;"
+    style="background-color: red; margin-top: 65px;"
   >
     <h1 style="color: white">
       Your browser is out of date.

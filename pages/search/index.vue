@@ -1,11 +1,7 @@
 <template>
   <div>
     <base-content :content="content">
-      <template slot="browserCheck">
-        <no-ssr>
-          <browser-detect/>
-        </no-ssr>
-      </template>
+      
       <template slot="breadcrumb">
         <breadcrumb :path="content.path" :hide="content.hideBreadcrumb"/>
       </template>
