@@ -126,6 +126,10 @@ export default {
     EventBus.$on('toggleFundingDisplay', state => {
       this.hideExpired = state
     })
+    //console.log(this.funding[0].expires)
+    console.log(
+      !isAfter(new Date(), new Date(endOfDay(this.funding[0].expires)))
+    )
   },
   methods: {}
 }
