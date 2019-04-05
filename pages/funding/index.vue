@@ -54,8 +54,8 @@
 <script>
 import jsonata from 'jsonata'
 import format from 'date-fns/format'
-import isAfter from 'date-fns/is_after'
-import endOfDay from 'date-fns/end_of_day'
+// import isAfter from 'date-fns/is_after'
+// import endOfDay from 'date-fns/end_of_day'
 import { mapGetters } from 'vuex'
 
 import { EventBus } from '@/event-bus.js'
@@ -78,21 +78,23 @@ export default {
     },
     fundsToDisplay() {
       let funding = []
-      if (this.hideExpired) {
-        funding = this.funding.filter(f => {
-          if (!isAfter(new Date(), new Date(endOfDay(f.expires)))) {
-            return f
-          }
-        })
-        return funding
-      } else {
-        funding = this.funding.filter(f => {
-          if (isAfter(new Date(), new Date(endOfDay(f.expires)))) {
-            return f
-          }
-        })
-        return funding
-      }
+
+      // if (this.hideExpired) {
+      //   funding = this.funding.filter(f => {
+      //     if (!isAfter(new Date(), new Date(endOfDay(f.expires)))) {
+      //       return f
+      //     }
+      //   })
+      //   return funding
+      // } else {
+      //   funding = this.funding.filter(f => {
+      //     if (isAfter(new Date(), new Date(endOfDay(f.expires)))) {
+      //       return f
+      //     }
+      //   })
+      //   return funding
+      // }
+      return funding
     }
   },
   asyncData({ store, params, route, error }) {
