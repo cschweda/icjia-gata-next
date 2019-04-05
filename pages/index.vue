@@ -64,10 +64,10 @@
 
 <script>
 import jsonata from 'jsonata'
-import format from 'date-fns/format'
+import { format, differenceInCalendarDays } from 'date-fns'
 // import isAfter from 'date-fns/is_after'
 // import endOfDay from 'date-fns/end_of_day'
-import differenceInCalendarDays from 'date-fns/difference_in_calendar_days'
+
 import { mapGetters } from 'vuex'
 import { EventBus } from '@/event-bus'
 
