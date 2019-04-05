@@ -1,9 +1,9 @@
 <template>
   <div >
-    <slot name="nav"/>
+    <!-- <slot name="nav"/>
     <slot name="browserCheck"/>
     <slot name="expired"/>
-    <!-- <slot name="breadcrumb"/> -->
+    <slot name="breadcrumb"/>
     <slot name="table-of-contents"/>
     <slot :title="content.title" name="siteTitle"/>
     <div style="margin-top: 15px">
@@ -11,7 +11,7 @@
     </div>
     <div class="markdown-body">
       <slot :body="renderedContent" name="markdown"/>
-    </div>
+    </div> -->
   </div>
 </template>
 
