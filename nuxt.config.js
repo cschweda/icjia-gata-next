@@ -29,6 +29,16 @@ module.exports = {
         rel: 'stylesheet',
         href: 'https://use.fontawesome.com/releases/v5.8.1/css/all.css'
       }
+    ],
+    script: [
+      {
+        src:
+          'https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.0.0/polyfill.min.js'
+      },
+      {
+        src:
+          'https://cdnjs.cloudflare.com/ajax/libs/event-source-polyfill/0.0.9/eventsource.min.js'
+      }
     ]
   },
 
