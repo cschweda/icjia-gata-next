@@ -65,8 +65,8 @@
 <script>
 import jsonata from 'jsonata'
 import format from 'date-fns/format'
-import isAfter from 'date-fns/is_after'
-import endOfDay from 'date-fns/end_of_day'
+// import isAfter from 'date-fns/is_after'
+// import endOfDay from 'date-fns/end_of_day'
 import differenceInCalendarDays from 'date-fns/difference_in_calendar_days'
 import { mapGetters } from 'vuex'
 import { EventBus } from '@/event-bus'
@@ -104,6 +104,14 @@ export default {
       return this.hideExpired ? 'Expires' : 'Expired'
     },
     fundsToDisplay() {
+      if (this.hideExpired) {
+        let funding = this.funding.filter(f => {
+          if (differenceInCalendarDays(new Date(), new Date(f.expires)) <= 1) {
+            return f
+          }
+        })
+        return funding
+      }
       // if (this.hideExpired) {
       //   let funding = this.funding.filter(f => {
       //     if (differenceInCalendarDays(new Date(), endOfDay(f.expires)) <= 1) {

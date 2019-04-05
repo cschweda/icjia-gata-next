@@ -1,11 +1,11 @@
 <template>
   <div class="top">
     <base-content :content="content">
-      <template slot="browserCheck">
+      <!-- <template slot="browserCheck">
         <no-ssr>
           <browser-detect/>
         </no-ssr>
-      </template>
+      </template> -->
       <template slot="breadcrumb">
         <breadcrumb :path="content.path"/>
       </template>
@@ -49,8 +49,8 @@
 import jsonata from 'jsonata'
 import { mapGetters } from 'vuex'
 import format from 'date-fns/format'
-import isAfter from 'date-fns/is_after'
-import endOfDay from 'date-fns/end_of_day'
+// import isAfter from 'date-fns/is_after'
+// import endOfDay from 'date-fns/end_of_day'
 export default {
   transition: 'tweakOpacity',
   components: {},
@@ -63,7 +63,7 @@ export default {
   computed: {
     ...mapGetters(['funding']),
     isExpired() {
-      return isAfter(new Date(), new Date(endOfDay(this.content.expires)))
+      return true
     }
   },
   mounted() {
