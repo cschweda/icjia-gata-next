@@ -106,7 +106,7 @@ export default {
     fundsToDisplay() {
       if (this.hideExpired) {
         let funding = this.funding.filter(f => {
-          if (differenceInCalendarDays(new Date(), endOfDay(f.expires)) <= 0) {
+          if (differenceInCalendarDays(new Date(), endOfDay(f.expires)) <= 1) {
             return f
           }
         })
@@ -114,7 +114,7 @@ export default {
         return funding
       } else {
         let funding = this.funding.filter(f => {
-          if (differenceInCalendarDays(new Date(), endOfDay(f.expires)) > 0) {
+          if (differenceInCalendarDays(new Date(), endOfDay(f.expires)) > 1) {
             return f
           }
         })
