@@ -3,9 +3,9 @@
    
     <sidebar/>
     <app-nav/>
-    <v-content>
+    <!-- <v-content>
       <nuxt/>
-    </v-content>
+    </v-content> -->
     
   </v-app>
 </template>
