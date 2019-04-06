@@ -63,7 +63,6 @@
 import jsonata from 'jsonata'
 import { mapGetters } from 'vuex'
 import { EventBus } from '@/event-bus'
-const moment = require('moment')
 
 import config from '@/config'
 
@@ -109,11 +108,7 @@ export default {
   },
   methods: {
     formatDate(date) {
-      return (
-        moment(date)
-          // .add(1, 'day')
-          .format(config.dateFormat)
-      )
+      return date
     }
   }
 }

@@ -55,7 +55,6 @@ import jsonata from 'jsonata'
 import { mapGetters } from 'vuex'
 import { EventBus } from '@/event-bus.js'
 import config from '@/config'
-const moment = require('moment')
 
 export default {
   transition: 'tweakOpacity',
@@ -96,11 +95,7 @@ export default {
   },
   methods: {
     formatDate(date) {
-      return (
-        moment(date)
-          // .add(1, 'day')
-          .format(config.dateFormat)
-      )
+      return date
     }
   }
 }
