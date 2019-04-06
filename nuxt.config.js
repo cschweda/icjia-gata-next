@@ -62,8 +62,7 @@ module.exports = {
   */
   modules: [
     // Doc: https://github.com/nuxt-community/axios-module#usage
-    '@nuxtjs/axios',
-    '@nuxtjs/moment',
+
     ['vue-scrollto/nuxt', { duration: 300, offset: -80 }]
   ],
   /*
