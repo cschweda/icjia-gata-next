@@ -39,20 +39,27 @@ export const getters = {
     return state.news
   },
   current: state => {
-    var today = new Date()
-    var yesterday = new Date(today.getTime() - 24 * 60 * 60 * 1000)
+    const today = new Date()
+    // const target = new Date(
+    //   today.getTime() + Math.abs(today.getTimezoneOffset() * 60000)
+    // )
+    const target = new Date(today.getTime() - 24 * 60 * 60 * 1000)
     let current = []
     state.funding.forEach(x => {
-      if (new Date(x.expires) > yesterday) current.push(x)
+      let expiration = new Date(x.expires)
+      if (expiration > target) current.push(x)
     })
     return current
   },
   expired: state => {
-    var today = new Date()
-    var yesterday = new Date(today.getTime() - 24 * 60 * 60 * 1000)
+    const today = new Date()
+    // const target = new Date(
+    //   today.getTime() + Math.abs(today.getTimezoneOffset() * 60000)
+    // )
+    const target = new Date(today.getTime() - 24 * 60 * 60 * 1000)
     let expired = []
     state.funding.forEach(x => {
-      if (new Date(x.expires) < yesterday) expired.push(x)
+      if (new Date(x.expires) < target) expired.push(x)
     })
     return expired
   }
