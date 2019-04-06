@@ -21,7 +21,6 @@
 </template>
 
 <script>
-const moment = require('moment')
 export default {
   props: {
     item: {

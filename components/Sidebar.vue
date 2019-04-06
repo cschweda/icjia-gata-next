@@ -32,7 +32,10 @@
           @click="goto('http://www.icjia.state.il.us')"
         >
         <h5>
-          <a href="https://github.com/ICJIA/icjia-gata-next" class="sidebar-footer-link">View on Github</a>
+          <a
+            href="https://github.com/ICJIA/icjia-gata-next"
+            class="sidebar-footer-link"
+          >View on Github</a>
         </h5>
         <h5 style="color: #666; font-weight: 400 !important;" class="mt-2">
           &copy;&nbsp;2019

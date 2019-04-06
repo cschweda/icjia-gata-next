@@ -25,7 +25,7 @@ import jsonata from 'jsonata'
 import { mapGetters } from 'vuex'
 import { EventBus } from '@/event-bus.js'
 import MenuDropdown from '@/components/MenuDropdown.vue'
-const moment = require('moment')
+
 export default {
   components: {
     MenuDropdown
