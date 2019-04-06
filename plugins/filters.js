@@ -26,7 +26,9 @@ Vue.filter('format', function(d) {
   function pad(n) {
     return n < 10 ? '0' + n : n
   }
-  const target = new Date(d)
+  const t = new Date(d)
+  // increment 00:00:00 time by 1 day
+  const target = new Date(t.getTime() + 24 * 60 * 60 * 1000)
   const date = target.getDate()
   const month = target.getMonth()
   const year = target.getFullYear()

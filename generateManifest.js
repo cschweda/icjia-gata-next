@@ -76,13 +76,13 @@ const readFiles = dirname => {
               /**
                * ... convert YAML date string to ISU 8601 ...
                */
-              dateFields.find(df => {
-                if (df === attr) {
-                  if (obj[attr] != 'never') {
-                    obj[attr] = obj[attr]
-                  }
-                }
-              })
+              // dateFields.find(df => {
+              //   if (df === attr) {
+              //     if (obj[attr] != 'never') {
+              //       obj[attr] = obj[attr]
+              //     }
+              //   }
+              // })
             }
             /**
              * ... delete obj.attributes ...

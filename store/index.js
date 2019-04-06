@@ -43,7 +43,6 @@ export const getters = {
     var yesterday = new Date(today.getTime() - 24 * 60 * 60 * 1000)
     let current = []
     state.funding.forEach(x => {
-      //console.log(new Date(x.expires) > yesterday)
       if (new Date(x.expires) > yesterday) current.push(x)
     })
     return current
@@ -53,7 +52,6 @@ export const getters = {
     var yesterday = new Date(today.getTime() - 24 * 60 * 60 * 1000)
     let expired = []
     state.funding.forEach(x => {
-      //console.log(new Date(x.expires) < yesterday)
       if (new Date(x.expires) < yesterday) expired.push(x)
     })
     return expired
