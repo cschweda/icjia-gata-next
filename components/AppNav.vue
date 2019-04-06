@@ -37,21 +37,9 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(['funding']),
+    ...mapGetters(['funding', 'current']),
     currentFundingOpps() {
-      let funding = this.funding.filter(f => {
-        let now = moment().startOf('day')
-
-        let expiration = moment(f.expires)
-          .add(1, 'day')
-          .endOf('day')
-
-        if (now.isSameOrBefore(expiration)) {
-          return f
-        }
-      })
-      return funding
-      return funding
+      return this.current
     }
   },
   methods: {

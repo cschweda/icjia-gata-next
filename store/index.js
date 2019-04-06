@@ -1,3 +1,5 @@
+import moment from 'moment'
+
 export const state = () => ({
   pages: [],
   funding: [],
@@ -37,5 +39,21 @@ export const getters = {
   },
   news: (state, getters) => {
     return state.news
+  },
+  current: state => {
+    const now = moment().subtract(1, 'day')
+    let current = []
+    state.funding.forEach(x => {
+      if (now.format() <= x.expires) current.push(x)
+    })
+    return current
+  },
+  expired: state => {
+    const now = moment().subtract(1, 'day')
+    let expired = []
+    state.funding.forEach(x => {
+      if (now.format() > x.expires) expired.push(x)
+    })
+    return expired
   }
 }

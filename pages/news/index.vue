@@ -1,7 +1,6 @@
 <template>
   <div>
     <base-content :content="content">
-      
       <template slot="breadcrumb">
         <breadcrumb :path="content.path" :hide="content.hideBreadcrumb"/>
       </template>
@@ -24,7 +23,9 @@
               <base-card :item="item">
                 <template slot="posted">
                   <div class="text-xs-right pr-3 pt-3 pb-2">
-                    <h4 class="pr-3 pb-4" style="font-size: 14px;"><span class="posted">Posted:&nbsp;{{ item.posted}}</span></h4>
+                    <h4 class="pr-3 pb-4" style="font-size: 14px;">
+                      <span class="posted">Posted:&nbsp;{{ item.posted}}</span>
+                    </h4>
                   </div>
                 </template>
               </base-card>

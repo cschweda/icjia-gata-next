@@ -1,7 +1,6 @@
 <template>
   <div class="top">
     <base-content :content="content">
-      
       <template slot="breadcrumb">
         <breadcrumb :path="content.path"/>
       </template>
@@ -57,12 +56,7 @@ export default {
   computed: {
     ...mapGetters(['funding']),
     isExpired() {
-      let now = moment().startOf('day')
-
-      let expiration = moment(this.content.expires)
-        .add(1, 'day')
-        .endOf('day')
-      return now.isSameOrAfter(expiration)
+      return false
     }
   },
   mounted() {

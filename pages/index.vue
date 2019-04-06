@@ -1,8 +1,6 @@
 <template>
   <div>
-    
     <base-content :content="content">
-     
       <template slot="siteTitle" slot-scope="{title}">
         <v-layout row style="background: #1A237E;">
           <v-container class="py-4">
@@ -39,21 +37,24 @@
                 <base-card :item="item" :show-expired="true">
                   <template slot="posted">
                     <div class="text-xs-right pr-3 pt-3 pb-2">
-                      <h4 class="pr-3 pb-4" style="font-size: 14px;"><span class="posted">Posted:&nbsp;{{ formatDate(item.posted) }}</span></h4>
+                      <h4 class="pr-3 pb-4" style="font-size: 14px;">
+                        <span class="posted">Posted:&nbsp;{{ formatDate(item.posted) }}</span>
+                      </h4>
                     </div>
                   </template>
                   <template slot="expires">
                     <div class="text-xs-left pb-2">
-                      <h4 class="pl-3 pt-4" style="font-size: 14px;"><span class="expires">{{expiredText}}:&nbsp;{{formatDate(item.expires)}}</span></h4>
+                      <h4 class="pl-3 pt-4" style="font-size: 14px;">
+                        <span class="expires">{{expiredText}}:&nbsp;{{formatDate(item.expires)}}</span>
+                      </h4>
                     </div>
                   </template>
-              </base-card></v-flex>
+                </base-card>
+              </v-flex>
             </v-container>
           </v-layout>
         </template>
       </base-list>
-      
-     
     </div>
   </div>
 </template>
@@ -93,38 +94,12 @@ export default {
   },
 
   computed: {
-    ...mapGetters(['funding', 'pages', 'news']),
+    ...mapGetters(['funding', 'pages', 'news', 'current', 'expired']),
     expiredText() {
       return this.hideExpired ? 'Expires' : 'Expired'
     },
     fundsToDisplay() {
-      if (this.hideExpired) {
-        let funding = this.funding.filter(f => {
-          let now = moment().startOf('day')
-
-          let expiration = moment(f.expires)
-            .add(1, 'day')
-            .endOf('day')
-
-          if (now.isSameOrBefore(expiration)) {
-            return f
-          }
-        })
-        return funding
-      } else {
-        let funding = this.funding.filter(f => {
-          let now = moment().startOf('day')
-
-          let expiration = moment(f.expires)
-            .add(1, 'day')
-            .endOf('day')
-
-          if (now.isAfter(expiration)) {
-            return f
-          }
-        })
-        return funding
-      }
+      return this.hideExpired ? this.current : this.expired
     }
   },
   mounted() {
