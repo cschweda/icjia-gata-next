@@ -10,7 +10,8 @@
       </v-toolbar-title>
       <v-spacer/>
       <v-toolbar-items class="hidden-sm-and-down display">
-        <menu-dropdown :items="currentFundingOpps" text="Funding Opportunities"/>
+        <!-- <menu-dropdown :items="currentFundingOpps" text="Funding Opportunities"/> -->
+
         <v-btn icon to="/search" style="color: #555">
           <v-icon>search</v-icon>
         </v-btn>
@@ -39,7 +40,7 @@ export default {
   computed: {
     ...mapGetters(['funding', 'current']),
     currentFundingOpps() {
-      return this.current
+      return []
     }
   },
   methods: {
