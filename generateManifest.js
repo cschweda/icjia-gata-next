@@ -79,7 +79,7 @@ const readFiles = dirname => {
               dateFields.find(df => {
                 if (df === attr) {
                   if (obj[attr] != 'never') {
-                    obj[attr] = new Date(obj[attr])
+                    obj[attr] = obj[attr]
                   }
                 }
               })

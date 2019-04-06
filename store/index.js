@@ -1,5 +1,3 @@
-import moment from 'moment'
-
 export const state = () => ({
   pages: [],
   funding: [],
@@ -41,18 +39,22 @@ export const getters = {
     return state.news
   },
   current: state => {
-    const now = moment().subtract(1, 'day')
+    var today = new Date()
+    var yesterday = new Date(today.getTime() - 24 * 60 * 60 * 1000)
     let current = []
     state.funding.forEach(x => {
-      if (now.format() <= x.expires) current.push(x)
+      //console.log(new Date(x.expires) > yesterday)
+      if (new Date(x.expires) > yesterday) current.push(x)
     })
     return current
   },
   expired: state => {
-    const now = moment().subtract(1, 'day')
+    var today = new Date()
+    var yesterday = new Date(today.getTime() - 24 * 60 * 60 * 1000)
     let expired = []
     state.funding.forEach(x => {
-      if (now.format() > x.expires) expired.push(x)
+      //console.log(new Date(x.expires) < yesterday)
+      if (new Date(x.expires) < yesterday) expired.push(x)
     })
     return expired
   }

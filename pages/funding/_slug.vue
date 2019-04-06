@@ -43,7 +43,6 @@
 <script>
 import jsonata from 'jsonata'
 import { mapGetters } from 'vuex'
-const moment = require('moment')
 
 export default {
   transition: 'tweakOpacity',

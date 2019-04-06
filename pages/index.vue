@@ -109,9 +109,11 @@ export default {
   },
   methods: {
     formatDate(date) {
-      return moment(date)
-        .add(1, 'day')
-        .format(config.dateFormat)
+      return (
+        moment(date)
+          // .add(1, 'day')
+          .format(config.dateFormat)
+      )
     }
   }
 }
