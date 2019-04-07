@@ -10,7 +10,7 @@
       </v-toolbar-title>
       <v-spacer/>
       <v-toolbar-items class="hidden-sm-and-down display">
-        <!-- <menu-dropdown :items="currentFundingOpps" text="Funding Opportunities"/> -->
+        <menu-dropdown :items="currentFundingOpps" text="Current Funding Opportunities"/>
 
         <v-btn icon to="/search" style="color: #555">
           <v-icon>search</v-icon>

@@ -1,6 +1,10 @@
 <template>
-  <v-menu offset-y max-width="350" nudge-left="120">
-    <template v-slot:activator="{ on }">
+  <!-- <v-menu offset-y max-width="350" nudge-left="120"> -->
+  <v-btn flat class="heavy" style="color: #666" @click="$router.push('/funding')">
+    {{text}}
+    <!-- <v-icon dark>arrow_drop_down</v-icon> -->
+  </v-btn>
+  <!-- <template v-slot:activator="{ on }">
       <v-btn flat class="heavy" style="color: #666" v-on="on">
         {{text}}
         <v-icon dark>arrow_drop_down</v-icon>
@@ -33,9 +37,7 @@
       <v-subheader inset style="font-weight: bold; color: #555">Current Opportunities</v-subheader>
 
       <v-list-tile v-for="item in items" :key="item.title" avatar @click="push(item.path)">
-        <!-- <v-list-tile-avatar>
-          <v-icon color="indigo lighten-1">info</v-icon>
-        </v-list-tile-avatar>-->
+
 
         <v-list-tile-content>
           <v-list-tile-title style="font-weight: 700;">{{ item.title }}</v-list-tile-title>
@@ -54,8 +56,8 @@
           <v-list-tile-title>View the Archive</v-list-tile-title>
         </v-list-tile-content>
       </v-list-tile>
-    </v-list>
-  </v-menu>
+  </v-list>-->
+  <!-- </v-menu> -->
 </template>
 
 <script>
