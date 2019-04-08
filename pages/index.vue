@@ -64,10 +64,21 @@ import jsonata from 'jsonata'
 import { mapGetters } from 'vuex'
 import { EventBus } from '@/event-bus'
 
+import BaseList from '@/components/BaseList'
+import BaseCard from '@/components/BaseCard'
+import BaseContent from '@/components/BaseContent'
+import GrantToggle from '@/components/GrantToggle'
+
 import config from '@/config'
 
 export default {
   transition: 'tweakOpacity',
+  components: {
+    BaseList,
+    BaseCard,
+    GrantToggle,
+    BaseContent
+  },
 
   data() {
     return {

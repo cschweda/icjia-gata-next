@@ -56,9 +56,15 @@ import { mapGetters } from 'vuex'
 import { EventBus } from '@/event-bus.js'
 import config from '@/config'
 
+import BaseContent from '@/components/BaseContent'
+import Breadcrumb from '@/components/Breadcrumb'
+import BaseList from '@/components/BaseList'
+import BaseCard from '@/components/BaseCard'
+import GrantToggle from '@/components/GrantToggle'
+
 export default {
   transition: 'tweakOpacity',
-  components: {},
+  components: { BaseContent, Breadcrumb, BaseList, BaseCard, GrantToggle },
   data() {
     return {
       hideExpired: true

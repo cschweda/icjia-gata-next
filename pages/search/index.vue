@@ -27,13 +27,15 @@
 
 <script>
 import jsonata from 'jsonata'
-
 import { mapGetters } from 'vuex'
-
 import Fuse from 'fuse.js'
+
+import BaseContent from '@/components/BaseContent'
+import Search from '@/components/Search'
+import Breadcrumb from '@/components/Breadcrumb'
 export default {
   transition: 'tweakOpacity',
-  components: {},
+  components: { BaseContent, Search, Breadcrumb },
   data() {
     return {
       content: ''

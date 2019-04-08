@@ -44,9 +44,15 @@
 import jsonata from 'jsonata'
 import { mapGetters } from 'vuex'
 
+import BaseContent from '@/components/BaseContent'
+import Breadcrumb from '@/components/Breadcrumb'
+import BaseList from '@/components/BaseList'
+import BaseCard from '@/components/BaseCard'
+import TableOfContents from '@/components/TableOfContents'
+
 export default {
   transition: 'tweakOpacity',
-  components: {},
+  components: { BaseContent, BaseCard, Breadcrumb, TableOfContents, BaseList },
   data() {
     return {
       tocItems: []

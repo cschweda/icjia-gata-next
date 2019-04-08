@@ -1,8 +1,8 @@
 <template>
   <v-app id="top">
-    <no-ssr>
+    <!-- <no-ssr>
       <browser-detect/>
-    </no-ssr>
+    </no-ssr> -->
     <sidebar/>
     <app-nav/>
     <v-content>
@@ -15,8 +15,11 @@
 <script>
 import { EventBus } from '@/event-bus.js'
 
+import Sidebar from '@/components/Sidebar'
+import AppNav from '@/components/AppNav'
+
 export default {
-  components: {},
+  components: { Sidebar, AppNav },
   data() {
     return {}
   },

@@ -39,14 +39,17 @@
 
 <script>
 import jsonata from 'jsonata'
-
 import { mapGetters } from 'vuex'
-
 import { EventBus } from '@/event-bus.js'
+
+import BaseContent from '@/components/BaseContent'
+import Breadcrumb from '@/components/Breadcrumb'
+import BaseList from '@/components/BaseList'
+import BaseCard from '@/components/BaseCard'
 
 export default {
   transition: 'tweakOpacity',
-  components: {},
+  components: { BaseContent, Breadcrumb, BaseList, BaseCard },
   data() {
     return {
       hideExpired: true
