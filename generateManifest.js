@@ -101,6 +101,9 @@ const readFiles = dirname => {
               obj.path = '/'
             }
 
+            let html = md.render(obj.body)
+            obj.html = html.replace(/(\r\n|\n|\r)/gm, '')
+
             resolve(obj)
           })
         })

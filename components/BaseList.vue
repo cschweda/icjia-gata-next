@@ -1,6 +1,8 @@
 <template>
   <div>
-    <div v-for="(item, index) in items" :key="index">
+    <div 
+      v-for="(item, index) in items" 
+      :key="index">
       <slot v-bind="item"/>
     </div>
   </div>

@@ -33,7 +33,7 @@ module.exports = {
     script: [
       {
         src:
-          'https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.0.0/polyfill.min.js'
+          'https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.min.js'
       },
       {
         src:
@@ -60,26 +60,14 @@ module.exports = {
   /*
   ** Nuxt.js modules
   */
-  modules: [
-    // Doc: https://github.com/nuxt-community/axios-module#usage
-
-    ['vue-scrollto/nuxt', { duration: 300, offset: -80 }]
-  ],
-  /*
-  ** Axios module configuration
-  */
-  axios: {
-    // See https://github.com/nuxt-community/axios-module#options
-  },
+  modules: [],
   generate: {
     routes
   },
-
   /*
   ** Build configuration
   */
   build: {
-    transpile: [/^vuetify/],
     /*
     ** You can extend webpack config here
     */

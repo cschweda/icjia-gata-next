@@ -1,7 +1,11 @@
 <template>
   <!-- <v-menu offset-y max-width="350" nudge-left="120"> -->
-  <v-btn flat class="heavy" style="color: #666" @click="$router.push('/funding')">
-    {{text}}
+  <v-btn 
+    flat 
+    class="heavy" 
+    style="color: #666" 
+    @click="$router.push('/funding')">
+    {{ text }}
     <!-- <v-icon dark>arrow_drop_down</v-icon> -->
   </v-btn>
   <!-- <template v-slot:activator="{ on }">

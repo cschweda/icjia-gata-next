@@ -3,13 +3,17 @@
     <base-content :content="content">
       
       <template slot="breadcrumb">
-        <breadcrumb :path="content.path" :hide="content.hideBreadcrumb"/>
+        <breadcrumb 
+          :path="content.path" 
+          :hide="content.hideBreadcrumb"/>
       </template>
-      <template slot="pageTitle" slot-scope="{title}">
+      <template 
+        slot="pageTitle" 
+        slot-scope="{title}">
         <v-layout row>
           <v-container>
             <v-flex xs12>
-              <h1 class="pageTitle">{{title}}</h1>
+              <h1 class="pageTitle">{{ title }}</h1>
             </v-flex>
           </v-container>
         </v-layout>
@@ -18,7 +22,9 @@
     <v-layout row>
       <v-container>
         <v-flex xs12>
-          <search/>
+          <no-ssr>
+            <search/>
+          </no-ssr>
         </v-flex>
       </v-container>
     </v-layout>
@@ -26,7 +32,6 @@
 </template>
 
 <script>
-import jsonata from 'jsonata'
 import { mapGetters } from 'vuex'
 import Fuse from 'fuse.js'
 
@@ -44,19 +49,18 @@ export default {
   computed: {
     ...mapGetters(['pages', 'funding', 'news'])
   },
-  asyncData({ store, params, route, error }) {
-    const slug = params.slug
-    const query = jsonata(`$[slug="search"]`)
-    const result = query.evaluate(store.state.pages)
-    if (result != undefined) {
-      return { content: result }
+  created() {
+    const content = this.$store.state.pages.filter(p => {
+      return p.slug === 'search'
+    })
+    if (content.length) {
+      this.content = content[0]
     } else {
-      return error({
-        statusCode: 404,
-        message: ' Page not found '
-      })
+      console.log('Error: Page Not Found')
+      this.$router.push('/404')
     }
   },
+
   mounted() {},
 
   methods: {}

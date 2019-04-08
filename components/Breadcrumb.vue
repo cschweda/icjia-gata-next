@@ -1,9 +1,16 @@
 <template>
   <div style="height: 30px;">
    
-    <v-breadcrumbs v-if="!hide" :items="items" class="crumbs" divider="|">
+    <v-breadcrumbs 
+      v-if="!hide" 
+      :items="items" 
+      class="crumbs" 
+      divider="|">
       <template v-slot:item="props">
-        <nuxt-link :to="props.item.href" :class="[props.item.disabled && 'disabled']" class="link">{{ props.item.text.toUpperCase() }}</nuxt-link>
+        <nuxt-link 
+          :to="props.item.href" 
+          :class="[props.item.disabled && 'disabled']" 
+          class="link">{{ props.item.text.toUpperCase() }}</nuxt-link>
       </template>
     </v-breadcrumbs>
    

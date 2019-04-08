@@ -2,13 +2,17 @@
   <div>
     <base-content :content="content">
       <template slot="breadcrumb">
-        <breadcrumb :path="content.path" :hide="content.hideBreadcrumb"/>
+        <breadcrumb 
+          :path="content.path" 
+          :hide="content.hideBreadcrumb"/>
       </template>
-      <template slot="pageTitle" slot-scope="{title}">
+      <template 
+        slot="pageTitle" 
+        slot-scope="{title}">
         <v-layout row>
           <v-container>
             <v-flex xs12>
-              <h1 class="pageTitle rule">{{title}}</h1>
+              <h1 class="pageTitle rule">{{ title }}</h1>
             </v-flex>
           </v-container>
         </v-layout>
@@ -21,23 +25,31 @@
         </v-flex>
       </v-container>
     </v-layout>
-    <base-list :items="fundsToDisplay" style="margin-top: -30px;">
+    <base-list 
+      :items="fundsToDisplay" 
+      style="margin-top: -30px;">
       <template slot-scope="item">
         <v-layout row>
           <v-container>
             <v-flex xs12>
-              <base-card :item="item" :show-expired="true">
+              <base-card 
+                :item="item" 
+                :show-expired="true">
                 <template slot="posted">
                   <div class="text-xs-right pr-3 pt-3 pb-2">
-                    <h4 class="pr-3 pb-4" style="font-size: 14px;">
+                    <h4 
+                      class="pr-3 pb-4" 
+                      style="font-size: 14px;">
                       <span class="posted">Posted:&nbsp;{{ item.posted | format }}</span>
                     </h4>
                   </div>
                 </template>
                 <template slot="expires">
                   <div class="text-xs-left pb-2">
-                    <h4 class="pl-3 pt-4" style="font-size: 14px;">
-                      <span class="expires">{{expiredText}}:&nbsp;{{item.expires | format}}</span>
+                    <h4 
+                      class="pl-3 pt-4" 
+                      style="font-size: 14px;">
+                      <span class="expires">{{ expiredText }}:&nbsp;{{ item.expires | format }}</span>
                     </h4>
                   </div>
                 </template>
@@ -51,7 +63,6 @@
 </template>
 
 <script>
-import jsonata from 'jsonata'
 import { mapGetters } from 'vuex'
 import { EventBus } from '@/event-bus.js'
 import config from '@/config'
@@ -80,17 +91,15 @@ export default {
       return this.hideExpired ? this.current : this.expired
     }
   },
-  asyncData({ store, params, route, error }) {
-    const slug = params.slug
-    const query = jsonata(`$[slug="funding"]`)
-    const result = query.evaluate(store.state.pages)
-    if (result != undefined) {
-      return { content: result }
+  created() {
+    const content = this.$store.state.pages.filter(p => {
+      return p.slug === 'funding'
+    })
+    if (content.length) {
+      this.content = content[0]
     } else {
-      return error({
-        statusCode: 404,
-        message: ' Page not found '
-      })
+      console.log('Error: Page Not Found')
+      this.$router.push('/404')
     }
   },
   mounted() {

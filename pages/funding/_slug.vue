@@ -4,34 +4,42 @@
       <template slot="breadcrumb">
         <breadcrumb :path="content.path"/>
       </template>
-      <template v-if="!isExpired" slot="table-of-contents">
+      <template 
+        v-if="!isExpired" 
+        slot="table-of-contents">
         <div class="table-of-contents">
           <table-of-contents :items="tocItems"/>
         </div>
       </template>
-      <template slot="pageTitle" slot-scope="{title}">
+      <template 
+        slot="pageTitle" 
+        slot-scope="{title}">
         <v-layout row>
           <v-container>
             <v-flex xs9>
               <div
                 style="color: #555; font-weight: 900; text-transform: uppercase;border-bottom: 1px solid #eee; padding-bottom: 5px; margin-bottom: 20px;"
               >Notice of Funding Opportunity</div>
-              <h1 class="pageTitle" style="margin-top: 10px">{{title}}</h1>
+              <h1 
+                class="pageTitle" 
+                style="margin-top: 10px">{{ title }}</h1>
             </v-flex>
           </v-container>
         </v-layout>
       </template>
-      <template v-if="isExpired" slot="expired">
+      <template 
+        v-if="isExpired" 
+        slot="expired">
         <div
           style="background: #EF5350; color: #fff; font-weight: bold; font-size: 20px"
           class="mt-0 px-2 py-5 text-xs-center"
         >THIS FUNDING OPPORTUNITY HAS EXPIRED</div>
       </template>
-      <template slot="markdown" slot-scope="{body}">
+      <template slot="markdown">
         <v-layout row>
-          <v-container style="margin-top: -30px;">
-            <v-flex xs10>
-              <div v-html="body"/>
+          <v-container class="mt-3">
+            <v-flex xs12>
+              <div v-html="content.html"/>
             </v-flex>
           </v-container>
         </v-layout>
@@ -41,7 +49,6 @@
 </template>
 
 <script>
-import jsonata from 'jsonata'
 import { mapGetters } from 'vuex'
 
 import BaseContent from '@/components/BaseContent'
@@ -66,7 +73,6 @@ export default {
   },
   mounted() {
     const toc = Array.prototype.slice.call(document.querySelectorAll('h2'))
-
     const tocItems = toc.map(item => {
       let obj = {}
       obj.id = item.id
@@ -77,17 +83,17 @@ export default {
     tocItems.unshift(intro)
     this.tocItems = tocItems
   },
-  asyncData({ store, params, route, error }) {
-    const slug = params.slug
-    const query = jsonata(`$[slug="${slug}"]`)
-    const result = query.evaluate(store.state.funding)
-    if (result != undefined) {
-      return { content: result }
+
+  created() {
+    const { slug } = this.$route.params
+    const content = this.$store.state.funding.filter(p => {
+      return p.slug === `${slug}`
+    })
+    if (content.length) {
+      this.content = content[0]
     } else {
-      return error({
-        statusCode: 404,
-        message: ' Page not found '
-      })
+      console.log('Error: Page Not Found')
+      this.$router.push('/404')
     }
   }
 }

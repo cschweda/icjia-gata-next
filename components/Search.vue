@@ -1,17 +1,22 @@
 <template>
-  <v-form class="pl-2" style="margin-top: -25px;">
+  <v-form 
+    class="pl-2" 
+    style="margin-top: -25px;">
     <v-text-field
       v-model="query"
       label="Search"
       placeholder="Enter search term"
       @keyup="instantSearch"
     />
-    <div v-for="(result, index) in results" :key="index" class="px-4">
+    <div 
+      v-for="(result, index) in results" 
+      :key="index" 
+      class="px-4">
       <div class="mt-2">
         <nuxt-link :to="result.path">
-          <h2>{{result.title}}</h2>
+          <h2>{{ result.title }}</h2>
         </nuxt-link>
-        <p>{{result.excerpt}}</p>
+        <p>{{ result.excerpt }}</p>
       </div>
     </div>
       
