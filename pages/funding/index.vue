@@ -49,7 +49,9 @@
                     <h4 
                       class="pl-3 pt-4" 
                       style="font-size: 14px;">
-                      <span class="expires">{{ expiredText }}:&nbsp;{{ item.expires | format }}</span>
+                      <span 
+                        :class="{expired: !hideExpired}" 
+                        class="expires" >{{ expiredText }}:&nbsp;{{ item.expires | format }}</span>
                     </h4>
                   </div>
                 </template>

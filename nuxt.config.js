@@ -60,7 +60,7 @@ module.exports = {
   /*
   ** Nuxt.js modules
   */
-  modules: [],
+  modules: [['vue-scrollto/nuxt', { duration: 300, offset: -80 }]],
   generate: {
     routes
   },

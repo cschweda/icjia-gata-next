@@ -144,6 +144,10 @@ summary:focus {
   font-size: 18px;
 }
 
+.expired {
+  color: red;
+}
+
 .posted {
   color: #999;
 }

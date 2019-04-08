@@ -68,7 +68,13 @@ export default {
   computed: {
     ...mapGetters(['funding']),
     isExpired() {
-      return false
+      const today = new Date()
+      const target = new Date(today.getTime() - 24 * 60 * 60 * 1000)
+      if (new Date(this.content.expires) < target) {
+        return true
+      } else {
+        return false
+      }
     }
   },
   mounted() {
