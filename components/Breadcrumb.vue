@@ -41,37 +41,37 @@ export default {
   },
   computed: {
     items() {
-      // const items = this.path.split('/')
-      // const crumbs = [{ text: 'home', disabled: false, href: '/' }]
-      // items.forEach((i, index) => {
-      //   if (i.length) {
-      //     let obj = {}
-      //     obj.text = i
-      //     if (index === 0) {
-      //       obj.href = '/'
-      //     }
-      //     if (index === 1) {
-      //       obj.href = '/' + items[1]
-      //     }
-      //     crumbs.push(obj)
-      //   }
-      // })
-      // crumbs[crumbs.length - 1].disabled = true
-      // crumbs[crumbs.length - 1].href = items[items.length - 1]
-      // return crumbs
+      const items = this.path.split('/')
       const crumbs = [{ text: 'home', disabled: false, href: '/' }]
-      let obj = {}
-      obj.text = this.section
-      obj.disabled = true
-      obj.href = `${this.section}`
-      crumbs.push(obj)
-      // let obj={}
-      // obj.text=this.title
-      // obj.disabled = true
-      // obj.href=`${this.section}/${this.title}`
-      // crumbs.push{obj}
+      items.forEach((i, index) => {
+        if (i.length) {
+          let obj = {}
+          obj.text = i
+          if (index === 0) {
+            obj.href = '/'
+          }
+          if (index === 1) {
+            obj.href = '/' + items[1]
+          }
 
+          if (index === 2) {
+            obj.text = this.title
+          }
+          crumbs.push(obj)
+        }
+      })
+      crumbs[crumbs.length - 1].disabled = true
+      crumbs[crumbs.length - 1].href = items[items.length - 1]
       return crumbs
+      // const crumbs = [{ text: 'home', disabled: false, href: '/' }]
+      // let obj = {}
+      // obj.text = this.section
+      // obj.disabled = true
+      // obj.href = `${this.section}`
+      // crumbs.push(obj)
+      // obj.text =
+
+      // return crumbs
     }
   }
 }
@@ -80,8 +80,8 @@ export default {
 <style>
 .crumbs {
   text-transform: uppercase;
-  /* background: #f5f5f5;
-  border-bottom: 1px solid #e5e5e5; */
+  background: #f5f5f5;
+  border-bottom: 1px solid #e5e5e5;
 }
 
 .disabled {

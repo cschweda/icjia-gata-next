@@ -4,7 +4,8 @@
     <template slot="breadcrumb">
       <breadcrumb 
         :path="content.path" 
-        :hide="false"/>
+        :hide="false"
+      />
     </template>
     <template 
       slot="pageTitle" 

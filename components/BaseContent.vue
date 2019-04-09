@@ -4,7 +4,8 @@
     <slot name="nav"/>
     <!-- <slot name="browserCheck"/> -->
     <slot name="expired"/>
-    <!-- <slot name="breadcrumb"/> -->
+    <slot 
+      name="breadcrumb" />
     <slot name="table-of-contents"/>
     <slot 
       :title="content.title" 

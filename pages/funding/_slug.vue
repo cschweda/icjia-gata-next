@@ -2,7 +2,9 @@
   <div class="top">
     <base-content :content="content">
       <template slot="breadcrumb">
-        <breadcrumb :path="content.path"/>
+        <breadcrumb 
+          :path="content.path" 
+          :title="truncatedTitle"/>
       </template>
       <template 
         v-if="!isExpired" 
@@ -60,7 +62,17 @@ import Breadcrumb from '@/components/Breadcrumb'
 import BaseList from '@/components/BaseList'
 import BaseCard from '@/components/BaseCard'
 import TableOfContents from '@/components/TableOfContents'
-
+String.prototype.trunc = function(n, useWordBoundary) {
+  if (this.length <= n) {
+    return this
+  }
+  var subString = this.substr(0, n - 1)
+  return (
+    (useWordBoundary
+      ? subString.substr(0, subString.lastIndexOf(' '))
+      : subString) + '...'
+  )
+}
 export default {
   transition: 'tweakOpacity',
   components: { BaseContent, BaseCard, Breadcrumb, TableOfContents, BaseList },
@@ -79,6 +91,10 @@ export default {
       } else {
         return false
       }
+    },
+    truncatedTitle() {
+      let title = this.content.title
+      return title.trunc(40, true)
     }
   },
   mounted() {
