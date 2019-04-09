@@ -22,6 +22,17 @@
 </template>
 
 <script>
+String.prototype.trunc = function(n, useWordBoundary) {
+  if (this.length <= n) {
+    return this
+  }
+  var subString = this.substr(0, n - 1)
+  return (
+    (useWordBoundary
+      ? subString.substr(0, subString.lastIndexOf(' '))
+      : subString) + '...'
+  )
+}
 export default {
   components: {},
   props: {
@@ -61,7 +72,7 @@ export default {
           }
 
           if (index === 2) {
-            obj.text = this.title
+            obj.text = this.title.trunc(this.isLeftAligned ? 10 : 30, true)
           }
           crumbs.push(obj)
         }
