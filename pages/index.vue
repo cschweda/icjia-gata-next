@@ -100,6 +100,11 @@ export default {
     GrantToggle,
     BaseContent
   },
+  head() {
+    return {
+      title: 'ICJIA GATA | Home'
+    }
+  },
   data() {
     return {
       hideExpired: true

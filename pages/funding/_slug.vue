@@ -68,7 +68,13 @@ export default {
   components: { BaseContent, BaseCard, Breadcrumb, TableOfContents, BaseList },
   data() {
     return {
-      tocItems: []
+      tocItems: [],
+      title: 'General Overview'
+    }
+  },
+  head() {
+    return {
+      title: `ICJIA GATA | ${this.getTitle}`
     }
   },
   computed: {
@@ -81,6 +87,9 @@ export default {
       } else {
         return false
       }
+    },
+    getTitle() {
+      return `${this.title}`
     }
   },
   mounted() {
@@ -94,6 +103,10 @@ export default {
     const intro = { id: 'top', text: 'Introduction' }
     tocItems.unshift(intro)
     this.tocItems = tocItems
+
+    if (this.content.title) {
+      this.title = this.content.title
+    }
   },
 
   created() {

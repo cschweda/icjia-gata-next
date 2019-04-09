@@ -38,14 +38,24 @@ import Breadcrumb from '@/components/Breadcrumb'
 
 export default {
   transition: 'tweakOpacity',
+  head() {
+    return {
+      title: `ICJIA GATA | ${this.getTitle}`
+    }
+  },
   components: { Breadcrumb, BaseContent },
   data() {
-    return {}
+    return {
+      title: 'General Overview'
+    }
   },
   computed: {
-    ...mapGetters(['pages'])
+    ...mapGetters(['pages']),
+    getTitle() {
+      return `${this.title}`
+    }
   },
-  computed: {},
+
   created() {
     const { slug } = this.$route.params
     const content = this.$store.state.pages.filter(p => {
@@ -57,7 +67,13 @@ export default {
       console.log('Error: Page Not Found')
       this.$router.push('/404')
     }
-  }
+  },
+  mounted() {
+    if (this.content.title) {
+      this.title = this.content.title
+    }
+  },
+  methods: {}
 }
 </script>
 

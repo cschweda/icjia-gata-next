@@ -4,13 +4,13 @@
     <template slot="breadcrumb">
       <breadcrumb 
         :path="content.path" 
-        :hide="false"/>
+        :title="content.title"/>
     </template>
     <template 
       slot="pageTitle" 
       slot-scope="{title}">
       <v-layout row>
-        <v-container>
+        <v-container> 
           <v-flex xs12>
             <div
               style="color: #555; font-weight: 900; text-transform: uppercase;border-bottom: 1px solid #eee; padding-bottom: 5px; margin-bottom: 10px;"
@@ -44,13 +44,23 @@ import Breadcrumb from '@/components/Breadcrumb'
 export default {
   transition: 'tweakOpacity',
   components: { Breadcrumb, BaseContent },
+  head() {
+    return {
+      title: `ICJIA GATA | ${this.getTitle}`
+    }
+  },
   data() {
-    return {}
+    return {
+      title: 'General Overview'
+    }
   },
   computed: {
-    ...mapGetters(['news'])
+    ...mapGetters(['news']),
+    getTitle() {
+      return `${this.title}`
+    }
   },
-  computed: {},
+
   created() {
     const { slug } = this.$route.params
     const content = this.$store.state.news.filter(p => {
@@ -61,6 +71,11 @@ export default {
     } else {
       console.log('Error: Page Not Found')
       this.$router.push('/404')
+    }
+  },
+  mounted() {
+    if (this.content.title) {
+      this.title = this.content.title
     }
   }
 }

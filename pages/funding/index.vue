@@ -83,7 +83,11 @@ export default {
       hideExpired: true
     }
   },
-
+  head() {
+    return {
+      title: 'ICJIA GATA | Funding Opportunities'
+    }
+  },
   computed: {
     ...mapGetters(['pages', 'funding', 'current', 'expired']),
     expiredText() {

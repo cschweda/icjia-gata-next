@@ -41,6 +41,11 @@ import Breadcrumb from '@/components/Breadcrumb'
 export default {
   transition: 'tweakOpacity',
   components: { BaseContent, Search, Breadcrumb },
+  head() {
+    return {
+      title: 'ICJIA GATA | Search'
+    }
+  },
   data() {
     return {
       content: ''

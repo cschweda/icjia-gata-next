@@ -4,7 +4,8 @@
       <template slot="breadcrumb">
         <breadcrumb 
           :path="content.path" 
-          :hide="content.hideBreadcrumb"/>
+          :hide="content.hideBreadcrumb"
+        />
       </template>
       <template 
         slot="pageTitle" 
@@ -57,6 +58,11 @@ import BaseCard from '@/components/BaseCard'
 export default {
   transition: 'tweakOpacity',
   components: { BaseContent, Breadcrumb, BaseList, BaseCard },
+  head() {
+    return {
+      title: 'ICJIA GATA | News & Announcements'
+    }
+  },
   data() {
     return {
       hideExpired: true
