@@ -4,8 +4,11 @@
     <v-breadcrumbs 
       v-if="!hide" 
       :items="items" 
-      class="crumbs" 
+      
+      :class="{isLeftAligned:isLeftAligned}"
+      class="crumbs"
       divider="|">
+      
       <template v-slot:item="props">
         <nuxt-link 
           :to="props.item.href" 
@@ -40,6 +43,9 @@ export default {
     }
   },
   computed: {
+    isLeftAligned() {
+      return this.$vuetify.breakpoint.xs || this.$vuetify.breakpoint.sm
+    },
     items() {
       const items = this.path.split('/')
       const crumbs = [{ text: 'home', disabled: false, href: '/' }]
@@ -63,15 +69,6 @@ export default {
       crumbs[crumbs.length - 1].disabled = true
       crumbs[crumbs.length - 1].href = items[items.length - 1]
       return crumbs
-      // const crumbs = [{ text: 'home', disabled: false, href: '/' }]
-      // let obj = {}
-      // obj.text = this.section
-      // obj.disabled = true
-      // obj.href = `${this.section}`
-      // crumbs.push(obj)
-      // obj.text =
-
-      // return crumbs
     }
   }
 }
@@ -91,7 +88,13 @@ export default {
 
 div .v-breadcrumbs {
   padding: 6px 12px;
-  justify-content: flex-end !important;
+  justify-content: flex-end;
+  font-size: 12px;
+}
+
+div .v-breadcrumbs.isLeftAligned {
+  padding: 6px 12px;
+  justify-content: flex-start;
   font-size: 12px;
 }
 </style>
