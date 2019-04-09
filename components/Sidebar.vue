@@ -68,11 +68,11 @@
             href="http://www.icjia.state.il.us"
           >Illinois Criminal Justice Information Authority</a>
         </h5>
-        <div 
+        <!-- <div 
           style="font-size: 10px;" 
           class="mt-2"><a href="https://legacy-grants.icjia.cloud">Previous ICJIA GATA site </a>&raquo;</div>
-      </div>
-    </v-layout>
+      </div> -->
+    </div></v-layout>
   </v-navigation-drawer>
 </template>
 

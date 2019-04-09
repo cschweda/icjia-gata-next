@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c3af0cba-2b61-44b7-bdb1-d0f6138ccf5b/deploy-status)](https://app.netlify.com/sites/hungry-franklin-9307b6/deploys)
+
 # icjia-gata-next
 
 > The Grant Accountability and Transparency Act (GATA) of 2014, 30 ILCS 708/1 et seq., increased accountability and transparency in the use of grant funds and reduced the administrative burden on state agencies and grantees through adoption of federal grant guidelines and regulations.
