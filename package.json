@@ -23,6 +23,7 @@
     "markdown-it-footnote": "^3.0.1",
     "markdown-it-named-headers": "0.0.4",
     "nuxt": "^2.6.1",
+    "sitemap-generator": "^8.3.3",
     "slug": "^1.1.0",
     "vue-scrollto": "^2.15.0",
     "vuetify": "^1.5.9"
