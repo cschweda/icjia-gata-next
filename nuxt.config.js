@@ -60,8 +60,19 @@ module.exports = {
   /*
   ** Nuxt.js modules
   */
-  modules: [['vue-scrollto/nuxt', { duration: 300, offset: -80 }]],
+  modules: [
+    ['vue-scrollto/nuxt', { duration: 300, offset: -80 }],
+    '@nuxtjs/sitemap'
+  ],
   generate: {
+    routes
+  },
+  sitemap: {
+    path: '/sitemap.xml',
+    hostname: 'https://grants.icjia.cloud',
+    cacheTime: 1000 * 60 * 15,
+    gzip: true,
+    exclude: [],
     routes
   },
   /*
