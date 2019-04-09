@@ -17,12 +17,16 @@
         <v-layout row>
           <v-container>
             <v-flex xs9>
-              <div
-                style="color: #555; font-weight: 900; text-transform: uppercase;border-bottom: 1px solid #eee; padding-bottom: 5px; margin-bottom: 20px;"
-              >Notice of Funding Opportunity</div>
+              <!-- <div
+                style="color: #555; font-weight: 900; text-transform: uppercase;margin-bottom: 20px;"
+              >Notice of Funding Opportunity</div> -->
+              <div 
+                class="text-xs-left mb-3" 
+                style="font-weight: bold; text-transform: uppercase; border-bottom: 1px solid #eee; padding-bottom: 5px; ">Expire{{ isExpired? 'd':'s' }}: {{ content.expires | format }}</div>
               <h1 
                 class="pageTitle" 
                 style="margin-top: 10px">{{ title }}</h1>
+              
             </v-flex>
           </v-container>
         </v-layout>

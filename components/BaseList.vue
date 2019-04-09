@@ -10,6 +10,7 @@
 
 <script>
 export default {
+  name: 'BaseList',
   props: {
     items: {
       type: Array,

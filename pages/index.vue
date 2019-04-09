@@ -41,7 +41,8 @@
     </div>
     <base-list 
       :items="fundsToDisplay" 
-      style="margin-top: -30px;">
+      style="margin-top: -30px; background: #f5f5f5"
+    >
       <template slot-scope="item">
         <v-layout row>
           <v-container>

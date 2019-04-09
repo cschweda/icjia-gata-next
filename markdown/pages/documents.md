@@ -23,8 +23,8 @@ View an example of a basic ICJIA grant agreement. An actual grant agreement also
 
 View examples of the ICJIA Uniform Budget Template documents.
 
-- [Budget Instructions (General).pdf »](ICJIA_Uniform_Budget_Template_032817_Sample_Budget_Instructions.pdf)
-- [Budget Instructions (ICJIA).pdf»](ICJIA_Uniform_Budget_Template_032817_Sample_Budget_Instructions.pdf)
+- [Budget Instructions (General).pdf »](ICJIA_Uniform_Budget_Template_032817_Sample_Budget_Instructions_GENERAL.pdf)
+- [Budget Instructions (ICJIA).pdf»](ICJIA_Uniform_Budget_Template_032817_Sample_Budget_Instructions_ICJIA.pdf)
 - [Section A ICJIA Funds »](ICJIA_Uniform_Budget_Template_032817_Sample_Section_A_ICJIA_Funds.pdf)
 - [Section A Indirect Cost Info](ICJIA_Uniform_Budget_Template_032817_Sample_Section_A_Indirect_Cost_Info.pdf)
 - [Section B Match Funds »](ICJIA_Uniform_Budget_Template_032817_Sample_Section_B_Match_Funds.pdf)

@@ -11,6 +11,7 @@
 <script>
 import { EventBus } from '@/event-bus'
 export default {
+  name: 'Toggle',
   data() {
     return {
       showCurrent: true

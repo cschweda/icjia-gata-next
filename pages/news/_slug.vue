@@ -13,16 +13,20 @@
         <v-container>
           <v-flex xs12>
             <div
-              style="color: #555; font-weight: 900; text-transform: uppercase;border-bottom: 1px solid #eee; padding-bottom: 5px; margin-bottom: 20px;"
+              style="color: #555; font-weight: 900; text-transform: uppercase;border-bottom: 1px solid #eee; padding-bottom: 5px; margin-bottom: 10px;"
             >News & Announcements</div>
+            
             <h1 class="pageTitle rule">{{ title }}</h1>
+            <div 
+              class="text-xs-left pull-15" 
+              style="font-weight: bold; text-transform: uppercase; font-size: 12px; color: #555 ">Posted: {{ content.posted | format }}</div>
           </v-flex>
         </v-container>
       </v-layout>
     </template>
     <template slot="markdown">
       <v-layout row>
-        <v-container class="mt-3">
+        <v-container class="mt-0">
           <v-flex xs12>
             <div v-html="content.html"/>
           </v-flex>

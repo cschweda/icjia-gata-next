@@ -21,22 +21,8 @@
 </template>
 
 <script>
-function linkify(html, section, slug) {
-  const re = new RegExp('^(http|https|mailto):/?/?', 'i')
-
-  const result = html.replace(/href="([^"]+)/g, function($1) {
-    const arr = $1.split('"')
-    let match = re.test(arr[1])
-    if (!match) {
-      const href = `${section}/${slug}/${arr[1]}`
-      return `href="/${href}`
-    }
-    return $1
-  })
-  return result
-}
-
 export default {
+  name: 'BaseContent',
   props: {
     content: {
       type: Object,
