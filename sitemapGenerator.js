@@ -3,7 +3,7 @@ const SitemapGenerator = require('sitemap-generator')
 // create generator
 var generator = SitemapGenerator('https://grants.icjia.cloud', {
   maxDepth: 0,
-  filepath: './static/sitemap.xml',
+  filepath: './dist/sitemap.xml',
   maxEntriesPerFile: 50000,
   stripQuerystring: false
 })
