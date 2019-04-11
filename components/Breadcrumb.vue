@@ -72,7 +72,7 @@ export default {
           }
 
           if (index === 2) {
-            obj.text = this.title.trunc(this.isLeftAligned ? 10 : 30, true)
+            obj.text = this.title.trunc(this.isLeftAligned ? 40 : 30, true)
           }
           crumbs.push(obj)
         }

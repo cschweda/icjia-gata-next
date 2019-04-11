@@ -34,7 +34,8 @@
         </v-btn> -->
         <v-btn 
           flat 
-          style="font-weight: 700; color: #555">Current Funding Opportunities</v-btn>
+          style="font-weight: 700; color: #555" 
+          to="/funding">Current Funding Opportunities</v-btn>
       </v-toolbar-items>
      
       <v-toolbar-side-icon @click="toggleSidebar"/>
