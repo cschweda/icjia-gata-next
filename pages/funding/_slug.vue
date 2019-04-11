@@ -44,7 +44,7 @@
       <template slot="markdown">
         <v-layout row>
           <v-container class="mt-3">
-            <v-flex xs12>
+            <v-flex xs10>
               <div v-html="content.html"/>
             </v-flex>
           </v-container>
@@ -100,7 +100,7 @@ export default {
       obj.text = item.innerHTML
       return obj
     })
-    const intro = { id: 'top', text: 'Introduction' }
+    const intro = { id: 'top', text: 'Notice of Funding Opportunity' }
     tocItems.unshift(intro)
     this.tocItems = tocItems
 
