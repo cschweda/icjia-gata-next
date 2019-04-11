@@ -6,7 +6,7 @@
         slot-scope="{title}">
         <v-layout 
           row 
-          style="background: #1A237E;">
+          style="background: #0D4474;">
           <v-container class="py-4">
             <v-flex xs12>
               <h1 
