@@ -1,7 +1,8 @@
 <template>
   <v-navigation-drawer 
     v-model="sidebar" 
-    :clipped="clipped" 
+    :clipped="clipped"
+    right 
     enable-resize-watcher 
     temporary 
     app>
