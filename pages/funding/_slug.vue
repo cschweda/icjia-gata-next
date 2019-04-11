@@ -24,7 +24,7 @@
               >Notice of Funding Opportunity</div> -->
               <div 
                 class="text-xs-left mb-3" 
-                style="font-weight: bold; text-transform: uppercase; border-bottom: 1px solid #eee; padding-bottom: 5px; ">Expire{{ isExpired? 'd':'s' }}: {{ content.expires | format }}</div>
+                style="font-weight: bold; color: #D50000; text-transform: uppercase; border-bottom: 1px solid #eee; padding-bottom: 5px; ">Expire{{ isExpired? 'd':'s' }}: {{ content.expires | format }}</div>
               <h1 
                 class="pageTitle" 
                 style="margin-top: 10px">{{ title }}</h1>
