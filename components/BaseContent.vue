@@ -4,13 +4,13 @@
     <slot name="nav"/>
     <!-- <slot name="browserCheck"/> -->
     <slot name="expired"/>
-    <slot 
-      name="breadcrumb" />
+    <!-- <slot 
+      name="breadcrumb" /> -->
     <slot name="table-of-contents"/>
     <slot 
       :title="content.title" 
       name="siteTitle"/>
-    <div style="margin-top: 15px">
+    <div >
       <slot 
         :title="content.title" 
         name="pageTitle"/>

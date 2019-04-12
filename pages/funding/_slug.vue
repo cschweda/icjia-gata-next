@@ -18,12 +18,15 @@
         slot-scope="{title}">
         <v-layout row>
           <v-container>
-            <v-flex xs9>
+            <v-flex 
+              xs12 
+              sm12 
+              md9>
               <!-- <div
                 style="color: #555; font-weight: 900; text-transform: uppercase;margin-bottom: 20px;"
               >Notice of Funding Opportunity</div> -->
               <div 
-                class="text-xs-left mb-3" 
+                class="text-xs-right mb-3" 
                 style="font-weight: bold; color: #D50000; text-transform: uppercase; border-bottom: 1px solid #eee; padding-bottom: 5px; ">Expire{{ isExpired? 'd':'s' }}: {{ content.expires | format }}</div>
               <h1 
                 class="pageTitle" 
@@ -44,7 +47,10 @@
       <template slot="markdown">
         <v-layout row>
           <v-container class="mt-3">
-            <v-flex xs10>
+            <v-flex 
+              xs12 
+              sm12 
+              md9>
               <div v-html="content.html"/>
             </v-flex>
           </v-container>
