@@ -9,6 +9,9 @@
       <img 
         src="../assets/img/logo-small.png" 
         width="70"
+        alt="Illinois Criminal Justice Information Authority"
+        class="logo"
+        @click="gotoIcjia"
       >
       <v-toolbar-title class="display siteTitle">
         
@@ -67,10 +70,16 @@ export default {
   methods: {
     toggleSidebar() {
       EventBus.$emit('toggleSidebar')
+    },
+    gotoIcjia() {
+      location.href = 'http://www.icjia.state.il.us'
     }
   }
 }
 </script>
 
 <style scoped>
+.logo:hover {
+  cursor: pointer;
+}
 </style>

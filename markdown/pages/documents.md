@@ -7,7 +7,7 @@ position: 5
 section: 'pages'
 ---
 
-<div style="background: #3949AB">
+<div style="background: #0D4474">
 
 <div style="font-size: 28px; font-weight: bold; color: #fff" class="text-xs-center py-4">The following forms are samples and not for use.</div>
 

@@ -42,14 +42,17 @@
     <base-list 
       :items="fundsToDisplay" 
       style="margin-top: -30px; background: #f5f5f5"
+      
     >
       <template slot-scope="item">
         <v-layout row>
           <v-container>
             <v-flex xs12>
+              
               <base-card 
                 :item="item" 
-                :show-expired="true">
+                :show-expired="true"
+              >
                 <template slot="posted">
                   <div class="text-xs-right pr-3 pt-3 pb-2">
                     <h4 
