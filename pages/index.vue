@@ -74,16 +74,20 @@
                   </div>
                 </template>
               </base-card>
-              <div class="text-xs-center mt-5">
-                <h3>
-                  For funding opportunities prior to 2019, please see: <a href="https://legacy-grants.icjia.cloud">https://legacy-grants.icjia.cloud</a>
-                </h3>
-              </div>
+              
             </v-flex>
           </v-container>
         </v-layout>
       </template>
     </base-list>
+
+    <div 
+      class="text-xs-center pt-5 pb-5" 
+      style="background-color: #f5f5f5">
+      <h3>
+        For archived funding opportunities prior to 2019, please see: <a href="https://legacy-grants.icjia.cloud">https://legacy-grants.icjia.cloud</a>
+      </h3>
+    </div>
     
 
     
