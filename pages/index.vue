@@ -85,7 +85,7 @@
       class="text-xs-center pt-5 pb-5" 
       style="background-color: #f5f5f5">
       <h3>
-        For archived funding opportunities prior to 2019, please see: <a href="https://legacy-grants.icjia.cloud">https://legacy-grants.icjia.cloud</a>
+        For archived funding opportunities prior to 2019, please see: <a href="https://legacy-grants.icjia.cloud/grants">https://legacy-grants.icjia.cloud/grants</a>
       </h3>
     </div>
     
