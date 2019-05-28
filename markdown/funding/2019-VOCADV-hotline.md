@@ -42,9 +42,13 @@ Funding is available for the period of **September 1, 2019 through August 31, 20
 ### Contact Information
 
 Ronnie Reichgelt
+
 Illinois Criminal Justice Information Authority
+
 300 West Adams, Suite 200
+
 Chicago, IL 60606
+
 Ronnie.Reichgelt@Illinois.gov
 
 ## Timeline
