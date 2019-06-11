@@ -15,19 +15,19 @@
   },
   "dependencies": {
     "@nuxtjs/google-analytics": "^2.2.0",
-    "@nuxtjs/sitemap": "^0.2.2",
+    "@nuxtjs/sitemap": "^1.2.0",
     "cross-env": "^5.2.0",
-    "front-matter": "^3.0.1",
-    "fuse.js": "^3.4.4",
+    "front-matter": "^3.0.2",
+    "fuse.js": "^3.4.5",
     "markdown-it": "^8.4.2",
-    "markdown-it-attrs": "^2.3.2",
+    "markdown-it-attrs": "^2.4.1",
     "markdown-it-footnote": "^3.0.1",
     "markdown-it-named-headers": "0.0.4",
-    "nuxt": "^2.6.1",
-    "sitemap-generator": "^8.3.3",
+    "nuxt": "^2.8.1",
+    "sitemap-generator": "^8.4.0",
     "slug": "^1.1.0",
     "vue-scrollto": "^2.15.0",
-    "vuetify": "^1.5.9"
+    "vuetify": "^1.5.14"
   },
   "devDependencies": {
     "nodemon": "^1.11.0",
