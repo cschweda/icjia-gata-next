@@ -1,21 +1,29 @@
 <template>
-  <v-form class="pl-2" style="margin-top: -25px;">
+  <v-form 
+    class="pl-2" 
+    style="margin-top: -25px;">
     <v-text-field
       v-model="query"
       label="Search"
       placeholder="Enter search term"
       @keyup="instantSearch"
     />
-    <div v-for="(result, index) in results" :key="index" class="px-4">
-      <div class="mt-2">
-        <nuxt-link :to="result.path">
-          <h2>{{result.title}}</h2>
+    <div 
+      v-for="(result, index) in queryResults" 
+      :key="index" 
+      class="px-4 py-3">
+      <div v-if="query.length">
+        <nuxt-link 
+          :to="result.path" 
+          style="text-decoration: none">
+          <h2>{{ result.title }}</h2>
         </nuxt-link>
-        <p>{{result.excerpt}}</p>
+        <p>{{ result.excerpt }}</p>
       </div>
     </div>
-      
+   
   </v-form>
+
 </template>
 
 <script>
@@ -25,13 +33,17 @@ export default {
   data() {
     return {
       query: '',
-      results: [],
+      queryResults: [],
       content: ''
     }
   },
   computed: {
     ...mapGetters(['pages', 'funding', 'news'])
   },
+  watch: {
+    query(newValue, oldValue) {}
+  },
+
   mounted() {
     let allSiteContent = [...this.news, ...this.pages, ...this.funding]
     this.fuse = new Fuse(allSiteContent, {
@@ -46,7 +58,7 @@ export default {
   },
   methods: {
     instantSearch() {
-      this.results = this.fuse.search(this.query)
+      this.queryResults = this.fuse.search(this.query)
     }
   }
 }

@@ -1,9 +1,16 @@
 <template>
   <div class="hidden-sm-and-down wrapper py-3">
-    <h3 v-scroll-to="'#top'" class="toc-title">{{title}}</h3>
+    <h3 
+      v-scroll-to="'#top'" 
+      class="toc-title">{{ title }}</h3>
     <div class="">
-      <div v-for="(item, index) in items" :key="index" class="toc">
-        <div v-scroll-to="`#${item.id}`" class="toc-item px-1">{{item.text}}</div>
+      <div 
+        v-for="(item, index) in items" 
+        :key="index" 
+        class="toc">
+        <div 
+          v-scroll-to="`#${item.id}`" 
+          class="toc-item px-1">{{ item.text }}</div>
       </div>
     </div>
   </div>

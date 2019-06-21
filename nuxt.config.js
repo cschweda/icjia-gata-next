@@ -8,11 +8,16 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: pkg.name,
+    title: 'ICJIA | GATA Information',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: pkg.description }
+      {
+        hid: 'description',
+        name: 'description',
+        content:
+          'The Grant Accountability and Transparency Act (GATA) of 2014, 30 ILCS 708/1 et seq., increased accountability and transparency in the use of grant funds and reduced the administrative burden on state agencies and grantees through adoption of federal grant guidelines and regulations.'
+      }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -33,7 +38,7 @@ module.exports = {
     script: [
       {
         src:
-          'https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.0.0/polyfill.min.js'
+          'https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.min.js'
       },
       {
         src:
@@ -55,31 +60,34 @@ module.exports = {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: ['@/plugins/vuetify', '@/plugins/globals', '@/plugins/filters'],
+  plugins: ['@/plugins/vuetify', '@/plugins/filters'],
 
   /*
   ** Nuxt.js modules
   */
   modules: [
-    // Doc: https://github.com/nuxt-community/axios-module#usage
-
-    ['vue-scrollto/nuxt', { duration: 300, offset: -80 }]
+    ['vue-scrollto/nuxt', { duration: 300, offset: -80 }],
+    '@nuxtjs/sitemap',
+    ['@nuxtjs/google-analytics']
   ],
-  /*
-  ** Axios module configuration
-  */
-  axios: {
-    // See https://github.com/nuxt-community/axios-module#options
+  googleAnalytics: {
+    id: 'UA-10798495-20'
   },
   generate: {
     routes
   },
-
+  sitemap: {
+    path: '/sitemap.xml',
+    hostname: 'https://grants.icjia.cloud',
+    cacheTime: 1000 * 60 * 15,
+    gzip: true,
+    exclude: [],
+    routes
+  },
   /*
   ** Build configuration
   */
   build: {
-    transpile: [/^vuetify/],
     /*
     ** You can extend webpack config here
     */

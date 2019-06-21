@@ -2,36 +2,56 @@
   <div class="top">
     <base-content :content="content">
       <template slot="breadcrumb">
-        <breadcrumb :path="content.path"/>
+        <breadcrumb 
+          :path="content.path" 
+          :title="content.title"/>
       </template>
-      <template v-if="!isExpired" slot="table-of-contents">
+      <template 
+        v-if="!isExpired" 
+        slot="table-of-contents">
         <div class="table-of-contents">
           <table-of-contents :items="tocItems"/>
         </div>
       </template>
-      <template slot="pageTitle" slot-scope="{title}">
+      <template 
+        slot="pageTitle" 
+        slot-scope="{title}">
         <v-layout row>
           <v-container>
-            <v-flex xs9>
-              <div
-                style="color: #555; font-weight: 900; text-transform: uppercase;border-bottom: 1px solid #eee; padding-bottom: 5px; margin-bottom: 20px;"
-              >Notice of Funding Opportunity</div>
-              <h1 class="pageTitle" style="margin-top: 10px">{{title}}</h1>
+            <v-flex 
+              xs12 
+              sm12 
+              md9>
+              <!-- <div
+                style="color: #555; font-weight: 900; text-transform: uppercase;margin-bottom: 20px;"
+              >Notice of Funding Opportunity</div> -->
+              <div 
+                class="text-xs-right mb-3" 
+                style="font-weight: bold; color: #D50000; text-transform: uppercase; border-bottom: 1px solid #eee; padding-bottom: 5px; ">Expire{{ isExpired? 'd':'s' }}: {{ content.expires | format }}</div>
+              <h1 
+                class="pageTitle" 
+                style="margin-top: 10px">{{ title }}</h1>
+              
             </v-flex>
           </v-container>
         </v-layout>
       </template>
-      <template v-if="isExpired" slot="expired">
+      <template 
+        v-if="isExpired" 
+        slot="expired">
         <div
           style="background: #EF5350; color: #fff; font-weight: bold; font-size: 20px"
           class="mt-0 px-2 py-5 text-xs-center"
         >THIS FUNDING OPPORTUNITY HAS EXPIRED</div>
       </template>
-      <template slot="markdown" slot-scope="{body}">
+      <template slot="markdown">
         <v-layout row>
-          <v-container style="margin-top: -30px;">
-            <v-flex xs10>
-              <div v-html="body"/>
+          <v-container class="mt-3">
+            <v-flex 
+              xs12 
+              sm12 
+              md9>
+              <div v-html="content.html"/>
             </v-flex>
           </v-container>
         </v-layout>
@@ -41,47 +61,70 @@
 </template>
 
 <script>
-import jsonata from 'jsonata'
 import { mapGetters } from 'vuex'
+
+import BaseContent from '@/components/BaseContent'
+import Breadcrumb from '@/components/Breadcrumb'
+import BaseList from '@/components/BaseList'
+import BaseCard from '@/components/BaseCard'
+import TableOfContents from '@/components/TableOfContents'
 
 export default {
   transition: 'tweakOpacity',
-  components: {},
+  components: { BaseContent, BaseCard, Breadcrumb, TableOfContents, BaseList },
   data() {
     return {
-      tocItems: []
+      tocItems: [],
+      title: 'General Overview'
+    }
+  },
+  head() {
+    return {
+      title: `ICJIA GATA | ${this.getTitle}`
     }
   },
   computed: {
     ...mapGetters(['funding']),
     isExpired() {
-      return false
+      const today = new Date()
+      const target = new Date(today.getTime() - 24 * 60 * 60 * 1000)
+      if (new Date(this.content.expires) < target) {
+        return true
+      } else {
+        return false
+      }
+    },
+    getTitle() {
+      return `${this.title}`
     }
   },
   mounted() {
     const toc = Array.prototype.slice.call(document.querySelectorAll('h2'))
-
     const tocItems = toc.map(item => {
       let obj = {}
       obj.id = item.id
       obj.text = item.innerHTML
       return obj
     })
-    const intro = { id: 'top', text: 'Introduction' }
+    const intro = { id: 'top', text: 'Notice of Funding Opportunity' }
     tocItems.unshift(intro)
     this.tocItems = tocItems
+
+    if (this.content.title) {
+      this.title = this.content.title
+    }
   },
-  asyncData({ store, params, route, error }) {
-    const slug = params.slug
-    const query = jsonata(`$[slug="${slug}"]`)
-    const result = query.evaluate(store.state.funding)
-    if (result != undefined) {
-      return { content: result }
+
+  created() {
+    const { slug } = this.$route.params
+    const content = this.$store.state.funding.filter(p => {
+      return p.slug === `${slug}`
+    })
+    if (content.length) {
+      this.content = content[0]
     } else {
-      return error({
-        statusCode: 404,
-        message: ' Page not found '
-      })
+      console.log('Error: Page Not Found')
+      this.$router.push('/404')
     }
   }
 }

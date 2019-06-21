@@ -2,25 +2,35 @@
   <base-content :content="content">
     
     <template slot="breadcrumb">
-      <breadcrumb :path="content.path" :hide="false"/>
+      <breadcrumb 
+        :path="content.path" 
+        :title="content.title"/>
     </template>
-    <template slot="pageTitle" slot-scope="{title}">
+    <template 
+      slot="pageTitle" 
+      slot-scope="{title}">
       <v-layout row>
-        <v-container>
-          <v-flex xs12>
-            <div
-              style="color: #555; font-weight: 900; text-transform: uppercase;border-bottom: 1px solid #eee; padding-bottom: 5px; margin-bottom: 20px;"
-            >News & Announcements</div>
-            <h1 class="pageTitle rule">{{title}}</h1>
+        <v-container> 
+          <v-flex 
+            xs12 
+          >
+            <!-- <div
+              style="color: #555; font-weight: 900; text-transform: uppercase;border-bottom: 1px solid #eee; padding-bottom: 5px; margin-bottom: 10px;"
+            >News & Announcements</div> -->
+            
+            <h1 class="pageTitle rule">{{ title }}</h1>
+            <div 
+              class="text-xs-left pull-15" 
+              style="font-weight: bold; text-transform: uppercase; font-size: 12px; color: #555 ">Posted: {{ content.posted | format }}</div>
           </v-flex>
         </v-container>
       </v-layout>
     </template>
-    <template slot="markdown" slot-scope="{body}">
+    <template slot="markdown">
       <v-layout row>
-        <v-container style="margin-top: -30px;">
+        <v-container class="mt-0">
           <v-flex xs12>
-            <div v-html="body"/>
+            <div v-html="content.html"/>
           </v-flex>
         </v-container>
       </v-layout>
@@ -28,32 +38,48 @@
   </base-content>
 </template>
 <script>
-import jsonata from 'jsonata'
 import { mapGetters } from 'vuex'
+
+import BaseContent from '@/components/BaseContent'
+import Breadcrumb from '@/components/Breadcrumb'
 
 export default {
   transition: 'tweakOpacity',
-  components: {},
-  data() {
-    return {}
-  },
-  computed: {
-    ...mapGetters(['news'])
-  },
-  asyncData({ store, params, route, error }) {
-    const slug = params.slug
-    const query = jsonata(`$[slug="${slug}"]`)
-    const result = query.evaluate(store.state.news)
-    if (result != undefined) {
-      return { content: result }
-    } else {
-      return error({
-        statusCode: 404,
-        message: ' Page not found '
-      })
+  components: { Breadcrumb, BaseContent },
+  head() {
+    return {
+      title: `ICJIA GATA | ${this.getTitle}`
     }
   },
-  computed: {}
+  data() {
+    return {
+      title: 'General Overview'
+    }
+  },
+  computed: {
+    ...mapGetters(['news']),
+    getTitle() {
+      return `${this.title}`
+    }
+  },
+
+  created() {
+    const { slug } = this.$route.params
+    const content = this.$store.state.news.filter(p => {
+      return p.slug === `${slug}`
+    })
+    if (content.length) {
+      this.content = content[0]
+    } else {
+      console.log('Error: Page Not Found')
+      this.$router.push('/404')
+    }
+  },
+  mounted() {
+    if (this.content.title) {
+      this.title = this.content.title
+    }
+  }
 }
 </script>
 

@@ -1,13 +1,13 @@
 ---
 title: 'Documents'
 posted: '2019-01-15'
-excerpt: 'ICJIA GATA Documents'
+excerpt: 'ICJIA GATA Documents. The Grant Accountability and Transparency Act (GATA) of 2014, 30 ILCS 708/1 et seq., increased accountability and transparency in the use of grant funds and reduced the administrative burden on state agencies and grantees through adoption of federal grant guidelines and regulations.'
 menuItem: true
 position: 5
 section: 'pages'
 ---
 
-<div style="background: #3949AB">
+<div style="background: #0D4474">
 
 <div style="font-size: 28px; font-weight: bold; color: #fff" class="text-xs-center py-4">The following forms are samples and not for use.</div>
 
@@ -23,8 +23,8 @@ View an example of a basic ICJIA grant agreement. An actual grant agreement also
 
 View examples of the ICJIA Uniform Budget Template documents.
 
-- [Budget Instructions (General).pdf »](ICJIA_Uniform_Budget_Template_032817_Sample_Budget_Instructions.pdf)
-- [Budget Instructions (ICJIA).pdf»](ICJIA_Uniform_Budget_Template_032817_Sample_Budget_Instructions.pdf)
+- [Budget Instructions (General).pdf »](ICJIA_Uniform_Budget_Template_032817_Sample_Budget_Instructions_GENERAL.pdf)
+- [Budget Instructions (ICJIA).pdf»](ICJIA_Uniform_Budget_Template_032817_Sample_Budget_Instructions_ICJIA.pdf)
 - [Section A ICJIA Funds »](ICJIA_Uniform_Budget_Template_032817_Sample_Section_A_ICJIA_Funds.pdf)
 - [Section A Indirect Cost Info](ICJIA_Uniform_Budget_Template_032817_Sample_Section_A_Indirect_Cost_Info.pdf)
 - [Section B Match Funds »](ICJIA_Uniform_Budget_Template_032817_Sample_Section_B_Match_Funds.pdf)

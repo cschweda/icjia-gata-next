@@ -94,6 +94,10 @@ h3 {
   margin-top: -25px;
 }
 
+.pull-15 {
+  margin-top: -15px !important;
+}
+
 .pull-10 {
   margin-top: -10px !important;
 }
@@ -142,6 +146,10 @@ summary:focus {
 .expires {
   color: #666;
   font-size: 18px;
+}
+
+.expired {
+  color: red;
 }
 
 .posted {

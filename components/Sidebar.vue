@@ -1,26 +1,49 @@
 <template>
-  <v-navigation-drawer v-model="sidebar" :clipped="clipped" enable-resize-watcher temporary app>
-    <v-layout sidebar-height column ma-0 px-3>
+  <v-navigation-drawer 
+    v-model="sidebar" 
+    :clipped="clipped"
+    right 
+    enable-resize-watcher 
+    temporary 
+    app>
+    <v-layout 
+      sidebar-height 
+      column 
+      ma-0 
+      px-3>
       <div class="sidebarItem mt-3">
-        <nuxt-link to="/" class="sidebar-link">Home</nuxt-link>
+        <nuxt-link 
+          to="/" 
+          class="sidebar-link">Home</nuxt-link>
       </div>
       <div class="sidebarItem">
-        <nuxt-link to="/news" class="sidebar-link">News & Announcements</nuxt-link>
+        <nuxt-link 
+          to="/news" 
+          class="sidebar-link">News & Announcements</nuxt-link>
       </div>
       <div class="sidebarItem">
-        <nuxt-link to="/funding" class="sidebar-link">Funding Opportunities</nuxt-link>
+        <nuxt-link 
+          to="/funding" 
+          class="sidebar-link">Funding Opportunities</nuxt-link>
       </div>
       <v-divider/>
-      <div v-for="(page, index) in pages" :key="index" class="sidebarItem">
+      <div 
+        v-for="(page, index) in pages" 
+        :key="index" 
+        class="sidebarItem">
         <nuxt-link
           v-if="page.menuItem"
           :to="generateSlug(page.slug)"
           class="sidebar-link"
-        >{{page.title}}</nuxt-link>
+        >{{ page.title }}</nuxt-link>
       </div>
       <v-divider style="margin-top: -25px"/>
-      <div class="sidebarItem" style="padding-top: 10px;">
-        <nuxt-link to="/search" class="sidebar-link">Search</nuxt-link>
+      <div 
+        class="sidebarItem" 
+        style="padding-top: 10px;">
+        <nuxt-link 
+          to="/search" 
+          class="sidebar-link">Search</nuxt-link>
       </div>
       <v-spacer/>
       <v-divider/>
@@ -37,15 +60,20 @@
             class="sidebar-footer-link"
           >View on Github</a>
         </h5>
-        <h5 style="color: #666; font-weight: 400 !important;" class="mt-2">
+        <h5 
+          style="color: #666; font-weight: 400 !important;" 
+          class="mt-2">
           &copy;&nbsp;2019
           <a
             class="sidebar-footer-link"
             href="http://www.icjia.state.il.us"
           >Illinois Criminal Justice Information Authority</a>
         </h5>
-      </div>
-    </v-layout>
+        <!-- <div 
+          style="font-size: 10px;" 
+          class="mt-2"><a href="https://legacy-grants.icjia.cloud">Previous ICJIA GATA site </a>&raquo;</div>
+      </div> -->
+    </div></v-layout>
   </v-navigation-drawer>
 </template>
 

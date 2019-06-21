@@ -9,7 +9,7 @@ section: 'funding'
 ---
 
 
-[LINK TO NOFO](ICADV Lead Entity NOFO.docx) {.text-xs-center .nofo-link}
+[CLICK FOR NOFO](ICADVLeadEntityNOFO.docx) {.text-xs-center .nofo-link}
 
 The Illinois Criminal Justice Information Authority is requesting applications for grants for the Services for Victims of Domestic Violence Program. Grants will be made with FFY17 Victims of Crime Act funds. A total of $21.3 million is available through this solicitation for use over a period of 12 months. 
 

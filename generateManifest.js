@@ -44,6 +44,20 @@ function dynamicSort(property) {
   }
 }
 
+function linkify(html, section, slug) {
+  const re = new RegExp('^(http|https|mailto):/?/?', 'i')
+  const result = html.replace(/href="([^"]+)/g, function($1) {
+    const arr = $1.split('"')
+    let match = re.test(arr[1])
+    if (!match) {
+      const href = `${section}/${slug}/${arr[1]}`
+      return `href="/${href}`
+    }
+    return $1
+  })
+  return result
+}
+
 const readFiles = dirname => {
   const readDirPr = new Promise((resolve, reject) => {
     fs.readdir(
@@ -100,6 +114,9 @@ const readFiles = dirname => {
             } else {
               obj.path = '/'
             }
+
+            let html = linkify(md.render(obj.body), obj.section, obj.slug)
+            obj.html = html.replace(/(\r\n|\n|\r)/gm, '')
 
             resolve(obj)
           })
