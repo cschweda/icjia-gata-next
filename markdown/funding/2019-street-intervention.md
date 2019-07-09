@@ -10,7 +10,7 @@ section: 'funding'
 
 [LINK TO NOFO](FY20StreetInterventionNOFO.docx) {.text-xs-center .nofo-link}
 
-The Illinois Criminal Justice Information Authority is requesting a proposal from Metropolitan Family Services for a grant to fund Violence Prevention and Street Intervention. The grant will be made with SFS state fiscal year 2020 funds. A total of $2,250,000 in funding is available through this solicitation for use over a period of ten months.
+The Illinois Criminal Justice Information Authority is requesting application(s) for a grant to fund Violence Prevention and Street Intervention. The grant will be made with SFS state fiscal year 2020 funds. A total of $2,250,000 in funding is available through this solicitation for use over a period of ten months.
 
 **Application deadline: 11:59 p.m., Tuesday, August 6, 2019.**
 
