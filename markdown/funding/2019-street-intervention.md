@@ -39,11 +39,11 @@ This solicitation is open only to not-for-profit organizations that currently ut
 2. Monitor the compliance of sub-recipients; and
 3. Implement the coordination of a multi-pronged evidence-based street intervention program.
 
-Each sub-recipient that is included in the eligible applicant’s application must currently be implementing all of the following coordinated services:
+Each sub-recipient that is included in the eligible applicant’s application:
 
-- a. outreach services that utilize staff, at least one of whom has received, or is currently receiving, training through a curriculum designed to develop outreach and leadership skills
-- b. conflict intervention and mediation
-- c. support services, including, at a minimum, employment, continued education, social service, mental health/substance abuse supports.
+- outreach services that utilize staff, at least one of whom has received, or is currently receiving, training through a curriculum designed to develop outreach and leadership skills
+- conflict intervention and mediation
+- support services, including, at a minimum, employment, continued education, social service, mental health/substance abuse supports.
 
 ## Deadline
 
@@ -83,6 +83,14 @@ The following documents must be emailed to CJA.StateViolencePrevention@Illinois.
 ## Questions
 
 Questions regarding this NOFO may be submitted to Shai.Hoffman@Illinois.gov until **11:59 p.m., 11:59 p.m. July 31, 2019**. Questions and responses will be posted at [click here.](FY20StreetInterventionApplicantQuestions.doc)
+
+## Applicant Technical Assistance Videos
+
+- [VIEW TECHNICAL ASSISTANCE VIDEO: Administrative Introduction](https://www.youtube.com/watch?v=atXC0whZQPM)
+- [VIEW TECHNICAL ASSISTANCE VIDEO: General Guidelines](https://youtu.be/PBwekeMT5dk)
+- [VIEW TECHNICAL ASSISTANCE VIDEO: Budget](https://www.youtube.com/embed/sQYCekU2pIw)
+- [VIEW TECHNICAL ASSISTANCE VIDEO: Indirect Costs](https://www.youtube.com/embed/mjp5PZx0oaY)
+- [VIEW TECHNICAL ASSISTANCE VIDEO: Prior Approval Requirements](https://www.youtube.com/embed/Q8UaLYqslJs)
 
 ### Contact Information
 
