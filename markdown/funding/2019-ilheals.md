@@ -98,11 +98,13 @@ The following documents must be emailed to CJA.IllinoisHEALS@illinois.gov by the
 
 ### <p class="text-center">[DOWNLOAD ZIP FILE OF ALL REQUIRED APPLICATION DOCUMENTS](NOFOIllinoisHEALS.zip)
 
-### Questions
+## Questions
 
 Questions regarding this NOFO may be submitted to CJA.IllinoisHEALS@illinois.gov.
 
-### Contact Information
+[Download applicant questions and answers](ResponsetoIllinoisHEALSNOFOApplicantQuestions.doc).
+
+## Contact Information
 
 Jason Wynkoop
 
