@@ -23,6 +23,12 @@ export default {
   data() {
     return {}
   },
+  mounted() {
+    Array.from(document.querySelectorAll('.blank')).forEach(function(link) {
+      console.log(link)
+      link.setAttribute('target', '_blank')
+    })
+  },
   methods: {}
 }
 </script>
