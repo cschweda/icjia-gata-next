@@ -97,7 +97,7 @@ Also, make sure your agency **IS** in good standing with the Illinois Secretary 
 
 \***\*Need help prequalifying? Email us at CJA.GATAHelp@Illinois.gov\*\***
 
-## SUCCESSFUL APPLICATION
+### SUCCESSFUL APPLICATION
 
 A well-developed grant application:
 
