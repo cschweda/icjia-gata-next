@@ -147,10 +147,6 @@ export default {
       this.hideExpired = state
       //console.log(this.hideExpired)
     })
-    Array.from(document.querySelectorAll('.blank')).forEach(function(link) {
-      console.log(link)
-      link.setAttribute('target', '_blank')
-    })
   }
 }
 </script>
