@@ -31,7 +31,7 @@ module.exports = {
     funding: {
       parentPath: '/funding/',
       type: 'funding',
-      sortOn: 'posted'
+      sortOn: 'expired'
     },
     news: {
       parentPath: '/news/',
