@@ -59,7 +59,7 @@ General technical assistance recordings are currently available for viewing at t
 * [NOFO General Requirements](https://www.youtube.com/watch?v=PBwekeMT5dk)
 * [Indirect Costs](https://www.youtube.com/watch?v=4stkASoNY5w)
 
-A technical assistance recording providing additional information regarding this funding opportunity will be available for viewing beginning on October 2, 2019. 
+A technical assistance recording is available here: [https://youtu.be/ZjSJs-iSFO0](https://youtu.be/ZjSJs-iSFO0)
 
 VIEW THE REQUIRED TECHNICAL ASSISTANCE WEBINAR RECORDING (Recording available 10.2.19)
 	
