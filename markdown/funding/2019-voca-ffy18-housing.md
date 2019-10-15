@@ -3,14 +3,14 @@ title: 'Victims of Crime Act (VOCA) FFY18 Transitional Housing Program'
 created: '2019-10-15'
 posted: '2019-10-15'
 expires: '2019-12-01'
-excerpt: 'The Illinois Criminal Justice Information Authority is requesting proposals for grants for the Transitional Housing Program. Grants will be made with FFY18 Victims of Crime Act (VOCA) funds. A total of $5 million in funding in for transitional housing programs is available through this solicitation for use over a period of 12 months. '
+excerpt: 'ICJIA is requesting proposals for FFY18 Victims of Crime Act grants to support the development or expansion of transitional housing and related costs. A total of $5 million in funding is available through this solicitation for use over a period of 12 months. '
 status: 'live'
 section: 'funding'
 ---
 
 [LINK TO NOFO](NOFO.VOCA.TH.pdf) {.text-xs-center .nofo-link}
 
-The Illinois Criminal Justice Information Authority is requesting proposals for grants for the Transitional Housing Program. Grants will be made with FFY18 Victims of Crime Act (VOCA) funds. A total of $5 million in funding in for transitional housing programs is available through this solicitation for use over a period of 12 months.
+ICJIA is requesting proposals for FFY18 Victims of Crime Act grants to support the development or expansion of transitional housing and related costs. A total of $5 million in funding is available through this solicitation for use over a period of 12 months.
 
 **Application deadline: 11:59 pm, December 1, 2019.**
 
