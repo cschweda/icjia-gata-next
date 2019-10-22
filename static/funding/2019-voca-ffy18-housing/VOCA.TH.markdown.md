@@ -36,7 +36,7 @@ Funding is available for the period of March 1, 2020 through February 28, 2021. 
 
 Technical assistance recordings providing additional information regarding this funding opportunity will be available for viewing beginning at 1:30 p.m. on October 17, 2019. 
 
-•	NOFO Guidelines (Available on October 17, 2019)
+•	[NOFO Guidelines](https://youtu.be/trg8DIF3T2A)
 •	[General Requirements](https://www.youtube.com/watch?v=PBwekeMT5dk)
 •	[Indirect Costs](https://www.youtube.com/watch?v=4stkASoNY5w)
 
@@ -68,7 +68,7 @@ Recipients must submit periodic financial reports, periodic performance reports,
 
 The following documents must be emailed to CJA.VOCA.THNOFO@illinois.gov by the **11:59 p.m., December 1, 2019**, deadline for application review. Click the links below to download copies.
 
-* [Complete Uniform State Grant Application (Word)](NOFO.VOCA.TH.APPLICATION.docx) 
+* [Complete Uniform State Grant Application (Word)](NOFO.Uniform.Application.docx) 
 * [Completed Program Narrative (Word)](NOFO.VOCA.TH.NARRATIVE.docx)
 * [Completed Budget/Budget Narrative (Excel)](NOFO.VOCA.TH.BUDGET.xlsx)
 
