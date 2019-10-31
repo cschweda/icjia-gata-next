@@ -86,7 +86,9 @@ The following documents must be emailed to CJA.VOCA.THNOFO@illinois.gov by the *
 
 ### Questions
 
-Questions regarding this NOFO may be submitted to CJA.VOCA.THNOFO@illinois.gov until 11:59 p.m. November 20, 2019. Questions and responses will be posted at https://grants.icjia.cloud.
+Questions regarding this NOFO may be submitted to CJA.VOCA.THNOFO@illinois.gov until 11:59 p.m. November 20, 2019. 
+
+[Download the latest questions and answers](VOCA.TH.FAQs.docx).
 
 ### Contact Information
 
