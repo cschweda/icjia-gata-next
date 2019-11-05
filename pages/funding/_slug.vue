@@ -29,7 +29,7 @@
                 class="text-xs-right mb-3" 
                 style="font-weight: bold; color: #D50000; text-transform: uppercase; border-bottom: 1px solid #eee; padding-bottom: 5px; ">Expire{{ isExpired? 'd':'s' }}: {{ content.expires | format }}</div>
               <h1 
-                class="pageTitle" 
+                class="pageTitle text-xs-center" 
                 style="margin-top: 10px">{{ title }}</h1>
               
             </v-flex>

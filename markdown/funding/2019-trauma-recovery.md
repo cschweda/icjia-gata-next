@@ -1,7 +1,7 @@
 ---
-title: 'Trauma Recovery Centers (TRC)'
+title: 'Trauma Recovery Centers'
 created: '2019-11-01'
-posted: '2019-11-01'
+posted: '2019-11-05'
 expires: '2019-12-12'
 excerpt: 'The Illinois Criminal Justice Information Authority is requesting applications for state grants to establish and enhance trauma recovery centers.'
 status: 'live'
