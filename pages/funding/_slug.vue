@@ -7,9 +7,11 @@
           :title="content.title"/>
       </template>
       <template 
-        v-if="!isExpired" 
+        
         slot="table-of-contents">
-        <div class="table-of-contents">
+        <div 
+          :class="{'tocSpacer': isExpired}" 
+          class="table-of-contents">
           <table-of-contents :items="tocItems"/>
         </div>
       </template>
@@ -142,5 +144,9 @@ export default {
   position: fixed;
   top: 130px;
   right: 10px;
+}
+
+.tocSpacer {
+  margin-top: 65px;
 }
 </style>
