@@ -92,7 +92,9 @@ The following documents must be emailed to CJA.SFY20NEWTRCNOFO@Illinois.gov by t
 
 ## Questions
 
-Questions regarding this NOFO may be submitted to CJA.SFY20NEWTRCNOFO@Illinois.gov until 11:59 p.m. December 3, 2019. Questions and responses will be posted at https://grants.icjia.cloud.
+Questions regarding this NOFO may be submitted to CJA.SFY20NEWTRCNOFO@Illinois.gov until 11:59 p.m. December 3, 2019.
+
+[Download the latest questions and answers here](ResponsetoTRCnofoQuestions.doc).
 
 ### Contact Information
 
