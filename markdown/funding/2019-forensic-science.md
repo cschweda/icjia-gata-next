@@ -100,11 +100,11 @@ The following documents must be emailed to CJA.NFSIAFFY19@Illinois.gov by the **
 
 [DOWNLOAD ZIP FILE OF ALL REQUIRED APPLICATION DOCUMENTS](NFSIAFFY19Zip.zip)
 
-### Questions
+## Questions
 
-Questions regarding this funding opportunity may be submitted to CJA.NFSIAFFY19@Illinois.gov.
+Questions regarding this funding opportunity may [downloaded here](NFSIAFFY19NOFOQA.docx).
 
-### Contact Information
+## Contact Information
 
 Lajuana Murphy
 
