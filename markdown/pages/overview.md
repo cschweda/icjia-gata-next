@@ -9,50 +9,57 @@ section: 'pages'
 
 The Grant Accountability and Transparency Act (GATA) of 2014, 30 ILCS 708/1 et seq., increased accountability and transparency in the use of grant funds and reduced the administrative burden on state agencies and grantees through adoption of federal grant guidelines and regulations.
 
-Pursuant to the Act, the Grant Accountability and Transparency Unit (GATU) was established within the Governor's Office of Management and Budget; GATU is charged with implementation of the Act in coordination with state grant-making agencies and nonprofit organizations in Illinois. GATA requires grants administered by state agencies to be awarded in a competitive bidding process. In addition, all applicants must undergo a registration and pre-award screening process. This competitive grant award process is initiated with a Notice of Funding Opportunity (NOFO).
+GATA requires grants administered by Executive branch state agencies to be awarded via a competitive bidding process. In addition, all applicants must undergo a registration and pre-award screening process. This competitive grant award process is initiated with a _Notice of Funding Opportunity_.
+
+## ICJIA Grant Process
 
 <div class="layout row wrap mt-5">
 <div class="flex xs12 sm12 md6">
 
-## ICJIA Grant Award Process
+When applying for funding via a Notice of Funding Opportunity, applicants are required to concisely address a specified scope of work, provide a program budget detailing personnel and equipment needs, and qualify their experience to implement the program's scope of services. Applications are competitively reviewed and scored.
 
-A Notice of Funding Opportunity (NOFO) requires applicants to concisely address a specified scope of work, provide a program budget detailing personnel and equipment needs, and qualify their experience to implement the program's scope of services. Applications are competitively reviewed and scored.
+### NOTIFICATION
 
-All applicants must:
+All Notices of Funding Opportunity are announced via CJ Dispatch, the ICJIA email subscriber list. [Subcribe now.](https://visitor.r20.constantcontact.com/manage/optin?v=001MqUcqqvjwLCJXlLMSWbTe3zHHmEQgFeBuHvBcJWTbwgrxFbDSGx4HSUPpI6DJWMUPgbljtLxffqIcGFTgCnr-auak88ybvRxpoJlTMGPtZs%3D){.blank}
 
-- Register on the State of Illinois Grant Accountability and Transparency Act (GATA) web portal.
-- Pass the pre-qualification verification of the following:
-  - valid DUNS number, current SAM.gov account;
-  - not be on the Federal Excluded Parties List;
-  - be in Good Standing with the Illinois Secretary of State, as applicable;
-  - not be on the Illinois Stop Payment list and not on the Dept. of Healthcare and Family Services Provider Sanctions list.
-- Complete the Internal Control Questionnaire (ICQ).
-- Once a grant award is given to an applicant they must submit to ICJIA a grant packet that includes an ICJIA approved:
+### PRE-QUALIFICATION
 
-- Fully executed agreement
-- Program narrative
-- Program budget
-- Sets of certification documents
-- Programmatic Risk Assessment (PRA)
+Pre-qualification for ICJIA-administered state or federal grants is highly encouraged. Complete the prequalification process now and be ready to focus on other important aspects of your grant application, such as drafting a program narrative, proposing a budget, and producing any other vital information needed to secure funding for your program.
+
+Complete the following to pre-qualify:
+
+- [Obtain a Data Universal Numbering System (DUNS) number.](http://fedgov.dnb.com/webform/pages/CCRSearch.jsp){.blank}
+- [Register with the System for Award Management (SAM).](https://www.hrsa.gov/grants/apply/register/sam-registration/index.html){.blank}
+- [Apply for, update, or verify your agency Employer Identification Number (EIN).](https://www.irs.gov/businesses/small-businesses-self-employed/apply-for-an-employer-identification-number-ein-online){.blank}
+- [Create a Grants.gov account with username and password.](https://www.grants.gov/applicants/registration.html){.blank}
+- [Complete registration in the Illinois GATA Grantee Portal.](https://grants.illinois.gov/portal/){.blank}
 
 </div>
 
-<div class="flex xs12 sm12 md6">
+<div class="flex xs12 sm12 md6" style="padding-left: 25px">
 
-## Helpful Hints
+Also, make sure your agency **IS** in good standing with the Illinois Secretary of State, as applicable, and **IS NOT**:
 
-A well-developed grant application includes:
+- [Excluded from receiving federal grants.](https://www.sam.gov/SAM/transcript/Quick_Guide_to_Advanced_Search_Exclusion.pdf){.blank}
+- On the Illinois Stop Payment list within the Grantee Compliance Enforcement System.
+- On the [Department of Healthcare and Family Services Provider Sanctions list.](https://www.illinois.gov/hfs/oig/Pages/SanctionsList.aspx){.blank}
 
-- Data and evidence that support the program scope and suggested outputs.
-- Program scope that is aligned with national, regional or local initiatives.
-- Strong and established partnerships with community groups, other not-for-profits, and local governments, detailed in the program scope and in letters of support.
-- Complete and concise responses in every section of the application.
+\***\*Need help prequalifying? Email us at CJA.GATAHelp@Illinois.gov\*\***
+
+### SUCCESSFUL APPLICATION
+
+A well-developed grant application:
+
+- Adheres to criteria outlined in the Notice of Funding Opportunity and clearly identifies the issues to be addressed.
+- Describes the proposed program.
+- Includes proposed program goals and objectives and how they will be measured.
+- Describes strategies for implementation of proposed program capabilities and competencies of staff to support implementation.
 
 Also consider:
 
-- Complete the ICQ section of the GATA pre-registration within 3 weeks prior to the submittal of your NOFO application.
-- Submit your Letter of Intent and any questions to the agency that generated the NOFO as soon as possible.
-- Attending the NOFO conference call and review all posted webinars.
+- Completing [GATA pre-registration](https://grants.illinois.gov/portal/){.blank} within three weeks of application deadline.
+- Submitting a Notice of Intent and questions you have about the funding opportunity as soon as possible.
+- Participating in funding opportunity conference calls and view technical assistance videos.
 
 </div>
 </div>
