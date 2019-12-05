@@ -24,14 +24,14 @@
         </nuxt-link>
       </v-toolbar-title>
       <v-spacer/>
-      <v-toolbar-items class="hidden-sm-and-down display">
+      <v-toolbar-items class=" display">
         <v-btn
      
           flat
           style="font-weight: 900;"
           @click="toggleSidebar"
         >
-          MENU&nbsp;&nbsp;&nbsp;&nbsp;
+          <span class="hidden-sm-and-down">MENU&nbsp;&nbsp;&nbsp;&nbsp;</span>
           <v-icon 
              
           >menu</v-icon>
