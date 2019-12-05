@@ -2,7 +2,7 @@ module.exports = {
   markdownItOptions: {
     html: true,
     xhtmlOut: false,
-    breaks: true,
+    breaks: false,
     langPrefix: 'language-',
     linkify: true,
     typographer: false,
@@ -21,23 +21,29 @@ module.exports = {
     x: false,
     y: true
   },
-
+  markdownSourcePath: './markdown/',
+  staticAssetPath: '/',
+  jsonDestinationPath: './api/',
   dateFormat: 'MMMM DD, YYYY',
+  dateFields: ['posted', 'created', 'expires', 'updated'],
   siteConfig: {
     pages: {
       parentPath: '/',
       type: 'page',
-      sortOn: 'position'
+      sortOn: 'position',
+      filename: 'pages.json'
     },
     funding: {
       parentPath: '/funding/',
       type: 'funding',
-      sortOn: 'expires'
+      sortOn: 'expires',
+      filename: 'funding.json'
     },
     news: {
       parentPath: '/news/',
       type: 'news',
-      sortOn: 'posted'
+      sortOn: 'posted',
+      filename: 'news.json'
     }
   },
   debug: false

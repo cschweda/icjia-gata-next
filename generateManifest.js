@@ -2,29 +2,17 @@ const fs = require('fs')
 const fm = require('front-matter')
 const path = require('path')
 const slug = require('slug')
-
-const markdownSourcePath = './markdown/'
-const staticAssetPath = '/'
-const jsonDestinationPath = './api/'
 const config = require('./config')
 
-const dateFields = ['posted', 'created', 'expires', 'updated']
-// const format = require('date-fns/format')
-
-const arr = []
-
-let md = require('markdown-it')({
-  html: true,
-  xhtmlOut: false,
-  breaks: false,
-  langPrefix: 'language-',
-  linkify: true,
-  typographer: false,
-  quotes: '“”‘’'
-})
+const markdownSourcePath = config.markdownSourcePath
+const staticAssetPath = config.staticAssetPath
+const jsonDestinationPath = config.jsonDestinationPath
+const dateFields = config.dateFields
+const md = require('markdown-it')(config.markdownItOptions)
   .use(require('markdown-it-footnote'))
   .use(require('markdown-it-named-headers'))
   .use(require('markdown-it-attrs'))
+const siteArray = Object.getOwnPropertyNames(config.siteConfig)
 
 /**
  * Sort array of objects by property
@@ -130,7 +118,6 @@ if (!fs.existsSync(`${jsonDestinationPath}`)) {
   fs.mkdirSync(`${jsonDestinationPath}`)
 }
 
-const siteArray = Object.getOwnPropertyNames(config.siteConfig)
 siteArray.forEach(obj => {
   readFiles(`${markdownSourcePath}${obj}/`).then(
     allContents => {
