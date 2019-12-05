@@ -35,7 +35,8 @@
           v-if="page.menuItem"
           :to="generateSlug(page.slug)"
           class="sidebar-link"
-        >{{ page.title }}</nuxt-link>
+        ><span v-if="page.menuTitle">{{ page.menuTitle }}</span>
+        <span v-else>{{ page.title }}</span></nuxt-link>
       </div>
       <v-divider style="margin-top: -25px"/>
       <div 

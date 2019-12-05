@@ -25,23 +25,20 @@
       </v-toolbar-title>
       <v-spacer/>
       <v-toolbar-items class="hidden-sm-and-down display">
-        <!-- <menu-dropdown 
-          :items="currentFundingOpps" 
-          text="Current Funding Opportunities"/> -->
-
-        <!-- <v-btn 
-          icon 
-          to="/search" 
-          style="color: #555">
-          <v-icon>search</v-icon>
-        </v-btn> -->
-        <v-btn 
-          flat 
-          style="font-weight: 700; color: #555" 
-          to="/funding">Current Funding Opportunities</v-btn>
+        <v-btn
+     
+          flat
+          style="font-weight: 900;"
+          @click="toggleSidebar"
+        >
+          MENU&nbsp;&nbsp;&nbsp;&nbsp;
+          <v-icon 
+             
+          >menu</v-icon>
+        </v-btn>
+       
       </v-toolbar-items>
      
-      <v-toolbar-side-icon @click="toggleSidebar"/>
     </v-toolbar>
   </div>
 </template>

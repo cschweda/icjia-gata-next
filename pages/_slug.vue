@@ -21,9 +21,14 @@
     </template>
     <template slot="markdown">
       <v-layout row>
-        <v-container class="mt-0">
+        <v-container 
+          class="mt-0" 
+        >
           <v-flex xs12>
-            <div v-html="content.html"/>
+            
+            <div 
+              style="margin-top: -30px" 
+              v-html="content.html"/>
           </v-flex>
         </v-container>
       </v-layout>
