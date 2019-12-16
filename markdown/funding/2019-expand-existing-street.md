@@ -1,5 +1,5 @@
 ---
-title: 'Violence Prevention and Street Intervention Funds (VPSI)'
+title: 'Notice of Funding Opportunity to Enhance and Expand Existing Street Intervention Programming'
 created: '2019-12-16'
 posted: '2019-12-16'
 expires: '2020-01-16'
@@ -20,7 +20,7 @@ This Notice of Funding Opportunity intends to fund an expansion (additional part
 
 ## Eligibility Information
 
-Agencies must be pre-qualified through the Grant Accountability and Transparency Act (GATA) Grantee Portal, https://grants.illinois.gov/portal/, to become eligible to apply for an award.  Applicants must have completed the GATA pre-qualification process and received approval of their Internal Control Questionnaire (ICQ) by the period of performance start date, March 15, 2020, to be considered for funding.  
+Agencies must be pre-qualified through the Grant Accountability and Transparency Act (GATA) Grantee Portal, https://grants.illinois.gov/portal/, to become eligible to apply for an award. Applicants must have completed the GATA pre-qualification process and received approval of their Internal Control Questionnaire (ICQ) by the period of performance start date, March 15, 2020, to be considered for funding.
 
 ## Eligible Applicants
 
@@ -35,11 +35,11 @@ Completed application materials must be emailed to CJA.StateViolencePrevention@I
 
 ## Available Funds
 
-Grants available through this funding opportunity are a portion of a SFY20 Violence Prevention and Street Intervention fund.    
+Grants available through this funding opportunity are a portion of a SFY20 Violence Prevention and Street Intervention fund.
 
 ### Period of Performance
 
-Funding is available for the anticipated period of March 15, 2020 through June 30, 2020. Based on program performance and fund availability, the ICJIA may recommend funding to support an additional 24 months.  
+Funding is available for the anticipated period of March 15, 2020 through June 30, 2020. Based on program performance and fund availability, the ICJIA may recommend funding to support an additional 24 months.
 
 ## Technical Assistance Session
 
@@ -64,8 +64,6 @@ The amounts below represent the minimum and maximum grant award amounts the appl
 | :----------------------------------------------------------: | :----------------------: | :----------------------: |
 | Suburban Cook, DuPage, Kane, Lake, McHenry and Will counties |         $25,000          |         $75,000          |
 |                        Other counties                        |         $25,000          |         $75,000          |
-
-
 
 ## Timeline
 
@@ -97,7 +95,7 @@ The following documents must be emailed to CJA.StateViolencePrevention@Illinois.
 
 ## Questions
 
-Questions regarding this NOFO may be submitted to CJA.StateViolencePrevention@Illinois.gov until 11:59 p.m., January 9, 2020.  Questions and responses will be posted at https://grants.icjia.cloud.
+Questions regarding this NOFO may be submitted to CJA.StateViolencePrevention@Illinois.gov until 11:59 p.m., January 9, 2020. Questions and responses will be posted at https://grants.icjia.cloud.
 
 ## Contact Information
 
