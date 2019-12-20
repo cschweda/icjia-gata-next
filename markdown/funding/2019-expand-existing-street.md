@@ -95,7 +95,9 @@ The following documents must be emailed to CJA.StateViolencePrevention@Illinois.
 
 ## Questions
 
-Questions regarding this NOFO may be submitted to CJA.StateViolencePrevention@Illinois.gov until 11:59 p.m., January 9, 2020. Questions and responses will be posted at https://grants.icjia.cloud.
+Questions regarding this NOFO may be submitted to CJA.StateViolencePrevention@Illinois.gov until 11:59 p.m., January 9, 2020.
+
+[Download current applicant questions and responses](UpdatesandResponsetoApplicantQuestions.pdf).
 
 ## Contact Information
 
